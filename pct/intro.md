@@ -1,19 +1,13 @@
 # PowerCyber Training
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Welcome to the PowerCyber Training website!
 
-Check out the content pages bundled with this sample book to see more.
+This initiative aims to advance power engineering by providing extensive training in state-of-the-art cyberinfrastructure (CI) technologies. It seeks to empower researchers and professionals with the requisite expertise for innovation in this dynamic field. The workshop is organized around three core objectives to foster a comprehensive grasp of theoretical and practical aspects of power engineering and CI.
 
-```{tableofcontents}
-```
 
 The contents of this book are licensed for free consumption under the following
 license: Creative Commons  Attribution-NonCommercial-NoDerivatives 4.0
 International (CC BY-NC-ND 4.0).
-
 
 # Acknowledgements
 
