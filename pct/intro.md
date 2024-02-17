@@ -10,6 +10,11 @@ Check out the content pages bundled with this sample book to see more.
 ```{tableofcontents}
 ```
 
+The contents of this book are licensed for free consumption under the following
+license: Creative Commons  Attribution-NonCommercial-NoDerivatives 4.0
+International (CC BY-NC-ND 4.0).
+
+
 # Acknowledgements
 
 This work is supported by the National Science Foundation (NSF) under [Grant No.
@@ -17,3 +22,4 @@ This work is supported by the National Science Foundation (NSF) under [Grant No.
 opinions, findings, and conclusions or recommendations expressed in this
 material are those of the author(s) and do not necessarily reflect the views of
 the National Science Foundation.
+
