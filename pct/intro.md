@@ -1,4 +1,4 @@
-# Welcome to your Jupyter Book
+# PowerCyber Training
 
 This is a small sample book to give you a feel for how book content is
 structured.
@@ -10,4 +10,10 @@ Check out the content pages bundled with this sample book to see more.
 ```{tableofcontents}
 ```
 
-Test GitHub actions.
+# Acknowledgements
+
+This work is supported by the National Science Foundation (NSF) under [Grant No.
+2319895 and 2319896](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2319895). Any
+opinions, findings, and conclusions or recommendations expressed in this
+material are those of the author(s) and do not necessarily reflect the views of
+the National Science Foundation.
