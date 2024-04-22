@@ -6,6 +6,7 @@ root: intro
 chapters:
 - file: modules/01/intro.md
   sections:
+  - file: modules/01/wsl.md
   - file: modules/01/env.md
 - file: notebooks
 - file: markdown-notebooks
