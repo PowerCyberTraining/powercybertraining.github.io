@@ -47,6 +47,7 @@ For example, if the references for your book are stored in `references.bib`,
 then the bibliography is inserted with:
 
 ```{bibliography}
+:filter: docname in docnames
 ```
 
 ## Learn more
