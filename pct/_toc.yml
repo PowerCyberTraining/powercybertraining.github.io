@@ -8,8 +8,8 @@ chapters:
   sections:
   - file: modules/01/wsl.md
   - file: modules/01/commands.md
-  - file: modules/01/filesystem.md
   - file: modules/01/pkgman.md
+  - file: modules/01/filesystem.md
   - file: modules/01/env.md
 - file: notebooks
 - file: markdown-notebooks
