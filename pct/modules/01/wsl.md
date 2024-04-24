@@ -39,7 +39,7 @@ beginning. The Command Prompt and PowerShell are for running Windows-based
 command-line programs. One of the programs is `wsl.exe`, which opens up the
 Linux shell where Linux programs can run. One cannot run a program compiled for
 Linux on Windows, or vice versa, without using a compatibility layer like WSL or
-WINE {cite}`wine`. 
+WINE {cite}`wine`.
 
 The screenshots below show the Windows CMD, Windows PowerShell, and a Ubuntu
 Bash Shell. If the path to the left of the prompt reads like `C:\` (or another
@@ -49,6 +49,12 @@ Windows shell.
 ```{note}
 TODO: Add a clean screenshot of the shells.
 ```
+
+## Files in WSL
+
+The files in WSL are stored in the Windows file system. In "My Computer", you
+will see a new drive, typically `\\wsl$`. This drive is convenient for accessing
+your WSL files from Windows.
 
 
 ```{bibliography}
