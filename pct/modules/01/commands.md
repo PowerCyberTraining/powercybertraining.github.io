@@ -298,45 +298,6 @@ User@Machine:~$ which ls
 
 This command shows that the `ls` command is located at `/usr/bin/ls`.
 
-### Permissions
-
-When you list files with `ls -l`, you will see the details of files and
-directories. For example,
-
-```bash
-User@Machine:~$ ls -la
-drwxrwxr-x  3 User staff 4096 Feb 16 22:04 .github
-```
-
-shows the info of the `.github` folder, which is owned by the user `User` and
-the group `staff`. `3` is the number of links to the directory. `4096` is the
-size of the directory itself in bytes.
-
-`drwxrwxr-x` is the permission string:
-
-- The first character indicates the type of the file. `d` for directory, `-` for
-  a regular file.
-- The next three characters are the *owner's permissions*. The owner can read,
-  write, and execute the file.
-- The next three characters are the *group's permissions*. The group can read,
-  write, and execute the file.
-- The last three characters are the *other users' permissions*. They can read,
-  and execute the file but cannot write.
-
-The permission string is also represented in octal format with three in a group.
-`rwxrwxr-x` is `775` in octal.
-
-### Changing Permissions
-
-The `chmod` command is used to change the permissions (mode bits) of a file or
-directory. The format is `chmod MODES FILES`. For example,
-
-```bash
-User@Machine:~$ chmod 755 file.txt
-```
-
-removes the write permission for the group and others.
-
 ### Changing Ownership
 
 There may be times you run into permission issues. This often happens when you
