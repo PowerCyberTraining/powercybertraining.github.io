@@ -310,16 +310,122 @@ It is useful to check what packages are installed in the current env.
 ```
 
 ### Installation with `pip`
+`pip` is the standard package manager for Python. In any mamba environment, if
+Python is installed, `pip` is installed. We discussed the reasons to prefer
+`mamba` over `pip`. Occasionally, you will still use `pip`.
 
+The basic commands for `pip` are:
 
-(Talk about the `mamba list ` output that includes pypi packages)
+- `pip install`: Install a package.
+- `pip remove`: Remove a package.
+- `pip list`: List installed packages in the current environment.
 
+You can refer to pip documentation at https://pip.pypa.io/en/stable/cli/
+
+```{admonition} Where does pip install packages?
+`pip` is a Python package, so it installs to the same environment that 
+contains the Python executable. This environment is often the active environment.
+
+To confirm, run `which python` and `which pip`. Their paths should be the same.
+
+If they are not the same, you will need to deactivate and activate the environment
+to fix environmental variables.
+
+```
+
+Published packages can be searched on the Python Package Index at
+https://pypi.org/. There was a `pip search` command, but unfortunately, it has
+been disabled for security reasons.
+
+To install a published package on `pip`, use `pip install <package>`.
+
+To emphasize, if a package is available for `conda`, install it via `conda`. This will
+satisfy a more complete set of dependencies.
+
+```{admonition} Exercise: Installing pypower
+1. Confirm that your pip is from the active environment.
+2. Install `pypower` via `pip`.
+3. Confirm that `pypower` is installed by running
+
+```bash
+python -c "import pypower; print(pypower)"
+```
+
+### Installing a package from source
+Most of the time, you will install packages that has been published to PyPI or
+conda-forge. If you are experimenting with a package that has yet to be
+published, such as a personal project on GitHub, you will need to install from
+source.
+
+```{admonition} Note
+Not all Python repositories on GitHub are installable though. Some repos are 
+meant for sharing scripts, not for distribution.
+```
+
+If a package contains `setup.py`, you can install it from source by running
+`pip install .` in the root directory of the package. Note the `.` at the end of
+the command. It specifies the directory that contains `setup.py`.
+
+### Developing a package
+Another use of `pip` is to set up a developmental installation of a package.
+This is helpful you want to modify the package and test your changes, without
+having to reinstall the package.
+
+To install a package in developmental mode, run `pip install -e .` in the root
+directory of the package. Also note the dot at the end. The option `-e` means
+"editable".
+
+(TODO: add multiple choice questions and exercise to test understanding)
+
+### Mixing conda and pip
+
+Now that you have installed `jupyter` via `mamba` and `pypower` via `pip` to the
+same environment, both packages can be used in the same Python.
+
+There is a possibility that you install two different versions of the same
+packages to the same environment by using `mamba` and `pip`, respectively. This
+is because the two package managers are not designed to fully interopate.
+
+Installing two versions of the same package creates problems. You won't be able
+to tell which version is imported when you run a script. If you accidentally did
+so, which means that you didn't follow the `mamba` first, and then `pip`
+instructions, you will need to uninstall the package in **both** package
+managers, make sure that you get a clean environment without the package, and
+reinstall it using your desired package manager.
+
+Having multiple versions of the same package can also happen when you have
+installed a package, for example, `andes`, using `mamba`. Then, you
+develop-installed `andes` using `pip` from source. This creates the same
+problem. The solution is also to remove all of them and reinstall just one copy.
+
+Mamba provides a command to list all installed packages in the current
+environment. Below is an example of the output; your list should look much
+longer. 
+
+```bash
+mamba list
+# packages in environment at /home/User/mambaforge/envs/pct:
+#
+# Name                    Version                   Build  Channel
+[TRUNCATED OUTPUT]
+jupyter                   1.0.0             pyhd8ed1ab_10    conda-forge
+pypower                   5.1.16                   pypi_0    pypi
+[TRUNCATED OUTPUT]
+```
+
+When you scroll through it, you will see the `Build` and `Channel` columns
+contain different information for `jupyter` and `pypower`. Since `jupyter` is
+installed via `mamba`, `mamba` then nows the channel and the build number.
+`pypower` is installed via `pip`, so the Channel shows `pypi`. You can use this
+to tell which package manager installed the package.
 
 ## System-wide packages
 
 
 `development tools`
 
+
+Having a system-wide python and environmental python
 
 Test
 
