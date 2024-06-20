@@ -1,4 +1,4 @@
-# Software and Package Management
+# Package Management
 
 ## Python environment
 
@@ -21,10 +21,10 @@ for specific operating systems and hardware architectures.
 
 To solve the problem of binary dependencies, we can use a package manager called
 `conda`. `conda` is a package manager that is more robust and handles binary
-dependencies better than `pip`. 
+dependencies better than `pip`.
 
 ### Anaconda, conda, and miniconda
-Here is some background. 
+Here is some background.
 
 1. Anaconda Inc. is a company that develops the Anaconda Distribution ("Anaconda" in short).
 It is a collection of packages for Python and R.
@@ -35,8 +35,8 @@ It is a collection of packages for Python and R.
 Anaconda that provides only `conda`, Python, and a small number of packages like `pip`.
 
 ### conda-forge
-To distribute packages on Anaconda, one needs to create an account and publish the 
-package under that account (called "channel"). It is sometimes difficult locate the channel 
+To distribute packages on Anaconda, one needs to create an account and publish the
+package under that account (called "channel"). It is sometimes difficult locate the channel
 and the correct version of the package. Therefore, `conda-forge` is a single, community-managed
 channel that contains all the packages that are available for `conda`.
 
@@ -47,7 +47,7 @@ resolving many dependencies with multiple versions. `mamba`, as the name suggest
 package manager that is built on top of `conda` and `pip`. It is a drop-in replacement for `conda`
 and is much faster.
 
-In the following, we may use `mamba` and `conda` interchangeably as they are 
+In the following, we may use `mamba` and `conda` interchangeably as they are
 drop-in replacements of each other. If you want speed as much as I do, use `mamba`.
 
 ### pip and conda
@@ -75,12 +75,12 @@ As an example, we will install `miniforge`, which provides `mamba` and `conda`.
 `Miniforge` can be found at https://github.com/conda-forge/miniforge.
 
 To install in WSL, follow the installation instruction at
-https://github.com/conda-forge/miniforge. 
+https://github.com/conda-forge/miniforge.
 
 Once installed, you will need to restart your shell by closing and reopening
 your WSL terminal. You will notice a change in your shell prompt.
 
-```bash 
+```bash
 (base) User@Host:~$
 ```
 
@@ -218,7 +218,7 @@ Python 3.9.6 | packaged by conda-forge | (default, Jul 11 2021, 03:39:48)
 [GCC 9.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()
-(base) User@Host:~$          
+(base) User@Host:~$
 ```
 You can tell that the Python interpreter in `base` is Python 3.9 on my machine.
 It may differ on yours.
@@ -233,7 +233,7 @@ Next, let's activate the new environment:
 Python 3.12.3 | packaged by conda-forge | (main, Apr 15 2024, 18:38:13) [GCC 12.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()
-(base) User@Host:~$          
+(base) User@Host:~$
 ```
 
 You can tell the `python` command now points to the Python in the `pct`
@@ -268,7 +268,7 @@ recommended practice is:
 ### Installation with `conda`
 
 There are a few commonly used commands for `mamba` besides `activate` and
-`deactivate`: 
+`deactivate`:
 
 - `mamba install`: Install a package.
 - `mamba update`: Update a package.
@@ -277,12 +277,12 @@ There are a few commonly used commands for `mamba` besides `activate` and
 
 ```{admonition} Exercise
 1. Activate the `pct` environment.
-2. Install `jupyter` via `mamba` using `mamba install jupyter`. 
+2. Install `jupyter` via `mamba` using `mamba install jupyter`.
    You will be prompted to confirm the installation. Type `y` and press `Enter`.
    You can skip the confirmation with `mamba install jupyter --yes`.
 3. Run `jupyter notebook` to start the Jupyter notebook. Follow the link to open
    the notebook in your web browser.
-4. Close the notebook program from the terminal by using `Ctrl-C` 
+4. Close the notebook program from the terminal by using `Ctrl-C`
    (holding down Ctrl and press C).
 5. Deactivate the `pct` environment to return to `base`.
 6. Run `jupyter notebook` again. You should see an error message, indicating that
@@ -292,7 +292,7 @@ There are a few commonly used commands for `mamba` besides `activate` and
 Oftentimes, you will use `conda search` to search for packages. For example,
 `mamba search jupyter` will search for `jupyter` in the `conda-forge` channel,
 which the default channel for mamba. The search result may include multiple versions
-of `jupyter`. 
+of `jupyter`.
 
 ```{admonition} Specifying the version for packages
 You can install a specific version of `jupyter` by specifying the
@@ -323,7 +323,7 @@ The basic commands for `pip` are:
 You can refer to pip documentation at https://pip.pypa.io/en/stable/cli/
 
 ```{admonition} Where does pip install packages?
-`pip` is a Python package, so it installs to the same environment that 
+`pip` is a Python package, so it installs to the same environment that
 contains the Python executable. This environment is often the active environment.
 
 To confirm, run `which python` and `which pip`. Their paths should be the same.
@@ -358,7 +358,7 @@ published, such as a personal project on GitHub, you will need to install from
 source.
 
 ```{admonition} Note
-Not all Python repositories on GitHub are installable though. Some repos are 
+Not all Python repositories on GitHub are installable though. Some repos are
 meant for sharing scripts, not for distribution.
 ```
 
@@ -400,7 +400,7 @@ problem. The solution is also to remove all of them and reinstall just one copy.
 
 Mamba provides a command to list all installed packages in the current
 environment. Below is an example of the output; your list should look much
-longer. 
+longer.
 
 ```bash
 mamba list
@@ -413,7 +413,7 @@ pypower                   5.1.16                   pypi_0    pypi
 [TRUNCATED OUTPUT]
 ```
 
-When you scroll through it, you will see the `Build` and `Channel` columns
+Scroll through it, you will see the `Build` and `Channel` columns
 contain different information for `jupyter` and `pypower`. Since `jupyter` is
 installed via `mamba`, `mamba` then nows the channel and the build number.
 `pypower` is installed via `pip`, so the Channel shows `pypi`. You can use this
@@ -421,13 +421,57 @@ to tell which package manager installed the package.
 
 ## System-wide packages
 
+Beside mamba/conda-installed packages, each Linux distribution also comes with
+at least one package manager.
 
-`development tools`
+The most popular one is `apt`, which is the package manager for Debian-based
+distributions. Ubuntu is a Debian-based distribution. We will discuss some very
+basic usage of `apt`.
+
+### Updating the package list
+
+Executing `apt` requires superuser permission. On Ubuntu, you can update the
+package list by running `sudo apt update`. This will fetch the latest package
+information from the repositories.
+
+When done, it will show the number of packages available for upgrade.
+
+### Installing a package
+
+To install a package, use `sudo apt install <package>`. For example, to install
+the `development tools`, use
+
+```bash
+sudo apt install build-essential
+```
+
+You can add the argument `-y` to skip the confirmation.
+
+`build-essential` includes compilers and other development tools. When done, you
+will have tools like `gcc`, `make`, `g++`, etc. To check if the installation is
+successful, run `gcc -v`.
+
+Packages installed via `apt` are global packages. They are installed to the
+system, not just to the current user.
+
+### Removing a package
+
+To remove a package, use `sudo apt remove <package>`.
 
 
-Having a system-wide python and environmental python
+### System-wide or local?
 
-Test
+You may have packages that are installed by both `apt` and `mamba`. We mentioned
+that `which` can be used to determine which interpreter is used when you run
+`python3` in a terminal.
+
+```{admonition} Exercise
+
+1. Open a new terminal. You should be in the (base) environment.
+2. Find out which python3 it is.
+3. Deactive the environment. Find out which python3 again.
+   This time, it should point to a system-wide python3.
+```
 
 ```{bibliography}
 :filter: docname in docnames
