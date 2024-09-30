@@ -1,10 +1,11 @@
-::: {.cell .markdown}
+<div class="cell markdown">
+
 # Jupyter Notebook
 
 ## Why use Jupyter?
 
 Jupyter is an open-source, web-based interface for interactive
-computing. Jupyter Notebook is Jupyter\'s document format that can store
+computing. Jupyter Notebook is Jupyter's document format that can store
 live code, equations, visualizations, and text. These documents can be
 shared for reproducible research and published online. This book you are
 reading is written in Jupyter Notebook.
@@ -12,12 +13,14 @@ reading is written in Jupyter Notebook.
 Jupyter supports many programming languages, including Python, Julia and
 R. Since the primary language of this training is Python, we will use
 Jupyter for it.
-:::
 
-::: {.cell .markdown}
+</div>
+
+<div class="cell markdown">
+
 ## Install Jupyter
 
-### Jupyter Notebook {#jupyter-notebook}
+### Jupyter Notebook
 
 If you have followed through the previous section, you should have
 already installed Jupyter Notebook. If not, you can install it by
@@ -64,13 +67,13 @@ jupyter lab
 
 The official Jupyter website contains two brief tours:
 
--   [Jupyter Notebook
-    Tour](https://jupyter.org/try-jupyter/notebooks/?path=notebooks/Intro.ipynb)
--   [JupyterLab Tour](https://jupyter.org/try-jupyter/lab/index.html)
+- [Jupyter Notebook
+  Tour](https://jupyter.org/try-jupyter/notebooks/?path=notebooks/Intro.ipynb)
+- [JupyterLab Tour](https://jupyter.org/try-jupyter/lab/index.html)
 
 Please visit each of them. After the page loads, you will see a message
-at the lower right corner, saying \"Try the Notebook Tour\" or \"Try the
-Welcome Tour.\". Click \"Start Now\" to begin the tour.
+at the lower right corner, saying "Try the Notebook Tour" or "Try the
+Welcome Tour.". Click "Start Now" to begin the tour.
 
 ## Shortcuts
 
@@ -94,13 +97,17 @@ Here are some shortcuts to start with:
     separator.
 9.  To change a cell from code to markdown, press `m`. To change it back
     to code, press `y`.
-:::
 
-::: {.cell .markdown}
+</div>
+
+<div class="cell markdown">
+
 # 
-:::
 
-::: {.cell .markdown}
+</div>
+
+<div class="cell markdown">
+
 # Advanced Features
 
 ## Magic Commands
@@ -112,7 +119,7 @@ magics) or `%%` (cell magics). They provide quick access to various
 features and can significantly enhance your workflow. Here are some
 commonly used magic commands:
 
-### Line Magics (%) {#line-magics-}
+### Line Magics (%)
 
 1.  `%timeit`: Time the execution of a single line of code
 
@@ -142,7 +149,7 @@ commonly used magic commands:
     %load my_script.py
     ```
 
-### Cell Magics (%%) {#cell-magics-}
+### Cell Magics (%%)
 
 1.  `%%time`: Time the execution of an entire cell. This is useful when
     you want to understand the performance of a code block
@@ -177,9 +184,11 @@ You can get a list of all available magic commands by running
 Magic commands are a powerful feature of Jupyter that can help you write
 more efficient and interactive notebooks. Experiment with different
 magic commands to find the ones that best suit your workflow!
-:::
 
-::: {.cell .markdown}
+</div>
+
+<div class="cell markdown">
+
 ## Markdown and LaTeX
 
 Jupyter supports Markdown for rich text formatting and LaTeX for
@@ -197,14 +206,16 @@ $$
 \frac{\partial f}{\partial x} = 2x
 $$
 ```
-:::
 
-::: {.cell .markdown}
+</div>
+
+<div class="cell markdown">
+
 ## Exporting Notebooks
 
 Jupyter notebooks can be exported to various formats. One can use the
-menu \"File\" - \"Save and Export Notebook As\" to export the notebook
-from the `.ipynb` format to others.
+menu "File" - "Save and Export Notebook As" to export the notebook from
+the `.ipynb` format to others.
 
 Notebooks can also be converted with commands:
 
@@ -212,9 +223,11 @@ Notebooks can also be converted with commands:
 jupyter nbconvert --to pdf your_notebook.ipynb
 jupyter nbconvert --to html your_notebook.ipynb
 ```
-:::
 
-::: {.cell .markdown}
+</div>
+
+<div class="cell markdown">
+
 ## Jupyterlab Extensions
 
 In addition to the standard features, Jupyterlab can be extended by
@@ -222,28 +235,30 @@ using third-party extensions. These third-party extensions provide
 features such as code formatting, integration with Google Drive, or
 integration with GitHub.
 
-Extensions can be installed by clicking on the \"puzzle piece\" icon.
-Upon the first use, one will be warned about the risks of using
-third-party extensions. After acknowledging the risks, one can use the
-search feature to find extensions, or browse all of them.
+Extensions can be installed by clicking on the "puzzle piece" icon. Upon
+the first use, one will be warned about the risks of using third-party
+extensions. After acknowledging the risks, one can use the search
+feature to find extensions, or browse all of them.
 
 There are some good extensions to begin with, but one may install them
 as needed, becasue having to load many extension may slow the startup of
 Jupyterlab and increase memory consumption on the client browser.
 
-Try searching for \"formatter\" and installing
+Try searching for "formatter" and installing
 `jupyterlab-code-formatter`. When done, in a new notebook window, a
-\"format notebook\" icon will appear. To use it, highlight the code to
+"format notebook" icon will appear. To use it, highlight the code to
 reformat, and click on the formatter.
 
 Other useful extensions to consider:
 
--   jupyterlabcodetoc: for adding a table of contents, which helps
-    navigate in a large but organized notebook
--   jupyterlab-git: for git integration within Jupyterlab
-:::
+- jupyterlabcodetoc: for adding a table of contents, which helps
+  navigate in a large but organized notebook
+- jupyterlab-git: for git integration within Jupyterlab
 
-::: {.cell .markdown}
+</div>
+
+<div class="cell markdown">
+
 ## Themes
 
 JupyterLab supports both light and dark themes just like your newer
@@ -252,9 +267,11 @@ to Settings \> Theme in the JupyterLab menu.
 
 Using a dark theme can be easier on the eyes, especially when working in
 low-light environments.
-:::
 
-::: {.cell .markdown}
+</div>
+
+<div class="cell markdown">
+
 ## Setting Password
 
 You may have noticed that Jupyter generates a random session key each
@@ -264,14 +281,14 @@ time you start it. That looks like
 
 If you are using Jupyter on a local WSL, it may be helpful to use your
 own password, so that you can head directly to the browser if the
-automatic pop-up doesn\'t work. Also, setting a password for your
-Jupyter server is an important security measure, especially if you\'re
-running Jupyter on a network where others might access it.
+automatic pop-up doesn't work. Also, setting a password for your Jupyter
+server is an important security measure, especially if you're running
+Jupyter on a network where others might access it.
 
-Here\'s how to set up a password with a recent version (\>v5.0) of
+Here's how to set up a password with a recent version (\>v5.0) of
 Jupyter Notebook:
 
-1.  First, generate a config file if you don\'t already have one:
+1.  First, generate a config file if you don't already have one:
 
     ``` bash
     jupyter notebook --generate-config
@@ -283,25 +300,29 @@ Jupyter Notebook:
     jupyter notebook password
     ```
 
-    You\'ll be prompted to enter and verify your password.
+    You'll be prompted to enter and verify your password.
 
 3.  This will create a hashed password in your Jupyter config file. You
-    can now start Jupyter normally, and you\'ll be required to enter
-    this password to access your notebooks.
+    can now start Jupyter normally, and you'll be required to enter this
+    password to access your notebooks.
 
-Remember, it\'s crucial to choose a strong, unique password to protect
+Remember, it's crucial to choose a strong, unique password to protect
 your Jupyter environment and any sensitive data in your notebooks.
 
 When running Jupyter on a shared or public network, consider additional
 security measures like using SSL encryption or running Jupyter behind a
 reverse proxy.
-:::
 
-::: {.cell .markdown}
+</div>
+
+<div class="cell markdown">
+
 For more advanced topics, refer to the [official Jupyter
 documentation](https://docs.jupyter.org/en/latest/) and community
 resources.
-:::
 
-::: {.cell .markdown}
-:::
+</div>
+
+<div class="cell markdown">
+
+</div>

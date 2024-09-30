@@ -38,7 +38,7 @@ layout is always consistent: the left panel is related to your work, the
 middle is the feeds from your network, and the right is announcements
 and trending projects.
 
-![git-landing.png](media/74fb1695-3c9e-4400-b5f8-7976c7583456.png)
+![git-landing.png](./media/74fb1695-3c9e-4400-b5f8-7976c7583456.png)
 
 </div>
 
@@ -57,7 +57,7 @@ Let's start by creating a new repository. Click on the "New" button on
 the top-left corner, as shown in the figure above. It will take to the
 next page, which looks like this:
 
-![git-make-new-repo.png](media/c4128b71-f941-4b88-b10c-78986fcf355f.png)
+![git-make-new-repo.png](./media/c4128b71-f941-4b88-b10c-78986fcf355f.png)
 
 </div>
 
@@ -71,7 +71,7 @@ use cases, we will choose `Public`.
 Scroll down to the bottom and click on the green "Create repository"
 button. You will be redirected to the repo page.
 
-![git-new-repo-index.png](media/86d2ae79-67ca-49fe-bf6e-15d47c726e58.png)
+![git-new-repo-index.png](./media/86d2ae79-67ca-49fe-bf6e-15d47c726e58.png)
 
 </div>
 

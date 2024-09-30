@@ -34,7 +34,7 @@ It is highly recommended to complete the "Getting Started with VS Code"
 guide. You will learn many useful points, such as changing settings and
 the keyboard shortcut for the command-line palette.
 
-![VSCodeLanding.png](media/51211c98-856d-4d29-b2bd-f4d8cd94f0d8.png)
+![VSCodeLanding.png](./media/51211c98-856d-4d29-b2bd-f4d8cd94f0d8.png)
 
 </div>
 
@@ -75,7 +75,7 @@ the WSL Target.
 
 <div class="cell markdown">
 
-![WSL-target.png](media/1b4437b2-17b8-4671-ba37-c5f9defc4c85.png)
+![WSL-target.png](./media/1b4437b2-17b8-4671-ba37-c5f9defc4c85.png)
 
 </div>
 
@@ -116,7 +116,7 @@ linter for automatically formatting your code.
 
 <div class="cell markdown">
 
-![install-python-wsl.png](media/6f0755f3-8481-4694-85b3-85db557fcd32.png)
+![install-python-wsl.png](./media/6f0755f3-8481-4694-85b3-85db557fcd32.png)
 
 </div>
 
@@ -131,7 +131,7 @@ folder, you can select "Yes, I trust the authors" and proceed.
 
 <div class="cell markdown">
 
-![trust-authors.png](media/243c9cce-eff6-4828-bac3-1990769c1a09.png)
+![trust-authors.png](./media/243c9cce-eff6-4828-bac3-1990769c1a09.png)
 
 </div>
 
@@ -174,7 +174,7 @@ you will see both the system-wide and `pct` python interpreters.
 
 <div class="cell markdown">
 
-![select-interpreter-menu.png](media/2975748e-e278-47b6-9788-739277b3e125.png)
+![select-interpreter-menu.png](./media/2975748e-e278-47b6-9788-739277b3e125.png)
 
 </div>
 
@@ -194,7 +194,7 @@ tabs. You will see a terminal at the bottom of the screen.
 
 <div class="cell markdown">
 
-![executed-python-code-right-interpreter.png](media/d6b76c4f-ded0-4e2d-b2ef-7f096ec8a01c.png)
+![executed-python-code-right-interpreter.png](./media/d6b76c4f-ded0-4e2d-b2ef-7f096ec8a01c.png)
 
 </div>
 
