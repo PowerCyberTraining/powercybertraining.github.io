@@ -16,5 +16,7 @@ chapters:
 - file: modules/04/intro.md
   sections:
   - file: modules/04/linear-equations.ipynb
+  - file: modules/04/nonlinear-equations.ipynb
+  - file: modules/04/acceleration.ipynb
 - file: notebooks
 - file: markdown-notebooks
