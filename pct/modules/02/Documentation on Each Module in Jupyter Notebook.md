@@ -157,40 +157,29 @@ The mathematical model for day-ahead economic dispatch constructed in this modul
 
 The objective function is to minimize the generation cost, where $P_{i,t}$ represents the output of generator $i$ in time period $t$, $C_g(P_{i,t})$ denotes the generation cost of generator $i$ in time period $t$, $N_g$ is the total number of generators, and $T$ is the total number of scheduling periods.
 
-\begin{equation}
-\min \sum_{i=1}^{N_g} \sum_{t=1}^{T} C_g(P_{i,t})
-\end{equation}
+$$\min \sum_{i=1}^{N_g} \sum_{t=1}^{T} C_g(P_{i,t})$$
 <div style="text-align: right">(1)</div>
 
 The constraints are as follows. For example, the generator's ramping constraint,  where $\Delta P_{i}^{U}$ represents the ramp-up limit and $\Delta P_{i}^{D}$ represents the ramp-down limit.
 
-\begin{align}
-P_{i,t} - P_{i,t-1} &\leq  \Delta P_{i}^{U} \\
-P_{i,t-1} - P_{i,t} &\leq  \Delta P_{i}^{D}
-\end{align}
+$$P_{i,t} - P_{i,t-1} \leq  \Delta P_{i}^{U}$$ 
+
+$$P_{i,t-1} - P_{i,t} \leq  \Delta P_{i}^{D}$$
 <div style="text-align: right">(2)</div>
 
 System load balance constraints, where $D_{k,t}$ represents the load at bus $k$ during time period $t$, and $K$ denotes the total number of buses.
 
-\begin{equation}
-\sum_{i=1}^{N_{g}} P_{i,t} \geq \sum_{k=1}^{K}D_{k,t}
-\end{equation}
+$$\sum_{i=1}^{N_{g}} P_{i,t} \geq \sum_{k=1}^{K}D_{k,t}$$
 <div style="text-align: right">(3)</div>
 
 Line flow limit constraints, where GSF represents the shift factor matrix, and $P_{l}^{max}$ denotes the line flow limit.
 
-\begin{aligned}
--P_{l}^{max}\leq &\sum_{i=1}^{N_{i}}GSF_{l-i}*P_{i,t}-\sum_{k=1}^{N_{l}}GSF_{l-k}*D_{k,t}\leq P_{l}^{max}
-\end{aligned}
-
+$$-P_{l}^{max}\leq \sum_{i=1}^{N_{i}}GSF_{l-i}*P_{i,t}-\sum_{k=1}^{N_{l}}GSF_{l-k}*D_{k,t}\leq P_{l}^{max}$$
 <div style="text-align: right">(4)</div>
 
 Generator output limit constraints, where $P_{i}^{max}$ and $P_{i}^{min}$ represent the upper and lower output limits of generator $i$, respectively.
-$$
-\begin{equation}
-P_{i}^{min}\leq P_{i,t}\leq P_{i}^{max}
-\end{equation}
-$$
+
+$$P_{i}^{min}\leq P_{i,t}\leq P_{i}^{max}$$
 <div style="text-align: right">(5)</div>
 
 Next, we use Gurobipy [1] to model and solve this mathematical formulation.
