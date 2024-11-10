@@ -3,12 +3,11 @@
 ## Overview
 The PJM 5-bus system was originally published as early as 1999 [1]. This system includes a total of 5 buses, 6 lines, 5 generators, and 3 loads. Based on the PJM 5-bus system used in [1], our module introduces several modifications to the parameters. Further details are presented in the following sections.
 
-[1] F. Li and R. Bo, "Small Test Systems for Power System Economic Studies," 2010 IEEE PES General Meeting, Minneapolis, MN, USA, 2010, pp. 1-4, doi: 10.1109/PES.2010.5589973.
+
 
 ## Generator parameters
 The parameters of the generators are presented below. Each generator's ramp rate is set to 50% [2] of its maximum power output, and the minimum power output for each generator is assumed to be 20% of its maximum power output.
 
-[2] X. Fang, F. Li, Y. Wei, and H. Cui, "Strategic scheduling of energy storage for load serving entities in locational marginal pricing market," IET Generation, Transmission & Distribution, vol. 9, no. 4, pp. 358–365, Apr. 2015, doi: 10.1049/iet-gtd.2015.0144.
 
 | Name | Location | Ramping limit (MW) | Min (MW) | Max (MW) | Price ($/MWh) |
 |------------------|----------|--------------------|--------|--------|---------------|
@@ -44,6 +43,7 @@ The load for each bus throughout the 24 hours is presented below.
 | Bus E | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
 
 
+## References
+[1] F. Li and R. Bo, "Small Test Systems for Power System Economic Studies," 2010 IEEE PES General Meeting, Minneapolis, MN, USA, 2010, pp. 1-4, doi: 10.1109/PES.2010.5589973.
 
-
-
+[2] X. Fang, F. Li, Y. Wei, and H. Cui, "Strategic scheduling of energy storage for load serving entities in locational marginal pricing market," IET Generation, Transmission & Distribution, vol. 9, no. 4, pp. 358–365, Apr. 2015, doi: 10.1049/iet-gtd.2015.0144.

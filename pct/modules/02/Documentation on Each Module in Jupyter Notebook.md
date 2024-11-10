@@ -152,6 +152,52 @@ print(SF)
 
 ## 2. Formulating the optimization model and solving the optimization problem
 
+The mathematical model for day-ahead economic dispatch constructed in this module is as follows:
+
+The objective function is to minimize the generation cost, where $P_{i,t}$ represents the output of generator $i$ in time period $t$, $C_g(P_{i,t})$ denotes the generation cost of generator $i$ in time period $t$, $N_g$ is the total number of generators, and $T$ is the total number of scheduling periods.
+$$
+\begin{equation}
+\min \sum_{i=1}^{N_g} \sum_{t=1}^{T} C_g(P_{i,t})
+\end{equation}
+$$
+<div style="text-align: right">(1)</div>
+
+The constraints are as follows. For example, the generator's ramping constraint,  where $\Delta P_{i}^{U}$ represents the ramp-up limit and $\Delta P_{i}^{D}$ represents the ramp-down limit.
+$$
+\begin{align}
+P_{i,t} - P_{i,t-1} &\leq  \Delta P_{i}^{U} \\
+P_{i,t-1} - P_{i,t} &\leq  \Delta P_{i}^{D}
+\end{align}
+$$
+<div style="text-align: right">(2)</div>
+
+System load balance constraints, where $D_{k,t}$ represents the load at bus $k$ during time period $t$, and $K$ denotes the total number of buses.
+$$
+\begin{equation}
+\sum_{i=1}^{N_{g}} P_{i,t} \geq \sum_{k=1}^{K}D_{k,t}
+\end{equation}
+$$
+<div style="text-align: right">(3)</div>
+
+Line flow limit constraints, where GSF represents the shift factor matrix, and $P_{l}^{max}$ denotes the line flow limit.
+$$
+\begin{aligned}
+-P_{l}^{max}\leq &\sum_{i=1}^{N_{i}}GSF_{l-i}*P_{i,t}-\sum_{k=1}^{N_{l}}GSF_{l-k}*D_{k,t}\leq P_{l}^{max}
+\end{aligned}
+$$
+<div style="text-align: right">(4)</div>
+
+Generator output limit constraints, where $P_{i}^{max}$ and $P_{i}^{min}$ represent the upper and lower output limits of generator $i$, respectively.
+$$
+\begin{equation}
+P_{i}^{min}\leq P_{i,t}\leq P_{i}^{max}
+\end{equation}
+$$
+<div style="text-align: right">(5)</div>
+
+Next, we use Gurobipy [1] to model and solve this mathematical formulation.
+
+
 First, if you have not installed Gurobipy, you can install it in Jupyter Notebook using the following command:
 
 ```python
@@ -174,7 +220,7 @@ gen_fuel_cost = grb.quicksum(gen_cost[i]*(P_i_t[i,t]) for i in range(N_gen) for 
 M.setObjective(gen_fuel_cost, GRB.MINIMIZE)
 ```
 
-Next, you need to define various constraints, such as ramping constraints:
+Next, you need to define various constraints, such as ramping constraints (In this case, we assume the ramp-up and ramp-down limits are identical):
 ```python
 M.addConstrs((P_i_t[i,t]-P_i_t[i,t-1]<=gen_ramping[i] for i in range(N_gen)  for t in range(1,N_interval)),name='con_1')
 M.addConstrs((P_i_t[i,t-1]-P_i_t[i,t]<=gen_ramping[i] for i in range(N_gen)  for t in range(1,N_interval)),name='con_2'
@@ -257,5 +303,5 @@ for i in range(N_gen):
     individual_gen_cost[i]=gen_cost[i]*sum(P_i_t_1[i,1:])
 print(f'Operating cost of individual gen {i+1}: {individual_gen_cost[i]:.2f}')
 ```
-
-
+## References
+[1] Gurobi Optimization, LLC, “Gurobi Optimizer Reference Manual,” 2023.
