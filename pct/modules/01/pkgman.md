@@ -2,16 +2,26 @@
 
 ## Python environment
 
-Python is a popular programming language widely used for scientific computing.
-It is known for its simplicity and readability. Python has a rich ecosystem of
-libraries and tools that make it a powerful language for data analysis, machine
-learning, and web development.
 
-An important aspects of software development is the management of
-dependencies. There is always such need because one of your projects can depend
-on a specific version of a package. You will create multiple so-called
-"environments", such that a specific version of packages is installed in a specific
-environment.
+Python has become a standard tool in power systems engineering, offering
+extensive capabilities for system analysis, optimization, and data processing.
+Its widespread adoption in the field stems from both its accessibility and its
+rich ecosystem of specialized libraries that can be combined to solve complex
+problems.
+
+When developing power system applications, you will typically work with multiple
+specialized packages; some for numerical computations, others for power system
+modeling, and perhaps others for visualization or data analysis. These packages
+often have specific version requirements, especially when dealing with
+industry-standard tools or research implementations.
+
+This is where Python environments become essential. An environment is an
+isolated workspace that allows you to maintain different configurations of
+packages for different projects. For instance, you might have one environment
+configured for power system stability analysis with an older version of
+numerical solvers, and another set up for machine learning applications in load
+forecasting that needs a newer version of the same solver. The solver is called a
+"dependency" of the project.
 
 Python provides a package manager called `pip` that makes it easy
 to install and manage dependencies. `pip` works well for small projects but sees
