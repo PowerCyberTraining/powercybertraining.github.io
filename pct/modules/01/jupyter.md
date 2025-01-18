@@ -102,15 +102,9 @@ Here are some shortcuts to start with:
 
 <div class="cell markdown">
 
-# 
+## Advanced Features
 
-</div>
-
-<div class="cell markdown">
-
-# Advanced Features
-
-## Magic Commands
+### Magic Commands
 
 Magic commands are a special commands to make life easier.
 
