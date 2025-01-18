@@ -76,19 +76,41 @@ handle binary dependencies differently under the hood.
 
 ## Using mamba to manage environments
 
-My recommended practice is to use `conda`/`mamba` to manage environments. This
-is helpful on Windows, Linux (including WSL), and macOS to avoid headaches down
-the road.
+We recommend using `conda`/`mamba` to manage environments. This is helpful on
+Windows, Linux (including WSL), and macOS to avoid headaches down the road.
 
 ### Installation
 As an example, we will install `miniforge`, which provides `mamba` and `conda`.
 `Miniforge` can be found at https://github.com/conda-forge/miniforge.
 
-To install in WSL, follow the installation instruction at
-https://github.com/conda-forge/miniforge.
+To install `miniforge`in WSL, follow the installation instruction at
+https://github.com/conda-forge/miniforge?tab=readme-ov-file#unix-like-platforms-macos--linux.
+In a nutshell, there are two steps:
 
-Once installed, you will need to restart your shell by closing and reopening
-your WSL terminal. You will notice a change in your shell prompt.
+1. Download the installer script.
+
+```bash
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+```
+
+2. Run the installer script.
+
+```bash
+bash Miniforge3-$(uname)-$(uname -m).sh
+```
+
+The installer script will ask you to review the license terms. Press Enter to
+continue, scroll down to the end, type `yes` and press enter to continue.
+
+Next, the installer will ask you other questions such as the installation directory. If
+you are unsure, press Enter to accept the default.
+
+You will wait a few minutes for the installation to complete. At the end, the
+installer will ask if you want to automatically initialize conda. The default
+option is `no`, but for convenience, we recommend typing `yes` to continue.
+
+Once installed, restart your shell by closing and reopening your WSL terminal.
+A change will appear in your shell prompt:
 
 ```bash
 (base) User@Host:~$
