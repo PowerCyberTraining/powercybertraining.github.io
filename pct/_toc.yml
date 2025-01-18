@@ -18,5 +18,3 @@ chapters:
   - file: modules/04/linear-equations.ipynb
   - file: modules/04/nonlinear-equations.ipynb
   - file: modules/04/power-flow.ipynb
-- file: notebooks
-- file: markdown-notebooks
