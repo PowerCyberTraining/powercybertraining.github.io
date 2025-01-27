@@ -1,17 +1,27 @@
-# Software and Package Management
+# Package Management
 
 ## Python environment
 
-Python is a popular programming language widely used for scientific computing.
-It is known for its simplicity and readability. Python has a rich ecosystem of
-libraries and tools that make it a powerful language for data analysis, machine
-learning, and web development.
 
-An important aspects of software development is the management of
-dependencies. There is always such need because one of your projects can depend
-on a specific version of a package. You will create multiple so-called
-"environments", such that a specific version of packages is installed in a specific
-environment.
+Python has become a standard tool in power systems engineering, offering
+extensive capabilities for system analysis, optimization, and data processing.
+Its widespread adoption in the field stems from both its accessibility and its
+rich ecosystem of specialized libraries that can be combined to solve complex
+problems.
+
+When developing power system applications, you will typically work with multiple
+specialized packages; some for numerical computations, others for power system
+modeling, and perhaps others for visualization or data analysis. These packages
+often have specific version requirements, especially when dealing with
+industry-standard tools or research implementations.
+
+This is where Python environments become essential. An environment is an
+isolated workspace that allows you to maintain different configurations of
+packages for different projects. For instance, you might have one environment
+configured for power system stability analysis with an older version of
+numerical solvers, and another set up for machine learning applications in load
+forecasting that needs a newer version of the same solver. The solver is called a
+"dependency" of the project.
 
 Python provides a package manager called `pip` that makes it easy
 to install and manage dependencies. `pip` works well for small projects but sees
@@ -21,10 +31,10 @@ for specific operating systems and hardware architectures.
 
 To solve the problem of binary dependencies, we can use a package manager called
 `conda`. `conda` is a package manager that is more robust and handles binary
-dependencies better than `pip`. 
+dependencies better than `pip`.
 
 ### Anaconda, conda, and miniconda
-Here is some background. 
+Here is some background.
 
 1. Anaconda Inc. is a company that develops the Anaconda Distribution ("Anaconda" in short).
 It is a collection of packages for Python and R.
@@ -35,8 +45,8 @@ It is a collection of packages for Python and R.
 Anaconda that provides only `conda`, Python, and a small number of packages like `pip`.
 
 ### conda-forge
-To distribute packages on Anaconda, one needs to create an account and publish the 
-package under that account (called "channel"). It is sometimes difficult locate the channel 
+To distribute packages on Anaconda, one needs to create an account and publish the
+package under that account (called "channel"). It is sometimes difficult locate the channel
 and the correct version of the package. Therefore, `conda-forge` is a single, community-managed
 channel that contains all the packages that are available for `conda`.
 
@@ -47,7 +57,7 @@ resolving many dependencies with multiple versions. `mamba`, as the name suggest
 package manager that is built on top of `conda` and `pip`. It is a drop-in replacement for `conda`
 and is much faster.
 
-In the following, we may use `mamba` and `conda` interchangeably as they are 
+In the following, we may use `mamba` and `conda` interchangeably as they are
 drop-in replacements of each other. If you want speed as much as I do, use `mamba`.
 
 ### pip and conda
@@ -66,21 +76,43 @@ handle binary dependencies differently under the hood.
 
 ## Using mamba to manage environments
 
-My recommended practice is to use `conda`/`mamba` to manage environments. This
-is helpful on Windows, Linux (including WSL), and macOS to avoid headaches down
-the road.
+We recommend using `conda`/`mamba` to manage environments. This is helpful on
+Windows, Linux (including WSL), and macOS to avoid headaches down the road.
 
 ### Installation
 As an example, we will install `miniforge`, which provides `mamba` and `conda`.
 `Miniforge` can be found at https://github.com/conda-forge/miniforge.
 
-To install in WSL, follow the installation instruction at
-https://github.com/conda-forge/miniforge. 
+To install `miniforge`in WSL, follow the installation instruction at
+https://github.com/conda-forge/miniforge?tab=readme-ov-file#unix-like-platforms-macos--linux.
+In a nutshell, there are two steps:
 
-Once installed, you will need to restart your shell by closing and reopening
-your WSL terminal. You will notice a change in your shell prompt.
+1. Download the installer script.
 
-```bash 
+```bash
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+```
+
+2. Run the installer script.
+
+```bash
+bash Miniforge3-$(uname)-$(uname -m).sh
+```
+
+The installer script will ask you to review the license terms. Press Enter to
+continue, scroll down to the end, type `yes` and press enter to continue.
+
+Next, the installer will ask you other questions such as the installation directory. If
+you are unsure, press Enter to accept the default.
+
+You will wait a few minutes for the installation to complete. At the end, the
+installer will ask if you want to automatically initialize conda. The default
+option is `no`, but for convenience, we recommend typing `yes` to continue.
+
+Once installed, restart your shell by closing and reopening your WSL terminal.
+A change will appear in your shell prompt:
+
+```bash
 (base) User@Host:~$
 ```
 
@@ -218,7 +250,7 @@ Python 3.9.6 | packaged by conda-forge | (default, Jul 11 2021, 03:39:48)
 [GCC 9.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()
-(base) User@Host:~$          
+(base) User@Host:~$
 ```
 You can tell that the Python interpreter in `base` is Python 3.9 on my machine.
 It may differ on yours.
@@ -233,7 +265,7 @@ Next, let's activate the new environment:
 Python 3.12.3 | packaged by conda-forge | (main, Apr 15 2024, 18:38:13) [GCC 12.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()
-(base) User@Host:~$          
+(base) User@Host:~$
 ```
 
 You can tell the `python` command now points to the Python in the `pct`
@@ -268,7 +300,7 @@ recommended practice is:
 ### Installation with `conda`
 
 There are a few commonly used commands for `mamba` besides `activate` and
-`deactivate`: 
+`deactivate`:
 
 - `mamba install`: Install a package.
 - `mamba update`: Update a package.
@@ -277,12 +309,12 @@ There are a few commonly used commands for `mamba` besides `activate` and
 
 ```{admonition} Exercise
 1. Activate the `pct` environment.
-2. Install `jupyter` via `mamba` using `mamba install jupyter`. 
+2. Install `jupyter` via `mamba` using `mamba install jupyter`.
    You will be prompted to confirm the installation. Type `y` and press `Enter`.
    You can skip the confirmation with `mamba install jupyter --yes`.
 3. Run `jupyter notebook` to start the Jupyter notebook. Follow the link to open
    the notebook in your web browser.
-4. Close the notebook program from the terminal by using `Ctrl-C` 
+4. Close the notebook program from the terminal by using `Ctrl-C`
    (holding down Ctrl and press C).
 5. Deactivate the `pct` environment to return to `base`.
 6. Run `jupyter notebook` again. You should see an error message, indicating that
@@ -292,7 +324,7 @@ There are a few commonly used commands for `mamba` besides `activate` and
 Oftentimes, you will use `conda search` to search for packages. For example,
 `mamba search jupyter` will search for `jupyter` in the `conda-forge` channel,
 which the default channel for mamba. The search result may include multiple versions
-of `jupyter`. 
+of `jupyter`.
 
 ```{admonition} Specifying the version for packages
 You can install a specific version of `jupyter` by specifying the
@@ -310,18 +342,168 @@ It is useful to check what packages are installed in the current env.
 ```
 
 ### Installation with `pip`
+`pip` is the standard package manager for Python. In any mamba environment, if
+Python is installed, `pip` is installed. We discussed the reasons to prefer
+`mamba` over `pip`. Occasionally, you will still use `pip`.
 
+The basic commands for `pip` are:
 
-(Talk about the `mamba list ` output that includes pypi packages)
+- `pip install`: Install a package.
+- `pip remove`: Remove a package.
+- `pip list`: List installed packages in the current environment.
 
+You can refer to pip documentation at https://pip.pypa.io/en/stable/cli/
+
+```{admonition} Where does pip install packages?
+`pip` is a Python package, so it installs to the same environment that
+contains the Python executable. This environment is often the active environment.
+
+To confirm, run `which python` and `which pip`. Their paths should be the same.
+
+If they are not the same, you will need to deactivate and activate the environment
+to fix environmental variables.
+
+```
+
+Published packages can be searched on the Python Package Index at
+https://pypi.org/. There was a `pip search` command, but unfortunately, it has
+been disabled for security reasons.
+
+To install a published package on `pip`, use `pip install <package>`.
+
+To emphasize, if a package is available for `conda`, install it via `conda`. This will
+satisfy a more complete set of dependencies.
+
+```{admonition} Exercise: Installing pypower
+1. Confirm that your pip is from the active environment.
+2. Install `pypower` via `pip`.
+3. Confirm that `pypower` is installed by running
+
+```bash
+python -c "import pypower; print(pypower)"
+```
+
+### Installing a package from source
+Most of the time, you will install packages that has been published to PyPI or
+conda-forge. If you are experimenting with a package that has yet to be
+published, such as a personal project on GitHub, you will need to install from
+source.
+
+```{admonition} Note
+Not all Python repositories on GitHub are installable though. Some repos are
+meant for sharing scripts, not for distribution.
+```
+
+If a package contains `setup.py`, you can install it from source by running
+`pip install .` in the root directory of the package. Note the `.` at the end of
+the command. It specifies the directory that contains `setup.py`.
+
+### Developing a package
+Another use of `pip` is to set up a developmental installation of a package.
+This is helpful you want to modify the package and test your changes, without
+having to reinstall the package.
+
+To install a package in developmental mode, run `pip install -e .` in the root
+directory of the package. Also note the dot at the end. The option `-e` means
+"editable".
+
+(TODO: add multiple choice questions and exercise to test understanding)
+
+### Mixing conda and pip
+
+Now that you have installed `jupyter` via `mamba` and `pypower` via `pip` to the
+same environment, both packages can be used in the same Python.
+
+There is a possibility that you install two different versions of the same
+packages to the same environment by using `mamba` and `pip`, respectively. This
+is because the two package managers are not designed to fully interopate.
+
+Installing two versions of the same package creates problems. You won't be able
+to tell which version is imported when you run a script. If you accidentally did
+so, which means that you didn't follow the `mamba` first, and then `pip`
+instructions, you will need to uninstall the package in **both** package
+managers, make sure that you get a clean environment without the package, and
+reinstall it using your desired package manager.
+
+Having multiple versions of the same package can also happen when you have
+installed a package, for example, `andes`, using `mamba`. Then, you
+develop-installed `andes` using `pip` from source. This creates the same
+problem. The solution is also to remove all of them and reinstall just one copy.
+
+Mamba provides a command to list all installed packages in the current
+environment. Below is an example of the output; your list should look much
+longer.
+
+```bash
+mamba list
+# packages in environment at /home/User/mambaforge/envs/pct:
+#
+# Name                    Version                   Build  Channel
+[TRUNCATED OUTPUT]
+jupyter                   1.0.0             pyhd8ed1ab_10    conda-forge
+pypower                   5.1.16                   pypi_0    pypi
+[TRUNCATED OUTPUT]
+```
+
+Scroll through it, you will see the `Build` and `Channel` columns
+contain different information for `jupyter` and `pypower`. Since `jupyter` is
+installed via `mamba`, `mamba` then nows the channel and the build number.
+`pypower` is installed via `pip`, so the Channel shows `pypi`. You can use this
+to tell which package manager installed the package.
 
 ## System-wide packages
 
+Beside mamba/conda-installed packages, each Linux distribution also comes with
+at least one package manager.
 
-`development tools`
+The most popular one is `apt`, which is the package manager for Debian-based
+distributions. Ubuntu is a Debian-based distribution. We will discuss some very
+basic usage of `apt`.
+
+### Updating the package list
+
+Executing `apt` requires superuser permission. On Ubuntu, you can update the
+package list by running `sudo apt update`. This will fetch the latest package
+information from the repositories.
+
+When done, it will show the number of packages available for upgrade.
+
+### Installing a package
+
+To install a package, use `sudo apt install <package>`. For example, to install
+the `development tools`, use
+
+```bash
+sudo apt install build-essential
+```
+
+You can add the argument `-y` to skip the confirmation.
+
+`build-essential` includes compilers and other development tools. When done, you
+will have tools like `gcc`, `make`, `g++`, etc. To check if the installation is
+successful, run `gcc -v`.
+
+Packages installed via `apt` are global packages. They are installed to the
+system, not just to the current user.
+
+### Removing a package
+
+To remove a package, use `sudo apt remove <package>`.
 
 
-Test
+### System-wide or local?
+
+You may have packages that are installed by both `apt` and `mamba`. We mentioned
+that `which` can be used to determine which interpreter is used when you run
+`python3` in a terminal.
+
+```{admonition} Exercise
+
+1. Open a new terminal. You should be in the (base) environment.
+2. Find out which python3 it is.
+3. Deactive the environment. Find out which python3 again.
+   This time, it should point to a system-wide python3.
+```
 
 ```{bibliography}
 :filter: docname in docnames

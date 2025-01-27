@@ -1,4 +1,4 @@
-# Fundamentals in Tooling
+# Tools You Need
 
 ## Motivation
 
@@ -20,7 +20,7 @@ This module aims to provide an introduction to several tools on Linux. These
 include
 - Windows Subsystem for Linux (WSL)
 - Shell
-- git
 - Anaconda/Mambaforge
-- Jupyter Notebook
 - VS Code
+- Jupyter Notebook
+- git

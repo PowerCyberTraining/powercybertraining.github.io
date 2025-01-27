@@ -11,5 +11,10 @@ chapters:
   - file: modules/01/filesystem.md
   - file: modules/01/pkgman.md
   - file: modules/01/env.md
-- file: notebooks
-- file: markdown-notebooks
+  - file: modules/01/jupyter.md
+  - file: modules/01/git.md
+- file: modules/04/intro.md
+  sections:
+  - file: modules/04/linear-equations.ipynb
+  - file: modules/04/nonlinear-equations.ipynb
+  - file: modules/04/power-flow.ipynb
