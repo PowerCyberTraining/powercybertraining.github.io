@@ -16,6 +16,26 @@ If you'd like to develop and/or build the PowerCyber Training book, you should:
 
 A fully-rendered HTML version of the book will be built in `pct/_build/html/`.
 
+### Using `.ipynb` files with embedded images
+
+Images embedded in `.ipynb` files are not rendered properly by Jupyter Book. The
+following is a workaround.
+
+Use `pandoc` to convert `.ipynb` files to `.md` files and extract the images.
+For example, to convert `modules/01/_git.ipynb` to `modules/01/git.md`, run the
+following command:
+
+```bash
+cd modules/01
+pandoc _git.ipynb -o git.md -t gfm --extract-media=./media
+```
+
+It is very important to note that the `.ipynb` and the `.md` files must NOT have
+the same name. Otherwise, Jupyter Book will default to using the `.ipynb` file.
+In this example, `_git.ipynb` and `git.md` have different names.
+
+In `_toc.yml`, refer to the converted `.md` file instead of the `.ipynb` file.
+
 ### Hosting the book
 
 Please see the [Jupyter Book documentation](https://jupyterbook.org/publish/web.html) to discover options for deploying a book online using services such as GitHub, GitLab, or Netlify.
