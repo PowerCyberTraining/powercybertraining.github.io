@@ -13,6 +13,13 @@ chapters:
   - file: modules/01/env.md
   - file: modules/01/jupyter.md
   - file: modules/01/git.md
+- file: modules/02/intro.md
+  sections:
+  - file: modules/02/Time-Series-Analysis.ipynb
+  - file: modules/02/Solar-Power-Forecasting.ipynb 
+- file: modules/03/intro.md
+  sections:
+  - file: modules/03/power-system-optimization-problem.ipynb
 - file: modules/04/intro.md
   sections:
   - file: modules/04/linear-equations.ipynb
