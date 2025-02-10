@@ -12,6 +12,6 @@ execute:
 3. If you do not wait for a long time for the machine learning process, please set
 execute:
   execute_notebooks: "off"
-_
-in the config.yml
+
+in the _config.yml
  
