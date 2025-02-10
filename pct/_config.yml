@@ -13,6 +13,7 @@ logo                        : logo.png  # A path to the book logo
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
+  timeout: -1
   execute_notebooks: auto
   only_build_toc_files: true
 
