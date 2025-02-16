@@ -26,3 +26,8 @@ chapters:
   - file: modules/04/linear-equations.ipynb
   - file: modules/04/nonlinear-equations.ipynb
   - file: modules/04/power-flow.ipynb
+- file: modules/06/intro.md
+  sections:
+  - file: modules/06/Transmission_Federate.ipynb
+  - file: modules/06/Distribution_Federate.ipynb
+ 
