@@ -14,7 +14,9 @@ logo                        : logo.png  # A path to the book logo
 # See https://jupyterbook.org/content/execute.html
 execute:
   timeout: -1
-  execute_notebooks: auto
+  exclude_patterns:
+    - 'Transmission_Federate.ipynb'
+    - 'Distribution_Federate.ipynb'
   only_build_toc_files: true
 
 # Define the name of the latex output file for PDF builds
