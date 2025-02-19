@@ -2,3 +2,4 @@ pct/_build/*
 **/.ipynb_checkpoints/
 .vscode/*
 .history/*
+.DS_Store
