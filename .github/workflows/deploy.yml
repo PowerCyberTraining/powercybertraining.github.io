@@ -48,12 +48,14 @@ jobs:
       run: |
         jupyter-book build pct
 
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+
     # Upload the book's HTML as an artifact
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
         path: "pct/_build/html"
-        name: "github-pages"
 
     # Deploy the book's HTML to GitHub Pages
     - name: Deploy to GitHub Pages
