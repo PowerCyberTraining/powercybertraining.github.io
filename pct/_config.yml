@@ -13,7 +13,10 @@ logo                        : logo.png  # A path to the book logo
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: auto
+  timeout: -1
+  exclude_patterns:
+    - 'Transmission_Federate.ipynb'
+    - 'Distribution_Federate.ipynb'
   only_build_toc_files: true
 
 # Define the name of the latex output file for PDF builds

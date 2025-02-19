@@ -1,0 +1,122 @@
+
+Elements in Active Circuit: network_34bus
+
+Power Delivery Elements
+
+Element             Bus1 Bus2 Bus3 ...
+
+"Transformer.SUBXF" 34BUS 800   
+"Line.L1"           800   802   
+"Line.L2"           802   806   
+"Line.L3"           806   808   
+"Line.L4"           808   810   
+"Line.L5"           808   812   
+"Line.L6"           812   814   
+"Line.L7"           814R  850   
+"Line.L8"           816   818   
+"Line.L9"           816   824   
+"Line.L10"          818   820   
+"Line.L11"          820   822   
+"Line.L12"          824   826   
+"Line.L13"          824   828   
+"Line.L14"          828   830   
+"Line.L15"          830   854   
+"Line.L16"          832   858   
+"Line.L17"          834   860   
+"Line.L18"          834   842   
+"Line.L19"          836   840   
+"Line.L20"          836   862   
+"Line.L21"          842   844   
+"Line.L22"          844   846   
+"Line.L23"          846   848   
+"Line.L24"          850   816   
+"Line.L25"          852R  832   
+"Transformer.XFM1"  832   888   
+"Line.L26"          854   856   
+"Line.L27"          854   852   
+"Line.L28"          858   864   
+"Line.L29"          858   834   
+"Line.L30"          860   836   
+"Line.L31"          862   838   
+"Line.L32"          888   890   
+"Capacitor.C844"    844   844   
+"Capacitor.C848"    848   848   
+"Transformer.REG1A" 814   814R  
+"Transformer.REG1B" 814   814R  
+"Transformer.REG1C" 814   814R  
+"Transformer.REG2A" 852   852R  
+"Transformer.REG2B" 852   852R  
+"Transformer.REG2C" 852   852R  
+
+Power Conversion Elements
+
+Element             Bus1 Bus2 Bus3 ...
+
+"Load.S860"         860   
+"Load.S840"         840   
+"Load.S844"         844   
+"Load.S848"         848   
+"Load.S830A"        830   
+"Load.S830B"        830   
+"Load.S830C"        830   
+"Load.S890"         890   
+"Load.D802_806SB"   802   
+"Load.D802_806RB"   806   
+"Load.D802_806SC"   802   
+"Load.D802_806RC"   806   
+"Load.D808_810SB"   808   
+"Load.D808_810RB"   810   
+"Load.D818_820SA"   818   
+"Load.D818_820RA"   820   
+"Load.D820_822SA"   820   
+"Load.D820_822RA"   822   
+"Load.D816_824SB"   816   
+"Load.D816_824RB"   824   
+"Load.D824_826SB"   824   
+"Load.D824_826RB"   826   
+"Load.D824_828SC"   824   
+"Load.D824_828RC"   828   
+"Load.D828_830SA"   828   
+"Load.D828_830RA"   830   
+"Load.D854_856SB"   854   
+"Load.D854_856RB"   856   
+"Load.D832_858SA"   832   
+"Load.D832_858RA"   858   
+"Load.D832_858SB"   832   
+"Load.D832_858RB"   858   
+"Load.D832_858SC"   832   
+"Load.D832_858RC"   858   
+"Load.D858_864SB"   858   
+"Load.D858_864RB"   864   
+"Load.D858_834SA"   858   
+"Load.D858_834RA"   834   
+"Load.D858_834SB"   858   
+"Load.D858_834RB"   834   
+"Load.D858_834SC"   858   
+"Load.D858_834RC"   834   
+"Load.D834_860SA"   834   
+"Load.D834_860RA"   860   
+"Load.D834_860SB"   834   
+"Load.D834_860RB"   860   
+"Load.D834_860SC"   834   
+"Load.D834_860RC"   860   
+"Load.D860_836SA"   860   
+"Load.D860_836RA"   836   
+"Load.D860_836SB"   860   
+"Load.D860_836RB"   836   
+"Load.D860_836SC"   860   
+"Load.D860_836RC"   836   
+"Load.D836_840SA"   836   
+"Load.D836_840RA"   840   
+"Load.D836_840SB"   836   
+"Load.D836_840RB"   840   
+"Load.D862_838SB"   862   
+"Load.D862_838RB"   838   
+"Load.D842_844SA"   842   
+"Load.D842_844RA"   844   
+"Load.D844_846SB"   844   
+"Load.D844_846RB"   846   
+"Load.D844_846SC"   844   
+"Load.D844_846RC"   846   
+"Load.D846_848SB"   846   
+"Load.D846_848RB"   848   
