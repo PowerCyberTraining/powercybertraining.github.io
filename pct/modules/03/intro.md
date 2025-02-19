@@ -1,6 +1,6 @@
-# Building and solving optimization problems with advanced tools
+# Optimization and Electricity Market
 
-## Overview: An example of a power system optimization problem 
+## Overview: An example of a power system optimization problem
 
 
 

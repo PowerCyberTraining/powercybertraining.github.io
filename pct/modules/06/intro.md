@@ -1,12 +1,12 @@
-# Co-simulation of transmission and distribution system with communication
+# Power System Co-Simulation
 
 ## Overview
 
-This module provides an overview of transmission-and-distribution (T&D) system co-simulation. 
-The Hierarchical Engine for Large-scale Infrastructure Co-Simulation (HELICS) facilitates communication 
-between the transmission and distribution systems to enable co-simulation. ANDES serves as the transmission system 
+This module provides an overview of transmission-and-distribution (T&D) system co-simulation.
+The Hierarchical Engine for Large-scale Infrastructure Co-Simulation (HELICS) facilitates communication
+between the transmission and distribution systems to enable co-simulation. ANDES serves as the transmission system
 simulator, while OpenDSS is utilized for simulating the distribution system. In this framework, active and reactive
-power values from the distribution federate are exchanged with the transmission system, while the voltage of the bus 
+power values from the distribution federate are exchanged with the transmission system, while the voltage of the bus
 is communicated to the transmission federate.
 
 ## Motivation
