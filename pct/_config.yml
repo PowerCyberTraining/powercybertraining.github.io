@@ -1,6 +1,6 @@
 #######################################################################################
 # A default configuration that will be loaded for all jupyter books
-# See the documentation for help and more options: 
+# See the documentation for help and more options:
 # https://jupyterbook.org/customize/config.html
 
 #######################################################################################
@@ -13,11 +13,13 @@ logo                        : logo.png  # A path to the book logo
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  timeout: -1
-  exclude_patterns:
-    - 'Transmission_Federate.ipynb'
-    - 'Distribution_Federate.ipynb'
+  # timeout: -1
+  # exclude_patterns:
+  #   - 'Transmission_Federate.ipynb'
+  #   - 'Distribution_Federate.ipynb'
   only_build_toc_files: true
+  execute_notebooks: 'off'
+
 
 # Define the name of the latex output file for PDF builds
 latex:
