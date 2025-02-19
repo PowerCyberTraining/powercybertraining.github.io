@@ -15,12 +15,12 @@ chapters:
   - file: modules/01/git.md
 - file: modules/02/intro.md
   sections:
-  - file: modules/02/Time-Series-Analysis-1.ipynb
-  - file: modules/02/Time-Series-Analysis-2.ipynb
-  - file: modules/02/Solar-Power-Forecasting.ipynb 
+  - file: modules/02/time-series-analysis-1.ipynb
+  - file: modules/02/time-series-analysis-2.ipynb
+  - file: modules/02/solar-power-forecasting.ipynb
 - file: modules/03/intro.md
   sections:
-  - file: modules/03/power-system-optimization-problem.ipynb
+  - file: modules/03/grid-optimization.ipynb
 - file: modules/04/intro.md
   sections:
   - file: modules/04/linear-equations.ipynb
@@ -28,6 +28,5 @@ chapters:
   - file: modules/04/power-flow.ipynb
 - file: modules/06/intro.md
   sections:
-  - file: modules/06/Transmission_Federate.ipynb
-  - file: modules/06/Distribution_Federate.ipynb
- 
+  - file: modules/06/transmission_federate.ipynb
+  - file: modules/06/distribution_federate.ipynb
