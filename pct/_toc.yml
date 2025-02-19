@@ -15,7 +15,8 @@ chapters:
   - file: modules/01/git.md
 - file: modules/02/intro.md
   sections:
-  - file: modules/02/Time-Series-Analysis.ipynb
+  - file: modules/02/Time-Series-Analysis-1.ipynb
+  - file: modules/02/Time-Series-Analysis-2.ipynb
   - file: modules/02/Solar-Power-Forecasting.ipynb 
 - file: modules/03/intro.md
   sections:
@@ -25,3 +26,8 @@ chapters:
   - file: modules/04/linear-equations.ipynb
   - file: modules/04/nonlinear-equations.ipynb
   - file: modules/04/power-flow.ipynb
+- file: modules/06/intro.md
+  sections:
+  - file: modules/06/Transmission_Federate.ipynb
+  - file: modules/06/Distribution_Federate.ipynb
+ 

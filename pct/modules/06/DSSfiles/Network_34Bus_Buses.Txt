@@ -1,0 +1,43 @@
+
+BUSES AND NODES IN ACTIVE CIRCUIT: network_34bus
+
+                                Coord                                 Number of     Nodes
+  Bus      Base kV             (x, y)                      Keep?       Nodes        connected ...
+
+"34bus"  69.000          (           NA,            NA )     No           3          1    2    3 
+"800"    24.900          (           NA,            NA )     No           3          1    2    3 
+"802"    24.900          (           NA,            NA )     No           3          1    2    3 
+"806"    24.900          (           NA,            NA )     No           3          1    2    3 
+"808"    24.900          (           NA,            NA )     No           3          1    2    3 
+"810"    24.900          (           NA,            NA )     No           1          2 
+"812"    24.900          (           NA,            NA )     No           3          1    2    3 
+"814"    24.900          (           NA,            NA )     No           3          1    2    3 
+"814r"   24.900          (           NA,            NA )     No           3          1    2    3 
+"850"    24.900          (           NA,            NA )     No           3          1    2    3 
+"816"    24.900          (           NA,            NA )     No           3          1    2    3 
+"818"    24.900          (           NA,            NA )     No           1          1 
+"824"    24.900          (           NA,            NA )     No           3          1    2    3 
+"820"    24.900          (           NA,            NA )     No           1          1 
+"822"    24.900          (           NA,            NA )     No           1          1 
+"826"    24.900          (           NA,            NA )     No           1          2 
+"828"    24.900          (           NA,            NA )     No           3          1    2    3 
+"830"    24.900          (           NA,            NA )     No           3          1    2    3 
+"854"    24.900          (           NA,            NA )     No           3          1    2    3 
+"832"    24.900          (           NA,            NA )     No           3          1    2    3 
+"858"    24.900          (           NA,            NA )     No           3          1    2    3 
+"834"    24.900          (           NA,            NA )     No           3          1    2    3 
+"860"    24.900          (           NA,            NA )     No           3          1    2    3 
+"842"    24.900          (           NA,            NA )     No           3          1    2    3 
+"836"    24.900          (           NA,            NA )     No           3          1    2    3 
+"840"    24.900          (           NA,            NA )     No           3          1    2    3 
+"862"    24.900          (           NA,            NA )     No           3          1    2    3 
+"844"    24.900          (           NA,            NA )     No           3          1    2    3 
+"846"    24.900          (           NA,            NA )     No           3          1    2    3 
+"848"    24.900          (           NA,            NA )     No           3          1    2    3 
+"852r"   24.900          (           NA,            NA )     No           3          1    2    3 
+"888"     4.160          (           NA,            NA )     No           3          1    2    3 
+"856"    24.900          (           NA,            NA )     No           1          2 
+"852"    24.900          (           NA,            NA )     No           3          1    2    3 
+"864"    24.900          (           NA,            NA )     No           1          1 
+"838"    24.900          (           NA,            NA )     No           1          2 
+"890"     4.160          (           NA,            NA )     No           3          1    2    3 
