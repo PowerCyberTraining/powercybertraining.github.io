@@ -1,0 +1,3 @@
+[submodule "pct/modules/02/solar-data"]
+	path = pct/modules/02/solar-data
+	url = git@github.com:PowerCyberTraining/solar-data.git
