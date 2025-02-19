@@ -53,8 +53,7 @@ jobs:
       uses: actions/upload-pages-artifact@v3
       with:
         path: "pct/_build/html"
-        name: "github-pages"  # Add explicit artifact name
-
+        name: "github-pages"
 
     # Deploy the book's HTML to GitHub Pages
     - name: Deploy to GitHub Pages
