@@ -20,6 +20,7 @@ chapters:
   - file: modules/02/solar-power-forecasting.ipynb
 - file: modules/03/intro.md
   sections:
+  - file: modules/03/numpy-pandas-lp-basics.ipynb
   - file: modules/03/grid-optimization.ipynb
 - file: modules/04/intro.md
   sections:

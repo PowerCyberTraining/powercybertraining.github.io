@@ -3,3 +3,4 @@ pct/_build/*
 .vscode/*
 .history/*
 .DS_Store
+~*.xlsx
