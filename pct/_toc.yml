@@ -15,12 +15,13 @@ chapters:
   - file: modules/01/git.md
 - file: modules/02/intro.md
   sections:
+  - file: modules/02/numpy-pandas-basics.ipynb
   - file: modules/02/time-series-analysis-1.ipynb
   - file: modules/02/time-series-analysis-2.ipynb
   - file: modules/02/solar-power-forecasting.ipynb
 - file: modules/03/intro.md
   sections:
-  - file: modules/03/numpy-pandas-lp-basics.ipynb
+  - file: modules/03/lp-basics.ipynb
   - file: modules/03/grid-optimization.ipynb
 - file: modules/04/intro.md
   sections:
