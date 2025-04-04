@@ -1,47 +1,21 @@
 # Optimization and Electricity Market
 
-## Overview: NumPy-Pandas-LP-Basics
+## Part 1: LP-Basics
 
 
 
 ### Objective
 
-This section provides a comprehensive introduction to numerical computing and optimization using **NumPy**, **Pandas**, and **Linear Programming**. These three foundational tools are essential for data science, engineering, and operational research, forming the computational backbone for large-scale numerical analysis and decision-making problems. The primary goal is to equip learners with the ability to manipulate structured data efficiently, perform high-speed numerical computations, and model real-world optimization problems using **Python**.
-
-1. **NumPy**: Introduces array-based computing for efficient numerical operations.
-2. **Pandas**: Focuses on structured data manipulation and analysis.
-3. **Linear Programming (LP)**: Explores mathematical optimization techniques using **GurobiPy**.
-
-
-
-### **1.2 Key Components**
-
-#### **1. NumPy Fundamentals**
-- **Creating NumPy Arrays**
-- **Array Attributes**
-- **Indexing and Slicing**
-- **Mathematical Operations**
-- **Reshaping and Transposing Arrays**
-- **Statistical Functions**
-- **Stacking and Concatenation**
+This section provides a comprehensive introduction to **Linear Programming**, which forms the computational backbone for large-scale decision-making problems. The primary goal is to equip learners with the ability to model real-world optimization problems using **Python**.
   
-#### **2. Pandas for Data Analysis**
-- **Creating Data Structures**
-- **Reading and Writing Data**
-- **Data Inspection and Manipulation**
-- **Data Cleaning**
-- **Modifying Data**
-- **Merging and Joining Data**
-- **Pivot Tables and Crosstabs**
-  
-#### **3. Linear Programming basics**
+#### **Linear Programming basics**
 - **Introduction to LP Optimization Models**
 - **Using Gurobi for Linear Programming**
 - **Solving Optimization Models**
+- **Extracting optimization results**
 
 
-
-## Overview: An example of a power system optimization problem
+## Part 2: An example of a power system optimization problem
 
 
 
