@@ -1,11 +1,46 @@
 
 # Data Analytics and Visualization
 
-## Part 1: Time Series Data Analysis
+
+## Part 1: NumPy-Pandas-Basics
+
+
 
 ### Objective
 
-This module aims to provide an in-depth analysis of historical time series data from the power grid system of Great Britain spanning multiple years (2016–2023). The objective is to analyze grid frequency trends, detect anomalies, and understand seasonal variations using Python-based data analytics and visualization tools. By leveraging libraries such as pandas, matplotlib, and seaborn, this module enables users to extract meaningful insights from large datasets.
+This section provides a comprehensive introduction to numerical computing and optimization using **NumPy** and **Pandas**. These two foundational tools are essential for data science and engineering, forming the computational backbone for large-scale numerical analysis. The primary goal is to equip learners with the ability to manipulate structured data efficiently and perform high-speed numerical computations using **Python**.
+
+1. **NumPy**: Introduces array-based computing for efficient numerical operations.
+2. **Pandas**: Focuses on structured data manipulation and analysis.
+
+
+
+### **1.2 Key Components**
+
+#### **1. NumPy Fundamentals**
+- **Creating NumPy Arrays**
+- **Array Attributes**
+- **Indexing and Slicing**
+- **Mathematical Operations**
+- **Reshaping and Transposing Arrays**
+- **Statistical Functions**
+- **Stacking and Concatenation**
+  
+#### **2. Pandas for Data Analysis**
+- **Creating Data Structures**
+- **Reading and Writing Data**
+- **Data Inspection and Manipulation**
+- **Data Cleaning**
+- **Modifying Data**
+- **Merging and Joining Data**
+- **Pivot Tables and Crosstabs**
+  
+
+## Part 2: Time Series Data Analysis
+
+### Objective
+
+This module aims to provide an in-depth analysis of historical time series data from the power grid system of Great Britain spanning multiple years (2016–2018). The objective is to analyze grid frequency trends, detect anomalies, and understand seasonal variations using Python-based data analytics and visualization tools. By leveraging libraries such as pandas, matplotlib, and seaborn, this module enables users to extract meaningful insights from large datasets.
 
 Source of data:Historic Frequency Data - National Grid ESO, https://www.neso.energy/industry-information/balancing-services/frequency-response-services/historic-frequency-data
 
@@ -33,7 +68,7 @@ Comparing historical frequency variations using heatmaps and boxplots.
 Generating moving averages and trend lines to smooth data fluctuations.
 Developing interactive plots for better insights into data patterns.
 
-## Part 2: Overview: Forecasting Solar-Energy Output
+## Part 3: Overview: Forecasting Solar-Energy Output
 ### Objective
 This module focuses on developing and evaluating predictive models for solar energy output using historical time series data. The primary goal is to understand the factors influencing solar power generation and enhance forecasting accuracy. Additionally, the module emphasizes model explainability by analyzing feature importance.
 
