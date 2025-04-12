@@ -1,4 +1,4 @@
-<div class="cell markdown">
+
 
 # VS Code Environment
 
@@ -9,11 +9,13 @@ Windows and, at the same time, works with WSL.
 
 We will show how to configure VS Code to work with WSL.
 
-`{note} VS Code is different from VS (Visual Studio). VS is a full-featured IDE, while VS Code is a lightweight editor.`
+:::{note} VS Code is different from VS (Visual Studio). VS is a
+full-featured IDE, while VS Code is a lightweight editor. 
+:::
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ## Installation
 
@@ -21,9 +23,9 @@ One can install VS Code by following the instruction on the [VS Code
 website](https://code.visualstudio.com). You will follow the standard
 procedure for installing a Windows software.
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ## Getting Started Guide
 
@@ -36,19 +38,19 @@ the keyboard shortcut for the command-line palette.
 
 ![VSCodeLanding.png](./media/51211c98-856d-4d29-b2bd-f4d8cd94f0d8.png)
 
-</div>
 
-<div class="cell markdown">
 
-\`\`\`{admonition} Exercise
+
+
+:::{admonition} Exercise
 
 What's the keyboard shortcut for invoking command-line palette?
 
-\`\`\`
+:::
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ## Extensions and WSL Remote
 
@@ -71,15 +73,15 @@ When done, on the left sidebar, you will see some new icons. Click
 over it, and click the right-pointing arrow to relaunch VS Code using
 the WSL Target.
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ![WSL-target.png](./media/1b4437b2-17b8-4671-ba37-c5f9defc4c85.png)
 
-</div>
 
-<div class="cell markdown">
+
+
 
 The VS Code program will reload, and in the lower-left corner, the
 status indicator will change to "WSL: Ubuntu".
@@ -87,7 +89,7 @@ status indicator will change to "WSL: Ubuntu".
 What does it mean by "WSL: Ubuntu"? Here are the facts:
 
 - Your VS Code is still running on Windows
-- If you open up a terminal by pressing Ctrl + \`\`\`, you will see a
+- If you open up a terminal by pressing Ctrl + ```, you will see a
   WSL terminal!
 - Try opening a file in VS Code by clicking "File - Open File", you will
   see a pop up menu with a path starting with `/home`. This indicates
@@ -102,9 +104,9 @@ recommend using the WSL as a daily driver.
 
 `` {note} Windows-only tools include `psspy` for calling PSS/E, for example. Code that require Windows-based backend programs has to run on Windows, not WSL. ``
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ### Python and autopep8
 
@@ -112,30 +114,30 @@ When connected to the WSL remote, go ahead and install the Python
 extension in WSL. Also, install a plugin called "autopep8", which is a
 linter for automatically formatting your code.
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ![install-python-wsl.png](./media/6f0755f3-8481-4694-85b3-85db557fcd32.png)
 
-</div>
 
-<div class="cell markdown">
+
+
 
 When done, make a temporary folder `mod1` in your home directory. Use VS
 Code to open the folder. VS Code should automatically reload. You will
 be asked to trust the authors of the files. Since you created the
 folder, you can select "Yes, I trust the authors" and proceed.
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ![trust-authors.png](./media/243c9cce-eff6-4828-bac3-1990769c1a09.png)
 
-</div>
 
-<div class="cell markdown">
+
+
 
 Now, let's start by writing our first Python script.
 
@@ -150,9 +152,9 @@ print("Hello, World!")
 
 Press `Ctrl + s` to save it as helloworld.py.
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ### Select Interpreter
 
@@ -170,57 +172,57 @@ and using the arrow keys to nagivate the list. When you find it, press
 enter to confirm. The next time you check the "Select interpreter" menu,
 you will see both the system-wide and `pct` python interpreters.
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ![select-interpreter-menu.png](./media/2975748e-e278-47b6-9788-739277b3e125.png)
 
-</div>
 
-<div class="cell markdown">
+
+
 
 The lower-right corner also has a "Python" badge that you can click on
 to change the interpreter.
 
-</div>
 
-<div class="cell markdown">
+
+
 
 Now let's execute the program. Click the "play" to the left of the file
 tabs. You will see a terminal at the bottom of the screen.
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ![executed-python-code-right-interpreter.png](./media/d6b76c4f-ded0-4e2d-b2ef-7f096ec8a01c.png)
 
-</div>
 
-<div class="cell markdown">
+
+
 
 Check for the path to the interpreter in the screenshot. We can confirm
 that the correct interpreter is used.
 
-\`\`\`{note} Why do we need to select different interpreters for
-different scripts?
+:::{note} Why do we need to select different interpreters for different
+scripts?
 
 Some scripts depend on a particular version of package. You can install
 the package to the particular environment and use the corresponding
 interpreter.
 
-\`\`\`
+:::
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ### Debugger
 
-</div>
 
-<div class="cell markdown">
+
+
 
 Now that you know how to run a Python program, we will talk about
 debugging.
@@ -256,26 +258,26 @@ def fibonacci(n, memo={}):
 print(fibonacci(9))
 ```
 
-</div>
 
-<div class="cell markdown">
+
+
 
 Copy the code into `fib.py` and save it. Run it, but it will error out:
 
     TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'`
 
-</div>
 
-<div class="cell markdown">
+
+
 
 Instead of inspecting the code, let's use the debugger to inspect the
 code. Click on the downward arrow to the right of the run button, select
 "Python Debugger: Debug Current File". The debugger will stop at the
 line that has the error.
 
-</div>
 
-<div class="cell markdown">
+
+
 
 Next, you will use breakpoints to indicate where you want the debugger
 to stop. Click on the left margin (to the left of the line number) to
@@ -302,9 +304,9 @@ afterwards. Note what gets returned to the caller.
 Finish the debugging process and come up with a fix. Restart the
 debugger as many times as needed.
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ### Debugging a package
 
@@ -313,7 +315,7 @@ documentation](https://code.visualstudio.com/docs/editor/debugging).
 
 You will follow some steps to create a JSON-based configuration.
 
-</div>
+
 
 <div class="cell markdown"
 vscode="{&quot;languageId&quot;:&quot;plaintext&quot;}">
@@ -328,4 +330,4 @@ switch between different clients.
 For more information, please refer to the [VS Code Remote Development
 documentation](https://code.visualstudio.com/docs/remote/remote-overview).
 
-</div>
+

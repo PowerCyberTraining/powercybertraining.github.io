@@ -1,4 +1,4 @@
-<div class="cell markdown">
+
 
 # Jupyter Notebook
 
@@ -14,9 +14,9 @@ Jupyter supports many programming languages, including Python, Julia and
 R. Since the primary language of this training is Python, we will use
 Jupyter for it.
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ## Install Jupyter
 
@@ -98,9 +98,9 @@ Here are some shortcuts to start with:
 9.  To change a cell from code to markdown, press `m`. To change it back
     to code, press `y`.
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ## Advanced Features
 
@@ -179,9 +179,9 @@ Magic commands are a powerful feature of Jupyter that can help you write
 more efficient and interactive notebooks. Experiment with different
 magic commands to find the ones that best suit your workflow!
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ## Markdown and LaTeX
 
@@ -201,9 +201,9 @@ $$
 $$
 ```
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ## Exporting Notebooks
 
@@ -218,9 +218,9 @@ jupyter nbconvert --to pdf your_notebook.ipynb
 jupyter nbconvert --to html your_notebook.ipynb
 ```
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ## Jupyterlab Extensions
 
@@ -249,9 +249,9 @@ Other useful extensions to consider:
   navigate in a large but organized notebook
 - jupyterlab-git: for git integration within Jupyterlab
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ## Themes
 
@@ -262,9 +262,9 @@ to Settings \> Theme in the JupyterLab menu.
 Using a dark theme can be easier on the eyes, especially when working in
 low-light environments.
 
-</div>
 
-<div class="cell markdown">
+
+
 
 ## Setting Password
 
@@ -307,16 +307,16 @@ When running Jupyter on a shared or public network, consider additional
 security measures like using SSL encryption or running Jupyter behind a
 reverse proxy.
 
-</div>
 
-<div class="cell markdown">
+
+
 
 For more advanced topics, refer to the [official Jupyter
 documentation](https://docs.jupyter.org/en/latest/) and community
 resources.
 
-</div>
 
-<div class="cell markdown">
 
-</div>
+
+
+
