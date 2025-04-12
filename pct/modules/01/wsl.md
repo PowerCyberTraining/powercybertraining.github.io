@@ -112,8 +112,7 @@ Windows so you are in a Windows shell.
 
 
 
-:::{note}
-TODO: Add a clean screenshot of the shells. 
+:::{note} TODO: Add a clean screenshot of the shells. 
 :::
 
 
@@ -130,8 +129,7 @@ convenient for accessing your WSL files from Windows.
 
 
 
-:::{bibliography}
-:filter: docname in docnames 
+:::{bibliography} :filter: docname in docnames 
 :::
 
 
