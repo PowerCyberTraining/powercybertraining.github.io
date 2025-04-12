@@ -21,7 +21,7 @@ working directory.
 
 The prompt character is `$` for a regular user and `#` for a superuser.
 
-## Basic Commands
+## Navigating the File System
 
 To navigate the file system in the shell, you will most likely use the
 following commands.
@@ -156,6 +156,8 @@ modification time.
 
 :::
 
+## Working with Files and Directories
+
 ### Make a Directory
 
 The `mkdir` command is used to make a directory. It can take a path to
@@ -221,6 +223,8 @@ Verify the directory and file were created correctly.
 
 
 
+## Manipulating Files
+
 ### Copy and Move
 
 The commands for copy and move are `cp` and `mv`.
@@ -267,6 +271,8 @@ The `cat` command is used to view the content of a file.
 User@Machine:~$ cat file.txt
 Hello, World!
 ```
+
+## Searching and Finding
 
 ### Find Files
 
@@ -328,7 +334,7 @@ will open the manual page for the `rmdir` command. When browsing, press
 
 
 
-## Advanced Commands
+## Basic Text Operations
 
 ### Echo / Display Text
 
@@ -368,6 +374,12 @@ and 2, respectively.
 
 :::
 
+
+
+
+
+## Advanced Command Line Concepts
+
 ### Environment Variables
 
 Environment variables are used to store information that can be used by
@@ -375,7 +387,9 @@ programs. They are set in the shell and are inherited by child
 processes. The `env` command is used to list the environment variables.
 You will likely see a long output with many variables.
 
-The best known environment variable is `PATH`. It is a colon-separated
+### Using PATH
+
+A well-known environment variable is `PATH`. It is a colon-separated
 list of directories where the shell looks for executable files. When you
 type a command, the shell looks for the command in the directories
 listed in the `PATH` variable. This is how you can run a command without
@@ -390,9 +404,109 @@ User@Machine:~$ which ls
 
 This command shows that the `ls` command is located at `/usr/bin/ls`.
 
+### Pipes
+
+Pipes `|` are used to connect the output of one command to the input of
+another command. A basic idea of UNIX is that you can chain commands
+together to do complex tasks. Pipes are what makes the shell powerful.
+
+For example, `ls -l` lists the files and folders, By inspection of
+`ls -l`, you can tell that the first line is the heading that indicates
+the number of disk blocks used. The rest of the lines are the files and
+folders.
+
+The command `wc -l` counts the number of lines. You can combine them to
+count the number of files and folders:
+
+``` bash
+User@Machine:~$ ls -l | wc -l
+25
+```
+
+The output of `ls -l` is piped to `wc -l`. The output is 25, so
+excluding the header, there are 24 files and folders.
 
 
 
+
+
+## File Permissions and Ownership
+
+### Understanding Permissions
+
+In Linux, every file and directory has an owner and associated
+permissions that control who can read, write, or execute it. When you
+list files with the `ls -l` command, you can see the permissions:
+
+``` bash
+User@Machine:~$ ls -l file.txt
+-rw-r--r-- 1 User staff 13 Jun 10 12:34 file.txt
+```
+
+The permission string `-rw-r--r--` has 10 characters:
+
+- First character: file type (`-` for regular file, `d` for directory)
+- Next 3 characters: owner permissions (`rw-` means read and write)
+- Next 3 characters: group permissions (`r--` means read only)
+- Last 3 characters: others permissions (`r--` means read only)
+
+The three basic permission types are:
+
+- `r`: Read permission
+- `w`: Write permission
+- `e`: Execute permission (for files) or Access permission (for
+  directories)
+
+### Changing Permissions with chmod
+
+The `chmod` command changes the permissions of a file or directory.
+There are two ways to specify permissions:
+
+1.  Symbolic mode (using letters):
+
+``` bash
+User@Machine:~$ chmod u+x file.sh  # Add execute permission for the user
+User@Machine:~$ chmod g+w file.txt  # Add write permission for the group
+User@Machine:~$ chmod o-r file.txt  # Remove read permission for others
+```
+
+Symbols used:
+
+- `u`: User (owner)
+- `g`: Group
+- `o`: Others
+- `a`: All (equivalent to ugo)
+- `+`: Add permission
+- `-`: Remove permission
+- `=`: Set permission exactly
+
+1.  Numeric mode (using octal numbers):
+
+``` bash
+# Set rwx for owner, rx for group and others
+User@Machine:~$ chmod 755 script.sh
+
+# Set rw for owner, r for group and others
+User@Machine:~$ chmod 644 file.txt
+```
+
+Common numeric permissions:
+
+- `755` (rwxr-xr-x): Standard for executable scripts
+- `644` (rw-r--r--): Standard for regular files
+- `700` (rwx------): Private file, accessible only by owner
+
+:::{admonition} Directory Permissions
+:class: tip
+
+For directories, the permissions have slightly different meanings:
+
+- `r`: List directory contents
+- `w`: Create or delete files within the directory
+- `x`: Access the directory (cd into it)
+
+A directory needs execute (`x`) permission to be accessed! 
+:::
 
 ### Changing Ownership
 
@@ -402,7 +516,7 @@ you probably have used `sudo` to install a package.
 
 If you accidentally run a command as the superuser, all the files and
 directories created by the command will be owned by the superuser. A
-regular issue will then not be able to modify or remove the files.
+regular user will then not be able to modify or remove the files.
 
 The `chown` command is used to change the ownership of a file or
 directory. The format is `chown OWNER:GROUP FILES`. For example,
@@ -431,43 +545,30 @@ permissions.
 
 :::
 
+:::{admonition} Exercise
 
+1.  Create a shell script called `hello.sh` in your home directory with
+    the command:
 
+        echo '#!/bin/bash\necho "Hello, World!"' > hello.sh
 
+2.  Try to execute it with `./hello.sh`. What happens?
 
-### Pipes
+3.  Use `chmod` to make it executable and try again.
 
-Pipes `|` are used to connect the output of one command to the input of
-another command. A basic idea of UNIX is that you can chain commands
-together to do complex tasks. Pipes are what makes the shell powerful.
-
-For example, `ls -l` lists the files and folders, By inspection of
-`ls -l`, you can tell that the first line is the heading that indicates
-the number of disk blocks used. The rest of the lines are the files and
-folders.
-
-The command `wc -l` counts the number of lines. You can combine them to
-count the number of files and folders:
-
-``` bash
-User@Machine:~$ ls -l | wc -l
-25
-```
-
-The output of `ls -l` is piped to `wc -l`. The output is 25, so
-excluding the header, there are 24 files and folders.
+:::
 
 
 
 
 
-## Text-based editors
+## Text Editors
 
 Occasionally, you may need to edit a file in the shell. There are
 several editors available. The most common ones are `nano`, `vim`, and
 `emacs`.
 
-### Nano
+### Nano (Beginner-friendly)
 
 The `nano` editor is a simple text editor that is available on most
 Linux distributions. It is easy to use: to edit a file, do
@@ -476,7 +577,17 @@ Linux distributions. It is easy to use: to edit a file, do
 To exit `nano`, press `Ctrl` + `X`. If you have unsaved changes, `nano`
 will ask you confirm.
 
-### Vim
+Here is an online video to refer to:
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/DLeATFgGM-A?si=vRD_yJMlMoFa3w2r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
+
+
+
+
+### Vim (Advanced)
 
 `vim` is a powerful text editor with a steep learning curve. As an
 evidence, the question [how do I exit
@@ -500,11 +611,29 @@ To save a file, you can type `:w`. To save and exit, you can type `:wq`.
 With the very basics, you will at least not stuck in `vim`. If
 interested, there are plenty of materials to teach yourself.
 
+
+
+
+
+Below is a video called "Vim in 100 Seconds". It serves as a great
+intro. But honestly, you can't go from zero to hero on Vim in just 100
+seconds :-)
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/-txKSRn0qeA?si=Up2P0bwJDz-tYB2v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
+Below is a Vim crash course for Beginners (30 minutes):
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/jXud3JybsG4?si=Qtz66e-JxTZBnnUR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
+
+
+
+
 :::{bibliography} :filter: docname in docnames 
 :::
-
-
-
-
 
 
