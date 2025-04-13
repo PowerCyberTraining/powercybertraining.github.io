@@ -1,10 +1,5 @@
 
-
 # Windows Subsystem for Linux
-
-
-
-
 
 ## Why Linux?
 
@@ -32,10 +27,6 @@ productive with Linux.
 
 So let's dive in.
 
-
-
-
-
 ## Windows Subsystem for Linux (WSL)
 
 Apparently, we do not want to buy a new computer just for Linux if you
@@ -52,10 +43,6 @@ machine or dual-boot to use Linux. WSL was originally created to meet
 the demand from users who want to use Linux BASH productivity tools in
 Windows {cite}`why-was-wsl-created`.
 
-
-
-
-
 :::{tip} How is WSL different from a virtual machine?
 
 VM software, such as VirtualBox or VMware, emulates a physical computer
@@ -64,10 +51,6 @@ because it uses a compatibility layer that is transparent to the user
 when running Linux applications. WSL is thus more lightweight and faster
 than a VM. 
 :::
-
-
-
-
 
 ## Installing WSL
 
@@ -82,10 +65,6 @@ Follow the video below to install WSL and Ubuntu.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eId6K8d0v6o?si=gnCRURtNuQKkwXrq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 
 </iframe>
-
-
-
-
 
 ## Getting to Know WSL
 
@@ -108,16 +87,8 @@ Ubuntu Bash Shell. If the path to the left of the prompt reads like
 `C:` (or another disk name but contains `:`), this indicates a path on
 Windows so you are in a Windows shell.
 
-
-
-
-
 :::{note} TODO: Add a clean screenshot of the shells. 
 :::
-
-
-
-
 
 ## Files in WSL
 
@@ -125,16 +96,8 @@ The files in WSL are stored in the Windows file system. In "My
 Computer", you will see a new drive, typically `\\wsl$`. This drive is
 convenient for accessing your WSL files from Windows.
 
-
-
-
-
 :::{bibliography} :filter: docname in docnames 
 :::
-
-
-
-
 
 :::{admonition} Quizzes
 
@@ -144,5 +107,4 @@ convenient for accessing your WSL files from Windows.
 4.  How do you launch WSL?
 5.  How do you distinguish between Windows and Linux files? 
 :::
-
 

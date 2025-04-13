@@ -1,5 +1,4 @@
 
-
 # Git and Version Control
 
 ## Motivation
@@ -40,15 +39,7 @@ and trending projects.
 
 ![git-landing.png](./media/74fb1695-3c9e-4400-b5f8-7976c7583456.png)
 
-
-
-
-
 ### Repository
-
-
-
-
 
 A repository (repo) is a storage for a project. It is like a folder for
 a project.
@@ -58,10 +49,6 @@ the top-left corner, as shown in the figure above. It will take to the
 next page, which looks like this:
 
 ![git-make-new-repo.png](./media/c4128b71-f941-4b88-b10c-78986fcf355f.png)
-
-
-
-
 
 Feel free to name it anything, such as `my-first-repo`. You can add a
 description but not required. Then, choose if this repo is public
@@ -73,10 +60,6 @@ button. You will be redirected to the repo page.
 
 ![git-new-repo-index.png](./media/86d2ae79-67ca-49fe-bf6e-15d47c726e58.png)
 
-
-
-
-
 There are a lot of information to unpack here.
 
 1.  Look at the URL. It is
@@ -84,10 +67,6 @@ There are a lot of information to unpack here.
     URL you will use to interact with the repo.
 2.  In the "Quick setup" section, you can see the address to clone the
     repo.
-
-
-
-
 
 ### Installing Git
 
@@ -107,17 +86,9 @@ You will be asked to enter your password. When done, you will have the
 For more information, refer to the previous section on package
 management.
 
-
-
-
-
 ### Setting up SSH keys
 
 TODO
-
-
-
-
 
 ### Clone the repository
 
@@ -131,34 +102,13 @@ git clone https://github.com/{your_username}/{repo_name}.git
 This will create a folder called `{repo_name}` in your current
 directory, with the repo contents.
 
-
-
-
-
 ### Commit and push changes
 
-
-
-
-
 ### Branch and Remote
-
-
-
-
 
 ### Pull request and merge
 
 ### Fork
 
-
-
-
-
 ## Workflow
-
-
-
-
-
 
