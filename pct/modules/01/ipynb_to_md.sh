@@ -1,13 +1,12 @@
 #!/bin/bash
 
 # Convert notebooks to markdown
-pandoc _wsl.ipynb -o wsl.md -t gfm --extract-media=./media
 pandoc _git.ipynb -o git.md -t gfm --extract-media=./media
 pandoc _jupyter.ipynb -o jupyter.md -t gfm --extract-media=./media
 pandoc _env.ipynb -o env.md -t gfm --extract-media=./media
 
 # Clean up and fix formatting
-for file in wsl.md git.md jupyter.md env.md; do
+for file in git.md jupyter.md env.md; do
   # Remove all div tags with their attributes
   sed -i 's/<div[^>]*>//g; s/<\/div>//g' "$file"
 
