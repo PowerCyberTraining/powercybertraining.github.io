@@ -1,0 +1,184 @@
+[
+    {
+        "question": "What does WSL stand for?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Windows Subsystem for Linux",
+                "correct": true,
+                "feedback": "Correct! WSL is a feature of Windows that allows you to run a Linux environment within Windows."
+            },
+            {
+                "answer": "Windows System Linux",
+                "correct": false,
+                "feedback": "Incorrect. The correct term is Windows Subsystem for Linux."
+            },
+            {
+                "answer": "Windows Shell for Linux",
+                "correct": false,
+                "feedback": "Incorrect. While WSL does provide a shell, it stands for Windows Subsystem for Linux."
+            },
+            {
+                "answer": "Web System Language",
+                "correct": false,
+                "feedback": "Incorrect. WSL is not related to web programming but is a feature allowing Linux to run on Windows."
+            }
+        ]
+    },
+    {
+        "question": "Why might power engineering researchers want to use Linux?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Many data analytics and machine learning libraries are developed primarily for Linux environments",
+                "correct": true,
+                "feedback": "Correct! While most power domain software runs on Windows, many data analytics and ML tools are easier to install and maintain on Linux."
+            },
+            {
+                "answer": "All power engineering software only runs on Linux",
+                "correct": false,
+                "feedback": "Incorrect. As mentioned in the material, most power domain software is exclusively available on Windows."
+            },
+            {
+                "answer": "Linux is required for running any engineering software",
+                "correct": false,
+                "feedback": "Incorrect. Many engineering tools run on Windows, but Linux offers advantages for specific workflows."
+            },
+            {
+                "answer": "Linux is free, so it saves money on software licenses",
+                "correct": false,
+                "feedback": "While Linux is indeed free, that's not the primary reason cited for power engineering researchers to use it."
+            }
+        ]
+    },
+    {
+        "question": "How is WSL different from a virtual machine?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "WSL uses a compatibility layer rather than emulating an entire computer",
+                "correct": true,
+                "feedback": "Correct! WSL is more lightweight and faster because it uses a compatibility layer instead of emulating a physical computer from the ground up."
+            },
+            {
+                "answer": "WSL can only run command-line applications",
+                "correct": false,
+                "feedback": "Incorrect. On Windows 11, WSL can support graphical applications that are native to Linux."
+            },
+            {
+                "answer": "Virtual machines can run more Linux distributions than WSL",
+                "correct": false,
+                "feedback": "Incorrect. WSL supports multiple Linux distributions and this is not the key difference highlighted."
+            },
+            {
+                "answer": "WSL requires a separate hard drive partition",
+                "correct": false,
+                "feedback": "Incorrect. Unlike dual-booting, WSL doesn't require a separate partition - it integrates with your Windows filesystem."
+            }
+        ]
+    },
+    {
+        "question": "Which of the following is a way to launch WSL?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Type 'wsl' in Command Prompt or PowerShell",
+                "correct": true,
+                "feedback": "Correct! You can launch WSL by typing 'wsl' in Command Prompt or PowerShell."
+            },
+            {
+                "answer": "Press Ctrl+Alt+L on your keyboard",
+                "correct": false,
+                "feedback": "Incorrect. There is no standard keyboard shortcut like this for launching WSL."
+            },
+            {
+                "answer": "Open Task Manager and select 'Run Linux'",
+                "correct": false,
+                "feedback": "Incorrect. Task Manager doesn't have a 'Run Linux' option for launching WSL."
+            },
+            {
+                "answer": "Restart your computer in Linux mode",
+                "correct": false,
+                "feedback": "Incorrect. WSL doesn't require restarting your computer - it runs alongside Windows."
+            }
+        ]
+    },
+    {
+        "question": "How can you identify if you're in a Windows shell versus a Linux shell?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "If the path contains a disk letter followed by a colon (e.g., C:), you're in a Windows shell",
+                "correct": true,
+                "feedback": "Correct! Windows paths contain drive letters with colons, while Linux paths don't."
+            },
+            {
+                "answer": "Linux shells always have a black background",
+                "correct": false,
+                "feedback": "Incorrect. The background color can be customized in both Windows and Linux shells."
+            },
+            {
+                "answer": "Windows shells always display the time",
+                "correct": false,
+                "feedback": "Incorrect. The display of time in the prompt is configurable in both Windows and Linux shells."
+            },
+            {
+                "answer": "Linux shells always display the username@hostname",
+                "correct": false,
+                "feedback": "Incorrect. While this is a common default in Linux, prompt formats can be customized, and some Windows shells can also display similar information."
+            }
+        ]
+    },
+    {
+        "question": "Where are WSL files stored on the Windows system?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "In a virtual drive accessible at \\\\wsl$",
+                "correct": true,
+                "feedback": "Correct! WSL files are accessible from Windows through the \\\\wsl$ virtual drive."
+            },
+            {
+                "answer": "In the C:\\Linux directory",
+                "correct": false,
+                "feedback": "Incorrect. WSL doesn't store files in a standard C:\\Linux directory."
+            },
+            {
+                "answer": "In a separate partition on your hard drive",
+                "correct": false,
+                "feedback": "Incorrect. WSL doesn't require a separate partition like dual-booting does."
+            },
+            {
+                "answer": "Files can only be accessed from within the Linux environment",
+                "correct": false,
+                "feedback": "Incorrect. One of the benefits of WSL is that you can access Linux files from Windows."
+            }
+        ]
+    },
+    {
+        "question": "Why was WSL originally created according to the material?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "To meet demand from users who want to use Linux BASH productivity tools in Windows",
+                "correct": true,
+                "feedback": "Correct! WSL was created to allow Windows users to utilize Linux BASH tools without needing a virtual machine or dual-boot setup."
+            },
+            {
+                "answer": "To replace Windows with Linux",
+                "correct": false,
+                "feedback": "Incorrect. WSL was designed to complement Windows, not replace it."
+            },
+            {
+                "answer": "To allow running Windows applications on Linux",
+                "correct": false,
+                "feedback": "Incorrect. WSL allows running Linux applications on Windows, not the other way around."
+            },
+            {
+                "answer": "To compete with macOS Terminal",
+                "correct": false,
+                "feedback": "Incorrect. While WSL might provide similar functionality to macOS Terminal in some ways, competing with it wasn't the primary reason for its creation."
+            }
+        ]
+    }
+]
