@@ -1,0 +1,158 @@
+[
+    {
+        "question": "Which command would you use to view a file's contents with line numbers?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "cat -n filename.txt",
+                "correct": true,
+                "feedback": "Correct! The -n flag with cat displays line numbers alongside the file contents."
+            },
+            {
+                "answer": "less -n filename.txt",
+                "correct": false,
+                "feedback": "Incorrect. While less can show line numbers, it uses the -N flag, not -n."
+            },
+            {
+                "answer": "head -n filename.txt",
+                "correct": false,
+                "feedback": "Incorrect. The -n flag with head specifies how many lines to show, not to display line numbers."
+            },
+            {
+                "answer": "tail -n filename.txt",
+                "correct": false,
+                "feedback": "Incorrect. The -n flag with tail specifies how many lines to show from the end, not to display line numbers."
+            }
+        ]
+    },
+    {
+        "question": "What is the main difference between the '>' and '>>' redirection operators?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "'>' overwrites the file while '>>' appends to it",
+                "correct": true,
+                "feedback": "Correct! The '>' operator overwrites any existing content, while '>>' adds to the end of the file."
+            },
+            {
+                "answer": "'>' is for text files while '>>' is for binary files",
+                "correct": false,
+                "feedback": "Incorrect. Both operators work with any file type."
+            },
+            {
+                "answer": "'>' works in Linux while '>>' works in Windows",
+                "correct": false,
+                "feedback": "Incorrect. Both operators work in both operating systems."
+            },
+            {
+                "answer": "'>' is faster than '>>'",
+                "correct": false,
+                "feedback": "Incorrect. The speed difference is negligible, and that's not their main distinction."
+            }
+        ]
+    },
+    {
+        "question": "Which command would you use to search for the word 'error' in all files within the current directory and its subdirectories?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "grep -iR \"error\" .",
+                "correct": true,
+                "feedback": "Correct! The -i flag makes the search case-insensitive, -R searches recursively, and '.' specifies the current directory."
+            },
+            {
+                "answer": "find . -name \"error\"",
+                "correct": false,
+                "feedback": "Incorrect. The find command searches for filenames, not file contents."
+            },
+            {
+                "answer": "cat * | grep \"error\"",
+                "correct": false,
+                "feedback": "Incorrect. This would only search in files in the current directory, not subdirectories."
+            },
+            {
+                "answer": "less -R \"error\" .",
+                "correct": false,
+                "feedback": "Incorrect. Less is for viewing files, not searching through them."
+            }
+        ]
+    },
+    {
+        "question": "How do you exit the nano text editor?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Press Ctrl+X",
+                "correct": true,
+                "feedback": "Correct! Ctrl+X is the standard way to exit nano. If there are unsaved changes, it will prompt you to save them."
+            },
+            {
+                "answer": "Type :q and press Enter",
+                "correct": false,
+                "feedback": "Incorrect. This is how you exit vim, not nano."
+            },
+            {
+                "answer": "Press Esc and then type q",
+                "correct": false,
+                "feedback": "Incorrect. This is a vim command, not a nano command."
+            },
+            {
+                "answer": "Press Alt+F4",
+                "correct": false,
+                "feedback": "Incorrect. Alt+F4 is a Windows shortcut for closing windows, not for exiting nano."
+            }
+        ]
+    },
+    {
+        "question": "What does the command 'ls -l | wc -l' do?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Counts the number of files and directories in the current directory",
+                "correct": true,
+                "feedback": "Correct! ls -l lists files with details, and wc -l counts the lines. The pipe (|) connects them together."
+            },
+            {
+                "answer": "Lists all files and their line counts",
+                "correct": false,
+                "feedback": "Incorrect. This would require a different command structure."
+            },
+            {
+                "answer": "Shows the total size of all files in the directory",
+                "correct": false,
+                "feedback": "Incorrect. To show total size, you would need to use a different command like 'du'."
+            },
+            {
+                "answer": "Lists all files and their permissions",
+                "correct": false,
+                "feedback": "Incorrect. While ls -l shows permissions, the wc -l part counts the lines, not displays permissions."
+            }
+        ]
+    },
+    {
+        "question": "Which command would you use to view the last 5 lines of a log file in real-time?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "tail -n 5 -f log.txt",
+                "correct": true,
+                "feedback": "Correct! The -n 5 shows the last 5 lines, and -f follows the file in real-time."
+            },
+            {
+                "answer": "head -n 5 -f log.txt",
+                "correct": false,
+                "feedback": "Incorrect. Head shows the beginning of the file, not the end."
+            },
+            {
+                "answer": "less -n 5 log.txt",
+                "correct": false,
+                "feedback": "Incorrect. Less doesn't have a real-time following feature like tail -f."
+            },
+            {
+                "answer": "cat -n 5 log.txt",
+                "correct": false,
+                "feedback": "Incorrect. Cat doesn't have options for showing a specific number of lines or following in real-time."
+            }
+        ]
+    }
+]
