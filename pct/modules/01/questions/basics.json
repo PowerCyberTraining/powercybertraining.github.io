@@ -1,0 +1,210 @@
+[
+    {
+        "question": "When you see '~' in your command prompt, what does it represent?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Your home directory",
+                "correct": true,
+                "feedback": "Correct! The tilde (~) is a shortcut that represents your home directory."
+            },
+            {
+                "answer": "The root directory",
+                "correct": false,
+                "feedback": "The root directory is represented by a forward slash (/)."
+            },
+            {
+                "answer": "The previous directory",
+                "correct": false,
+                "feedback": "The previous directory is represented by two dots (..)."
+            },
+            {
+                "answer": "A hidden directory",
+                "correct": false,
+                "feedback": "Hidden directories start with a dot (.), not a tilde."
+            }
+        ]
+    },
+    {
+        "question": "Which command is used to print your current location in the file system?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "pwd",
+                "correct": true,
+                "feedback": "Correct! 'pwd' (print working directory) shows your current location."
+            },
+            {
+                "answer": "cd",
+                "correct": false,
+                "feedback": "'cd' is used to change directories, not to show your current location."
+            },
+            {
+                "answer": "ls",
+                "correct": false,
+                "feedback": "'ls' lists directory contents, not your current location."
+            },
+            {
+                "answer": "loc",
+                "correct": false,
+                "feedback": "'loc' is not a standard Linux command."
+            }
+        ]
+    },
+    {
+        "question": "What does '..' represent in a file path?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The parent directory",
+                "correct": true,
+                "feedback": "Correct! '..' refers to the directory one level up from your current location."
+            },
+            {
+                "answer": "The current directory",
+                "correct": false,
+                "feedback": "The current directory is represented by a single dot (.)."
+            },
+            {
+                "answer": "The home directory",
+                "correct": false,
+                "feedback": "The home directory is represented by tilde (~)."
+            },
+            {
+                "answer": "A hidden directory",
+                "correct": false,
+                "feedback": "Hidden directories start with a single dot (.)."
+            }
+        ]
+    },
+    {
+        "question": "Which command creates a new directory?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "mkdir",
+                "correct": true,
+                "feedback": "Correct! 'mkdir' (make directory) creates new directories."
+            },
+            {
+                "answer": "touch",
+                "correct": false,
+                "feedback": "'touch' creates files, not directories."
+            },
+            {
+                "answer": "cd",
+                "correct": false,
+                "feedback": "'cd' changes directories but doesn't create them."
+            },
+            {
+                "answer": "ls",
+                "correct": false,
+                "feedback": "'ls' lists directory contents but doesn't create directories."
+            }
+        ]
+    },
+    {
+        "question": "What's the difference between an absolute path and a relative path?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Absolute paths start from root (/), relative paths start from current location",
+                "correct": true,
+                "feedback": "Correct! Absolute paths give the complete path from root, while relative paths start from where you are."
+            },
+            {
+                "answer": "Absolute paths are shorter than relative paths",
+                "correct": false,
+                "feedback": "This isn't always true - it depends on your current location."
+            },
+            {
+                "answer": "Absolute paths only work in home directory",
+                "correct": false,
+                "feedback": "Absolute paths work from anywhere in the system."
+            },
+            {
+                "answer": "Relative paths always use the ~ symbol",
+                "correct": false,
+                "feedback": "The ~ symbol is a shortcut to home directory, not a requirement for relative paths."
+            }
+        ]
+    },
+    {
+        "question": "If you want to list all files, including hidden ones, which command should you use?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "ls -a",
+                "correct": true,
+                "feedback": "Correct! The -a flag shows all files, including hidden ones that start with a dot."
+            },
+            {
+                "answer": "ls -l",
+                "correct": false,
+                "feedback": "The -l flag shows detailed information but doesn't show hidden files."
+            },
+            {
+                "answer": "ls -h",
+                "correct": false,
+                "feedback": "The -h flag makes file sizes human-readable but doesn't show hidden files."
+            },
+            {
+                "answer": "ls -p",
+                "correct": false,
+                "feedback": "The -p flag adds / to directories but doesn't show hidden files."
+            }
+        ]
+    },
+    {
+        "question": "What happens when you run 'cd' without any arguments?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Takes you to your home directory",
+                "correct": true,
+                "feedback": "Correct! Running 'cd' alone is a shortcut to return to your home directory."
+            },
+            {
+                "answer": "Takes you to the root directory",
+                "correct": false,
+                "feedback": "To go to the root directory, you need 'cd /'."
+            },
+            {
+                "answer": "Shows an error message",
+                "correct": false,
+                "feedback": "'cd' without arguments is valid and takes you home."
+            },
+            {
+                "answer": "Does nothing",
+                "correct": false,
+                "feedback": "'cd' without arguments actively changes your location to home."
+            }
+        ]
+    },
+    {
+        "question": "Which command would you use to copy a file named 'notes.txt' to a backup named 'notes_backup.txt'?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "cp notes.txt notes_backup.txt",
+                "correct": true,
+                "feedback": "Correct! The 'cp' command copies files, taking the source file first and destination second."
+            },
+            {
+                "answer": "mv notes.txt notes_backup.txt",
+                "correct": false,
+                "feedback": "'mv' would move (rename) the file rather than creating a copy."
+            },
+            {
+                "answer": "copy notes.txt notes_backup.txt",
+                "correct": false,
+                "feedback": "'copy' is not a standard Linux command."
+            },
+            {
+                "answer": "ls notes.txt notes_backup.txt",
+                "correct": false,
+                "feedback": "'ls' lists files but doesn't copy them."
+            }
+        ]
+    }
+]
