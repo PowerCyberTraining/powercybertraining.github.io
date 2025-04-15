@@ -9,7 +9,7 @@ chapters:
   - file: modules/01/wsl.ipynb
   - file: modules/01/basics.ipynb
   - file: modules/01/cli.md
-  - file: modules/01/pkgman.md
+  - file: modules/01/pkgman.ipynb
   - file: modules/01/env.md
   - file: modules/01/jupyter.md
   - file: modules/01/git.md
