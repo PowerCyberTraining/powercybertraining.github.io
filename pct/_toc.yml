@@ -4,6 +4,8 @@
 format: jb-book
 root: intro
 chapters:
+- file: how-to-use.md
+  title: How to use this book
 - file: modules/01/intro.md
   sections:
   - file: modules/01/wsl.ipynb
@@ -27,7 +29,7 @@ chapters:
   sections:
   - file: modules/04/linear-equations.ipynb
   - file: modules/04/nonlinear-equations.ipynb
-  - file: modules/04/power-flow.ipynb
+  - file: modules/04/ac-power-flow.ipynb
 - file: modules/06/intro.md
   sections:
   - file: modules/06/transmission_federate.ipynb
