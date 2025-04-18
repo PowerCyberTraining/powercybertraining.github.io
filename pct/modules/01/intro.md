@@ -9,7 +9,7 @@ researchers to figure out how to install, configure, and efficiently use these
 tools for research.
 
 Most power engineering researchers are familiar with the Microsoft Windows
-operating system and the MATLAB software. However, many of the advanced
+operating system and probably also with MATLAB. However, many of the advanced
 cyberinfrastructure tools are developed on Linux and thus compile more easily
 and run more efficiently in Linux. On the other hand, compiling and configuring
 some tools to properly run on Windows may take significantly more efforts.
@@ -19,8 +19,8 @@ important for research productivity.
 This module aims to provide an introduction to several tools on Linux. These
 include
 - Windows Subsystem for Linux (WSL)
-- Shell
-- Anaconda/Mambaforge
-- VS Code
+- Linux Command Line Interface (CLI)
+- Python Package Management
+- Visual Studio Code IDE
 - Jupyter Notebook
 - git
