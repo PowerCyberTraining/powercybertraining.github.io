@@ -1,4 +1,4 @@
-# Tools You Need
+# Computational Environment Fundamentals
 
 ## Motivation
 
