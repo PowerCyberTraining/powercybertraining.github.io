@@ -1,5 +1,4 @@
-
-# How to use this book
+# How to Follow the Training
 
 This book is designed to be *interactive* and *hands-on*. To get the most out of your learning experience, we recommend the following approach:
 
@@ -10,7 +9,28 @@ This website is designed for easy navigation:
 - The **left sidebar** contains the table of contents with collapsible sections for each topic area.
 - The **right side** displays the current page content.
 - Use the **Next** and **Previous** links at the bottom of each page to move sequentially through lessons.
-- In the top-right corner, you'll find buttons for **full screen mode**, **dark/light mode**, and other display options to customize your reading experience.
+- In the top-right corner, you'll find buttons for **full screen mode**,
+  **dark/light mode**, and other display options to customize your reading
+  experience.
+
+## Highlighting and Annotating using Hypothesis
+
+This website supports **Hypothesis**, an annotation overlay that allows you to
+highlight text and add notes. Simply select any text to highlight it and add
+your questions or thoughts. This feature is great for collaborative learning
+and asking questions about specific content.
+
+```{admonition} Note
+:class: tip
+
+You will need to create a free account with Hypothesis to use this feature.
+
+```
+
+You can open the Hypothesis panel
+by clicking the "<" button in the top-right corner of the page. The other two
+buttons below allows you to switch on and off the highlights and write notes for
+the page.
 
 ## Setting up your environment
 
