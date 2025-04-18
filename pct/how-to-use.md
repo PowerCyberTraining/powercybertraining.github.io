@@ -3,6 +3,15 @@
 
 This book is designed to be *interactive* and *hands-on*. To get the most out of your learning experience, we recommend the following approach:
 
+## Navigating This Website
+
+This website is designed for easy navigation:
+
+- The **left sidebar** contains the table of contents with collapsible sections for each topic area.
+- The **right side** displays the current page content.
+- Use the **Next** and **Previous** links at the bottom of each page to move sequentially through lessons.
+- In the top-right corner, you'll find buttons for **full screen mode**, **dark/light mode**, and other display options to customize your reading experience.
+
 ## Setting up your environment
 
 1. **Begin with Module 1**: Start by following the environment setup instructions in Module 1, which will guide you through installing necessary tools (WSL for Windows users, command-line basics, package managers, and development environments).
