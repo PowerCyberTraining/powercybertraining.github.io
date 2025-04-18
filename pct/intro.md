@@ -18,21 +18,10 @@ To start, please click on the "Next" link at the bottom of this page. You can
 also use the arrow key on your keyboard to navigate through the website.
 
 
-```{admonition} Acknowledgements
+## Acknowledgements
 
 This work is supported by the National Science Foundation (NSF) under [Grant No.
 2319895 and 2319896](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2319895). Any
 opinions, findings, and conclusions or recommendations expressed in this
 material are those of the author(s) and do not necessarily reflect the views of
 the National Science Foundation.
-```
-
-```{admonition} License
-
-The contents of this book are licensed for free consumption under the following
-license: Creative Commons Attribution 4.0 International (CC-BY-4.0). We welcome
-you to share and adapt the contents for your own purposes, provided that you
-properly credit the original authors.
-
-![Creative Commons Attribution 4.0 International License](https://i.creativecommons.org/l/by/4.0/88x31.png)
-```
