@@ -5,7 +5,6 @@ format: jb-book
 root: intro
 chapters:
 - file: how-to-use.md
-  title: How to use this book
 - file: modules/01/intro.md
   sections:
   - file: modules/01/wsl.ipynb
