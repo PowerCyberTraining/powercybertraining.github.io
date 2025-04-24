@@ -1,4 +1,4 @@
-# 🔥 Why Can LMP at Some Locations Exceed the Most Expensive Unit’s Price?
+# Why Can LMP at Some Locations Exceed the Most Expensive Unit’s Price?
 
 💡 Ever wondered why electricity prices at some locations spike beyond the cost of the most expensive generator? Even though there is an elegant mathematical explanation for this, a concrete example can provide an intuitive understanding.
 
