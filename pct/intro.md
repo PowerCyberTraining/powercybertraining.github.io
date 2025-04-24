@@ -14,8 +14,7 @@ Lessons are being updated to include an information table at the beginning. The
 table will indicate the status of the lesson (e.g., "In Progress", "Completed").
 We thank you for your patience as we work to complete the materials.
 
-To start, please click on the "Next" link at the bottom of this page. You can
-also use the arrow key on your keyboard to navigate through the website.
+To start, please click on the "Next" link at the bottom of this page.
 
 
 ## Acknowledgements

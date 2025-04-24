@@ -29,6 +29,8 @@ chapters:
   - file: modules/04/linear-equations.ipynb
   - file: modules/04/nonlinear-equations.ipynb
   - file: modules/04/ac-power-flow.ipynb
+  - file: modules/04/oop-and-dc-power-flow.ipynb
+  - file: modules/04/sympy.ipynb
 - file: modules/06/intro.md
   sections:
   - file: modules/06/transmission_federate.ipynb
