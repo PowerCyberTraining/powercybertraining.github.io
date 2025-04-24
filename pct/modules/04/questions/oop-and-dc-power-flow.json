@@ -1,0 +1,158 @@
+[
+    {
+        "question": "In the context of power system analysis, what is the main purpose of the BaseModel class?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "To provide a common interface and enforce implementation requirements for all power system components",
+                "correct": true,
+                "feedback": "Correct! BaseModel serves as an abstract base class that defines the common interface and required methods for all power system components."
+            },
+            {
+                "answer": "To perform power flow calculations",
+                "correct": false,
+                "feedback": "Incorrect. Power flow calculations are implemented in specific analysis methods, not in the BaseModel class."
+            },
+            {
+                "answer": "To store system-wide parameters like base MVA",
+                "correct": false,
+                "feedback": "Incorrect. System-wide parameters are stored in the PowerSystem class, not the BaseModel."
+            },
+            {
+                "answer": "To handle data input/output operations",
+                "correct": false,
+                "feedback": "Incorrect. Data I/O operations are handled by separate functions, not the BaseModel class."
+            }
+        ]
+    },
+    {
+        "question": "What are the three main assumptions of DC power flow analysis?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Flat voltage profile, negligible line resistance, and small angle differences",
+                "correct": true,
+                "feedback": "Correct! DC power flow assumes 1.0 p.u. voltages, r << x, and sin(θ) ≈ θ for small angles."
+            },
+            {
+                "answer": "Zero reactive power, constant power factor, and balanced system",
+                "correct": false,
+                "feedback": "Incorrect. While DC power flow doesn't consider reactive power, these are not its main assumptions."
+            },
+            {
+                "answer": "Constant impedance loads, lossless transmission, and infinite bus",
+                "correct": false,
+                "feedback": "Incorrect. These are not the main assumptions of DC power flow analysis."
+            },
+            {
+                "answer": "Equal voltage magnitudes, zero shunt elements, and constant frequency",
+                "correct": false,
+                "feedback": "Incorrect. While flat voltage profile is one assumption, the others are not key assumptions of DC power flow."
+            }
+        ]
+    },
+    {
+        "question": "What is the relationship between voltage angles and power flow in DC power flow analysis?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "P_ij = (θ_i - θ_j)/x_ij",
+                "correct": true,
+                "feedback": "Correct! In DC power flow, the power flow between buses i and j is proportional to their angle difference divided by the reactance."
+            },
+            {
+                "answer": "P_ij = V_i * V_j * sin(θ_i - θ_j)/x_ij",
+                "correct": false,
+                "feedback": "Incorrect. This is the AC power flow equation. DC power flow uses a simplified linear relationship."
+            },
+            {
+                "answer": "P_ij = (V_i - V_j)/x_ij",
+                "correct": false,
+                "feedback": "Incorrect. DC power flow relates to angle differences, not voltage magnitude differences."
+            },
+            {
+                "answer": "P_ij = (θ_i - θ_j) * (V_i/V_j)",
+                "correct": false,
+                "feedback": "Incorrect. DC power flow assumes flat voltage profile (V=1.0), so voltage magnitudes are not part of the equation."
+            }
+        ]
+    },
+    {
+        "question": "What is the purpose of the 'status' field in the Branch class?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "To indicate whether the branch is in-service (1) or out-of-service (0)",
+                "correct": true,
+                "feedback": "Correct! The status field is used to track whether a branch is operational in the system."
+            },
+            {
+                "answer": "To show if the branch is overloaded",
+                "correct": false,
+                "feedback": "Incorrect. Overload conditions are determined by comparing flows to ratings, not by the status field."
+            },
+            {
+                "answer": "To indicate the direction of power flow",
+                "correct": false,
+                "feedback": "Incorrect. Power flow direction is determined by the actual flow calculation, not the status field."
+            },
+            {
+                "answer": "To show if the branch is a transformer",
+                "correct": false,
+                "feedback": "Incorrect. The type of branch (line or transformer) is determined by other parameters, not the status field."
+            }
+        ]
+    },
+    {
+        "question": "In the PowerSystem class, what is the default value of baseMVA and why is it important?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "100.0 MVA, used as the power base for per-unit calculations",
+                "correct": true,
+                "feedback": "Correct! 100 MVA is the industry-standard base power used for per-unit calculations in power systems."
+            },
+            {
+                "answer": "1.0 MVA, used as the minimum power threshold",
+                "correct": false,
+                "feedback": "Incorrect. 1.0 MVA would be too small for a typical power system base."
+            },
+            {
+                "answer": "1000.0 MVA, used as the maximum power limit",
+                "correct": false,
+                "feedback": "Incorrect. The base MVA is not a limit but a reference value for per-unit calculations."
+            },
+            {
+                "answer": "50.0 MVA, used for frequency calculations",
+                "correct": false,
+                "feedback": "Incorrect. Base MVA is not directly related to frequency calculations."
+            }
+        ]
+    },
+    {
+        "question": "What is the purpose of the ContingencyAnalysis class?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "To simulate and analyze the impact of component outages on system operation",
+                "correct": true,
+                "feedback": "Correct! ContingencyAnalysis evaluates system behavior under various component outages (N-1 analysis)."
+            },
+            {
+                "answer": "To optimize power flow solutions",
+                "correct": false,
+                "feedback": "Incorrect. Power flow optimization is a different type of analysis."
+            },
+            {
+                "answer": "To calculate system losses",
+                "correct": false,
+                "feedback": "Incorrect. Loss calculation is a different aspect of power system analysis."
+            },
+            {
+                "answer": "To manage real-time system operations",
+                "correct": false,
+                "feedback": "Incorrect. The class performs analysis for planning purposes, not real-time operations."
+            }
+        ]
+    }
+]

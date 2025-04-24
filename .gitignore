@@ -4,3 +4,4 @@ pct/_build/*
 .history/*
 .DS_Store
 ~*.xlsx
+.cursor/*

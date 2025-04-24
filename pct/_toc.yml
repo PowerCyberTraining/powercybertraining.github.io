@@ -4,12 +4,13 @@
 format: jb-book
 root: intro
 chapters:
+- file: how-to-use.md
 - file: modules/01/intro.md
   sections:
-  - file: modules/01/wsl.md
-  - file: modules/01/commands.ipynb
-  - file: modules/01/filesystem.md
-  - file: modules/01/pkgman.md
+  - file: modules/01/wsl.ipynb
+  - file: modules/01/basics.ipynb
+  - file: modules/01/cli.md
+  - file: modules/01/pkgman.ipynb
   - file: modules/01/env.md
   - file: modules/01/jupyter.md
   - file: modules/01/git.md
@@ -27,8 +28,14 @@ chapters:
   sections:
   - file: modules/04/linear-equations.ipynb
   - file: modules/04/nonlinear-equations.ipynb
-  - file: modules/04/power-flow.ipynb
+  - file: modules/04/ac-power-flow.ipynb
+  - file: modules/04/oop-and-dc-power-flow.ipynb
+  - file: modules/04/sympy.ipynb
 - file: modules/06/intro.md
   sections:
   - file: modules/06/transmission_federate.ipynb
   - file: modules/06/distribution_federate.ipynb
+- file: about/intro.md
+  sections:
+  - file: about/people.md
+  - file: about/license.md

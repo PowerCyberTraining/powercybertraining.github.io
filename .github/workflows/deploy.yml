@@ -29,8 +29,19 @@ jobs:
       with:
         python-version: 3.11
 
+    # Cache pip dependencies
+    - name: Cache pip dependencies
+      id: pip-cache
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
     - name: Install dependencies
       run: |
+        echo "Cache hit: ${{ steps.pip-cache.outputs.cache-hit == 'true' }}"
         pip install -r requirements.txt
 
     # (optional) Cache your executed notebooks between runs
@@ -38,10 +49,15 @@ jobs:
     # execute:
     #   execute_notebooks: cache
     - name: cache executed notebooks
+      id: jupyter-cache
       uses: actions/cache@v4
       with:
         path: _build/.jupyter_cache
         key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
+
+    - name: Check jupyter cache status
+      run: |
+        echo "Jupyter cache hit: ${{ steps.jupyter-cache.outputs.cache-hit == 'true' }}"
 
     # Build the book
     - name: Build the book

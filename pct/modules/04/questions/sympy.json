@@ -1,0 +1,132 @@
+[
+    {
+        "question": "What is the main advantage of using SymPy over NumPy for power system analysis?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "SymPy maintains symbolic expressions that reveal mathematical relationships",
+                "correct": true,
+                "feedback": "Correct! SymPy allows us to work with symbolic expressions, revealing the underlying mathematical structure of power system equations."
+            },
+            {
+                "answer": "SymPy calculations are faster than NumPy",
+                "correct": false,
+                "feedback": "Incorrect. SymPy is generally slower for numerical calculations, which is why we use lambdify to convert to NumPy for numerical evaluation."
+            },
+            {
+                "answer": "SymPy uses less memory than NumPy",
+                "correct": false,
+                "feedback": "Incorrect. Memory usage is not the primary advantage of SymPy over NumPy."
+            },
+            {
+                "answer": "SymPy has more built-in power system functions",
+                "correct": false,
+                "feedback": "Incorrect. The advantage is in symbolic manipulation, not in having more power system functions."
+            }
+        ]
+    },
+    {
+        "question": "Which SymPy function is used to convert symbolic expressions to fast numerical functions?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "lambdify",
+                "correct": true,
+                "feedback": "Correct! lambdify converts symbolic expressions to numerical functions that can use NumPy for fast computation."
+            },
+            {
+                "answer": "simplify",
+                "correct": false,
+                "feedback": "Incorrect. simplify is used to simplify symbolic expressions, not convert them to numerical functions."
+            },
+            {
+                "answer": "evaluate",
+                "correct": false,
+                "feedback": "Incorrect. evaluate is not a SymPy function for converting to numerical functions."
+            },
+            {
+                "answer": "subs",
+                "correct": false,
+                "feedback": "Incorrect. subs is used for substituting values in symbolic expressions, not converting to numerical functions."
+            }
+        ]
+    },
+    {
+        "question": "Which of the following creates multiple symbolic variables at once in SymPy?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "sp.symbols('x y z')",
+                "correct": true,
+                "feedback": "Correct! sp.symbols() can create multiple symbolic variables from a space-separated string."
+            },
+            {
+                "answer": "Using sp.Symbol() multiple times",
+                "correct": false,
+                "feedback": "Incorrect. While this would work, it's not the most efficient way to create multiple symbols at once."
+            },
+            {
+                "answer": "np.array(['x', 'y', 'z'])",
+                "correct": false,
+                "feedback": "Incorrect. This creates a NumPy array of strings, not symbolic variables."
+            },
+            {
+                "answer": "list(['x', 'y', 'z'])",
+                "correct": false,
+                "feedback": "Incorrect. This creates a list of strings, not symbolic variables."
+            }
+        ]
+    },
+    {
+        "question": "In power system analysis, why is symbolic differentiation particularly useful?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "For deriving the Jacobian matrix in power flow analysis",
+                "correct": true,
+                "feedback": "Correct! Symbolic differentiation helps derive the Jacobian matrix, which is essential for power flow analysis using the Newton-Raphson method."
+            },
+            {
+                "answer": "For solving differential equations",
+                "correct": false,
+                "feedback": "Incorrect. While SymPy can solve differential equations, this is not its primary use in power flow analysis."
+            },
+            {
+                "answer": "For numerical integration",
+                "correct": false,
+                "feedback": "Incorrect. Numerical integration is not a primary application of symbolic computation in power flow analysis."
+            },
+            {
+                "answer": "For plotting functions",
+                "correct": false,
+                "feedback": "Incorrect. While SymPy can plot functions, this is not why symbolic differentiation is particularly useful in power system analysis."
+            }
+        ]
+    },
+    {
+        "question": "What is the difference between sp.sin(x) and np.sin(x)?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "sp.sin(x) maintains x as a symbol while np.sin(x) tries to compute a numerical value",
+                "correct": true,
+                "feedback": "Correct! SymPy's sin function maintains symbolic expressions while NumPy's sin function computes numerical values."
+            },
+            {
+                "answer": "sp.sin(x) is more accurate than np.sin(x)",
+                "correct": false,
+                "feedback": "Incorrect. The difference is not about accuracy but about symbolic versus numerical computation."
+            },
+            {
+                "answer": "sp.sin(x) is faster than np.sin(x)",
+                "correct": false,
+                "feedback": "Incorrect. For numerical computation, np.sin is actually faster."
+            },
+            {
+                "answer": "They produce exactly the same result",
+                "correct": false,
+                "feedback": "Incorrect. They handle input differently - one symbolically, one numerically."
+            }
+        ]
+    }
+]

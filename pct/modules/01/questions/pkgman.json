@@ -1,0 +1,184 @@
+[
+    {
+        "question": "What is the recommended package manager for scientific computing and power systems engineering?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "conda/mamba",
+                "correct": true,
+                "feedback": "Correct! conda/mamba is recommended for power systems engineering and scientific computing because it handles binary dependencies better than pip."
+            },
+            {
+                "answer": "pip",
+                "correct": false,
+                "feedback": "Incorrect. While pip is useful, conda/mamba is preferred for scientific packages as it handles binary dependencies better."
+            },
+            {
+                "answer": "apt",
+                "correct": false,
+                "feedback": "Incorrect. apt is a system package manager for Debian-based Linux distributions, not a Python package manager."
+            },
+            {
+                "answer": "npm",
+                "correct": false,
+                "feedback": "Incorrect. npm is a package manager for JavaScript/Node.js, not Python."
+            }
+        ]
+    },
+    {
+        "question": "Why should you create different Python environments for different projects?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "To avoid package version conflicts between projects",
+                "correct": true,
+                "feedback": "Correct! Different projects may require different versions of the same package. Separate environments allow each project to have its own package versions."
+            },
+            {
+                "answer": "To save disk space",
+                "correct": false,
+                "feedback": "Incorrect. Creating multiple environments actually uses more disk space, not less."
+            },
+            {
+                "answer": "To make Python run faster",
+                "correct": false,
+                "feedback": "Incorrect. Multiple environments don't inherently improve Python's performance."
+            },
+            {
+                "answer": "It's required by Python to run any packages",
+                "correct": false,
+                "feedback": "Incorrect. Python can run packages without separate environments, but separate environments help manage dependencies."
+            }
+        ]
+    },
+    {
+        "question": "What command would you use to create a new conda environment called 'project' with Python 3.12?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "mamba create -n project python=3.12",
+                "correct": true,
+                "feedback": "Correct! This command creates a new environment named 'project' with Python 3.12 installed."
+            },
+            {
+                "answer": "mamba new project python=3.12",
+                "correct": false,
+                "feedback": "Incorrect. The correct command uses 'create' instead of 'new'."
+            },
+            {
+                "answer": "mamba install -n project python=3.12",
+                "correct": false,
+                "feedback": "Incorrect. 'install' is used to add packages to an existing environment, not to create a new one."
+            },
+            {
+                "answer": "mamba env project python=3.12",
+                "correct": false,
+                "feedback": "Incorrect. The correct format is 'mamba create -n project python=3.12'."
+            }
+        ]
+    },
+    {
+        "question": "When should you use pip instead of conda/mamba?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "When a package is not available in conda",
+                "correct": true,
+                "feedback": "Correct! If a package isn't available through conda/mamba, then pip is the appropriate alternative."
+            },
+            {
+                "answer": "When you need to install a package faster",
+                "correct": false,
+                "feedback": "Incorrect. Speed isn't the primary consideration when choosing between conda and pip."
+            },
+            {
+                "answer": "Always, pip is better than conda",
+                "correct": false,
+                "feedback": "Incorrect. For scientific and engineering applications, conda is often preferred because it handles binary dependencies better."
+            },
+            {
+                "answer": "When working with packages that don't have dependencies",
+                "correct": false,
+                "feedback": "Incorrect. The package's dependency structure isn't the main factor in choosing between pip and conda."
+            }
+        ]
+    },
+    {
+        "question": "What is the difference between Anaconda Distribution and Miniconda?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Anaconda comes with 250+ pre-installed packages while Miniconda is minimal with just conda and Python",
+                "correct": true,
+                "feedback": "Correct! Anaconda (~3GB) includes hundreds of pre-installed scientific packages, while Miniconda (~400MB) is minimal."
+            },
+            {
+                "answer": "Miniconda can install more packages than Anaconda",
+                "correct": false,
+                "feedback": "Incorrect. Both can install the same packages; Anaconda just comes with more pre-installed."
+            },
+            {
+                "answer": "Anaconda is free but Miniconda requires a paid subscription",
+                "correct": false,
+                "feedback": "Incorrect. Both Anaconda and Miniconda have free versions available."
+            },
+            {
+                "answer": "Miniconda works on Windows while Anaconda only works on Linux",
+                "correct": false,
+                "feedback": "Incorrect. Both Anaconda and Miniconda work on Windows, macOS, and Linux."
+            }
+        ]
+    },
+    {
+        "question": "What is the recommended order when mixing conda and pip in a project?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Create environment, install conda packages, then install pip packages",
+                "correct": true,
+                "feedback": "Correct! This order is important because packages installed with pip aren't tracked by conda, which may lead to conflicts if conda packages are installed after pip packages."
+            },
+            {
+                "answer": "Create environment, install pip packages, then install conda packages",
+                "correct": false,
+                "feedback": "Incorrect. Installing conda packages after pip packages can lead to dependency conflicts, as conda doesn't track pip-installed packages."
+            },
+            {
+                "answer": "Always install packages with pip first, then create a conda environment",
+                "correct": false,
+                "feedback": "Incorrect. You should create the conda environment first, then install packages."
+            },
+            {
+                "answer": "Never mix conda and pip in the same environment",
+                "correct": false,
+                "feedback": "Incorrect. While it requires care, mixing conda and pip is sometimes necessary and can work if done in the right order."
+            }
+        ]
+    },
+    {
+        "question": "How can you export your conda environment for others to reproduce?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "mamba env export > environment.yml",
+                "correct": true,
+                "feedback": "Correct! This command creates an environment.yml file that others can use to recreate your environment."
+            },
+            {
+                "answer": "mamba list > environment.txt",
+                "correct": false,
+                "feedback": "Incorrect. While 'mamba list' shows installed packages, the correct command to export an environment is 'mamba env export'."
+            },
+            {
+                "answer": "pip freeze > environment.yml",
+                "correct": false,
+                "feedback": "Incorrect. 'pip freeze' only captures pip-installed packages, not the full conda environment."
+            },
+            {
+                "answer": "mamba save environment",
+                "correct": false,
+                "feedback": "Incorrect. The correct command is 'mamba env export > environment.yml'."
+            }
+        ]
+    }
+]
