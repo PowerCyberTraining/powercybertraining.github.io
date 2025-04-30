@@ -1,0 +1,262 @@
+[
+    {
+        "question": "What is the standard form for a system of linear equations?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Ax = b",
+                "correct": true,
+                "feedback": "Correct! A system of linear equations is written in standard form as Ax = b, where A is the coefficient matrix, x is the vector of unknowns, and b is the right-hand side vector."
+            },
+            {
+                "answer": "x = Ab",
+                "correct": false,
+                "feedback": "Incorrect. The standard form is Ax = b, not x = Ab."
+            },
+            {
+                "answer": "x = A^(-1)b",
+                "correct": false,
+                "feedback": "Incorrect. This is the solution to a system of linear equations (x = A^(-1)b), not the standard form of the system itself."
+            },
+            {
+                "answer": "b = xA",
+                "correct": false,
+                "feedback": "Incorrect. The standard form of a system of linear equations is Ax = b, not b = xA."
+            }
+        ]
+    },
+    {
+        "question": "When is the solution to a system of linear equations Ax = b unique?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "When A is square and nonsingular (det(A) ≠ 0)",
+                "correct": true,
+                "feedback": "Correct! A unique solution exists when A is a square matrix and has a non-zero determinant, meaning its rows or columns are linearly independent."
+            },
+            {
+                "answer": "When A is any rectangular matrix",
+                "correct": false,
+                "feedback": "Incorrect. Rectangular matrices (more equations than unknowns or vice versa) typically lead to either no solution or infinitely many solutions."
+            },
+            {
+                "answer": "When A is a singular matrix",
+                "correct": false,
+                "feedback": "Incorrect. A singular matrix (det(A) = 0) means the system either has no solution or infinitely many solutions."
+            },
+            {
+                "answer": "When A is a diagonal matrix",
+                "correct": false,
+                "feedback": "Incorrect. While diagonal matrices with non-zero diagonal elements do have unique solutions, this is not a necessary condition. Any nonsingular matrix will have a unique solution."
+            }
+        ]
+    },
+    {
+        "question": "Which of the following is the recommended way to solve a system of linear equations in Python?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "np.linalg.solve(A, b)",
+                "correct": true,
+                "feedback": "Correct! Using np.linalg.solve is the recommended approach as it's more numerically stable and computationally efficient than computing the inverse."
+            },
+            {
+                "answer": "np.linalg.inv(A) @ b",
+                "correct": false,
+                "feedback": "Incorrect. While this will work mathematically, it's not recommended because matrix inversion is numerically unstable and computationally expensive."
+            },
+            {
+                "answer": "A * b",
+                "correct": false,
+                "feedback": "Incorrect. This would perform element-wise multiplication, not solve the system of equations."
+            },
+            {
+                "answer": "A @ b",
+                "correct": false,
+                "feedback": "Incorrect. This performs matrix multiplication, not solving for x in Ax = b."
+            }
+        ]
+    },
+    {
+        "question": "What is the main advantage of LU decomposition for solving linear systems?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "It allows efficient solving for multiple right-hand sides after a single decomposition",
+                "correct": true,
+                "feedback": "Correct! Once the LU decomposition is computed, it can be reused to solve for different right-hand side vectors without repeating the most expensive part of the computation."
+            },
+            {
+                "answer": "It always guarantees a solution even for singular matrices",
+                "correct": false,
+                "feedback": "Incorrect. LU decomposition does not guarantee solutions for singular matrices."
+            },
+            {
+                "answer": "It's the only method that works with sparse matrices",
+                "correct": false,
+                "feedback": "Incorrect. There are several methods that work with sparse matrices, including iterative methods."
+            },
+            {
+                "answer": "It requires less memory than other solution methods",
+                "correct": false,
+                "feedback": "Incorrect. While memory efficiency isn't the main advantage, the key benefit is computational efficiency when solving multiple systems with the same coefficient matrix."
+            }
+        ]
+    },
+    {
+        "question": "What makes a matrix 'sparse'?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "It contains many zero elements",
+                "correct": true,
+                "feedback": "Correct! A sparse matrix has many zero elements, allowing for specialized storage formats and algorithms that improve efficiency."
+            },
+            {
+                "answer": "It has more columns than rows",
+                "correct": false,
+                "feedback": "Incorrect. A matrix with more columns than rows is called a wide matrix or has a rectangular shape, but this doesn't make it sparse."
+            },
+            {
+                "answer": "Its determinant is close to zero",
+                "correct": false,
+                "feedback": "Incorrect. A matrix with a determinant close to zero is called ill-conditioned, not sparse."
+            },
+            {
+                "answer": "It contains only integer values",
+                "correct": false,
+                "feedback": "Incorrect. The type of values in a matrix doesn't determine whether it's sparse. Sparsity refers to the number of zero elements."
+            }
+        ]
+    },
+    {
+        "question": "Which of the following SciPy sparse matrix formats is most efficient for incrementally building a matrix?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "dok_matrix",
+                "correct": true,
+                "feedback": "Correct! dok_matrix (Dictionary of Keys) is based on a hash table and allows efficient random access, making it ideal for incrementally building a matrix."
+            },
+            {
+                "answer": "csr_matrix",
+                "correct": false,
+                "feedback": "Incorrect. While csr_matrix (Compressed Sparse Row) is efficient for arithmetic operations and row slicing, it's not the best choice for incrementally building a matrix."
+            },
+            {
+                "answer": "csc_matrix",
+                "correct": false,
+                "feedback": "Incorrect. csc_matrix (Compressed Sparse Column) is efficient for arithmetic operations and column slicing, but not for incrementally building a matrix."
+            },
+            {
+                "answer": "dia_matrix",
+                "correct": false,
+                "feedback": "Incorrect. dia_matrix is efficient for storing diagonal matrices but isn't designed for incrementally building general matrices."
+            }
+        ]
+    },
+    {
+        "question": "Which function in SciPy should be used to solve sparse linear systems?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "scipy.sparse.linalg.spsolve",
+                "correct": true,
+                "feedback": "Correct! spsolve is specifically designed to solve sparse linear systems efficiently."
+            },
+            {
+                "answer": "scipy.linalg.solve",
+                "correct": false,
+                "feedback": "Incorrect. scipy.linalg.solve is designed for dense matrices and would not take advantage of the sparsity structure."
+            },
+            {
+                "answer": "scipy.sparse.solve",
+                "correct": false,
+                "feedback": "Incorrect. This is not a valid function in SciPy. The correct function is scipy.sparse.linalg.spsolve."
+            },
+            {
+                "answer": "scipy.sparse.linalg.eigs",
+                "correct": false,
+                "feedback": "Incorrect. eigs computes eigenvalues and eigenvectors, not solutions to linear systems."
+            }
+        ]
+    },
+    {
+        "question": "Which sparse solver has shown superior performance for electrical circuit problems?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "KLU",
+                "correct": true,
+                "feedback": "Correct! As mentioned in the notebook, KLU (Kent Clark LU) shows superior performance for electrical circuit problems, including power systems."
+            },
+            {
+                "answer": "SuperLU",
+                "correct": false,
+                "feedback": "Incorrect. While SuperLU is a good general-purpose sparse solver, KLU is specifically optimized for circuit problems."
+            },
+            {
+                "answer": "UMFPACK",
+                "correct": false,
+                "feedback": "Incorrect. UMFPACK is another good general-purpose sparse solver, but it's not specifically optimized for electrical circuit problems like KLU."
+            },
+            {
+                "answer": "LAPACK",
+                "correct": false,
+                "feedback": "Incorrect. LAPACK is primarily for dense linear algebra, not sparse systems."
+            }
+        ]
+    },
+    {
+        "question": "Why is it not recommended to use matrix inversion (A⁻¹) to solve linear systems?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "It's numerically unstable and computationally expensive",
+                "correct": true,
+                "feedback": "Correct! Matrix inversion is both numerically less stable and computationally more expensive than direct solving methods like LU decomposition."
+            },
+            {
+                "answer": "It only works for square matrices",
+                "correct": false,
+                "feedback": "Incorrect. While it's true that only square matrices can be inverted, this isn't the main reason to avoid using inversion for solving systems."
+            },
+            {
+                "answer": "It's not supported in NumPy",
+                "correct": false,
+                "feedback": "Incorrect. NumPy does support matrix inversion with np.linalg.inv(), but it's still not recommended for solving systems."
+            },
+            {
+                "answer": "It only works for real-valued matrices",
+                "correct": false,
+                "feedback": "Incorrect. Matrix inversion works for complex-valued matrices as well, but is still not the recommended approach."
+            }
+        ]
+    },
+    {
+        "question": "What is the primary advantage of using a sparse matrix representation for power system admittance matrices?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Better efficiency and less memory usage",
+                "correct": true,
+                "feedback": "Correct! Power system admittance matrices are naturally sparse because buses are only connected to a few other buses. Using sparse representations provides better computational efficiency and significantly reduced memory usage."
+            },
+            {
+                "answer": "More accurate results in power flow calculations",
+                "correct": false,
+                "feedback": "Incorrect. Sparse matrix representation affects efficiency, not accuracy. The mathematical results should be identical to using dense matrices."
+            },
+            {
+                "answer": "Ability to handle complex numbers",
+                "correct": false,
+                "feedback": "Incorrect. Both sparse and dense matrices in Python can handle complex numbers for admittance matrices."
+            },
+            {
+                "answer": "Simplified matrix construction",
+                "correct": false,
+                "feedback": "Incorrect. Sparse matrices can actually be more complex to construct, but the efficiency benefits outweigh this complexity for large power systems."
+            }
+        ]
+    }
+]

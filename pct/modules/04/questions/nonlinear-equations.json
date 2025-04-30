@@ -1,0 +1,262 @@
+[
+    {
+        "question": "What is the standard form of nonlinear equations in numerical computing?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "f(x) = 0",
+                "correct": true,
+                "feedback": "Correct! The standard form for solving nonlinear equations in numerical computing is f(x) = 0, where f is the residual function that should be zero at the solution."
+            },
+            {
+                "answer": "f(x) = g(x)",
+                "correct": false,
+                "feedback": "Incorrect. While this is a common way to express equations, for numerical computing, equations are reformulated as f(x) - g(x) = 0, reducing to the standard form f(x) = 0."
+            },
+            {
+                "answer": "x = f(x)",
+                "correct": false,
+                "feedback": "Incorrect. This is a fixed-point form, not the standard form for solving nonlinear equations numerically."
+            },
+            {
+                "answer": "f'(x) = 0",
+                "correct": false,
+                "feedback": "Incorrect. This would be the form for finding extrema (minima or maxima) of a function, not for solving nonlinear equations."
+            }
+        ]
+    },
+    {
+        "question": "What is a residual function in the context of nonlinear equations?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "A function that measures how far we are from a solution, which should be zero (or sufficiently small) when a solution is found",
+                "correct": true,
+                "feedback": "Correct! The residual function measures the 'error' or distance from a true solution, and should approach zero as we converge to the solution."
+            },
+            {
+                "answer": "The derivative of the nonlinear function",
+                "correct": false,
+                "feedback": "Incorrect. The residual function is the function itself that we want to find roots for, not its derivative."
+            },
+            {
+                "answer": "The difference between consecutive iterations in the solution process",
+                "correct": false,
+                "feedback": "Incorrect. This describes the step size or change in the solution, not the residual function."
+            },
+            {
+                "answer": "The remaining terms after simplifying a nonlinear equation",
+                "correct": false,
+                "feedback": "Incorrect. The residual function is the nonlinear function whose roots we are trying to find."
+            }
+        ]
+    },
+    {
+        "question": "In the Newton-Raphson method for a single equation, how is the next iteration calculated?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "x_{k+1} = x_k - f(x_k)/f'(x_k)",
+                "correct": true,
+                "feedback": "Correct! The Newton-Raphson method uses the current value, the function value, and the derivative to calculate the next approximation."
+            },
+            {
+                "answer": "x_{k+1} = x_k + f(x_k)/f'(x_k)",
+                "correct": false,
+                "feedback": "Incorrect. The formula uses subtraction, not addition."
+            },
+            {
+                "answer": "x_{k+1} = x_k - f'(x_k)/f(x_k)",
+                "correct": false,
+                "feedback": "Incorrect. The function value is divided by the derivative, not the other way around."
+            },
+            {
+                "answer": "x_{k+1} = x_k - f(x_k)*f'(x_k)",
+                "correct": false,
+                "feedback": "Incorrect. The formula involves division by the derivative, not multiplication."
+            }
+        ]
+    },
+    {
+        "question": "For systems of nonlinear equations, what replaces the derivative in the Newton-Raphson method?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The Jacobian matrix",
+                "correct": true,
+                "feedback": "Correct! The Jacobian matrix contains all partial derivatives of the system and replaces the simple derivative used in the single-equation case."
+            },
+            {
+                "answer": "The Hessian matrix",
+                "correct": false,
+                "feedback": "Incorrect. The Hessian matrix contains second derivatives and is used in optimization methods like Newton's method for minimization, not in root finding."
+            },
+            {
+                "answer": "The gradient vector",
+                "correct": false,
+                "feedback": "Incorrect. The gradient vector would only give the direction of steepest increase, but the Jacobian matrix is needed for systems of equations."
+            },
+            {
+                "answer": "The Laplacian operator",
+                "correct": false,
+                "feedback": "Incorrect. The Laplacian operator is used in partial differential equations, not in solving systems of nonlinear equations."
+            }
+        ]
+    },
+    {
+        "question": "What is the primary advantage of providing an analytical Jacobian to nonlinear equation solvers?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Improved computational efficiency, especially for large systems",
+                "correct": true,
+                "feedback": "Correct! Providing an analytical Jacobian eliminates the need for numerical approximation, which requires multiple function evaluations and can be computationally expensive."
+            },
+            {
+                "answer": "It guarantees convergence to the correct solution",
+                "correct": false,
+                "feedback": "Incorrect. While an analytical Jacobian improves performance, it doesn't guarantee convergence, which still depends on factors like the initial guess."
+            },
+            {
+                "answer": "It eliminates the need for an initial guess",
+                "correct": false,
+                "feedback": "Incorrect. An initial guess is still required even when providing an analytical Jacobian."
+            },
+            {
+                "answer": "It works for all types of nonlinear equations",
+                "correct": false,
+                "feedback": "Incorrect. Some nonlinear systems might still fail to converge or have multiple solutions, regardless of whether an analytical Jacobian is provided."
+            }
+        ]
+    },
+    {
+        "question": "What convergence property is characteristic of the Newton-Raphson method near a solution?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Quadratic convergence",
+                "correct": true,
+                "feedback": "Correct! Near a solution, the error approximately squares with each iteration, meaning the number of correct digits roughly doubles each step."
+            },
+            {
+                "answer": "Linear convergence",
+                "correct": false,
+                "feedback": "Incorrect. Newton-Raphson exhibits quadratic convergence near a solution, which is faster than linear convergence."
+            },
+            {
+                "answer": "Logarithmic convergence",
+                "correct": false,
+                "feedback": "Incorrect. Newton-Raphson shows quadratic convergence near a solution, not logarithmic."
+            },
+            {
+                "answer": "Exponential convergence",
+                "correct": false,
+                "feedback": "Incorrect. The Newton-Raphson method has quadratic convergence, not exponential."
+            }
+        ]
+    },
+    {
+        "question": "When can the Newton-Raphson method fail or perform poorly?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "When the initial guess is poor or when derivatives are close to zero",
+                "correct": true,
+                "feedback": "Correct! The method can diverge with poor initial guesses, and it behaves erratically near points where the derivative is zero (causing division by near-zero values)."
+            },
+            {
+                "answer": "Only when the function is not differentiable",
+                "correct": false,
+                "feedback": "Incorrect. While non-differentiability is a problem, the method can also fail with poor initial guesses or near points where derivatives are zero."
+            },
+            {
+                "answer": "Only for systems with more than three variables",
+                "correct": false,
+                "feedback": "Incorrect. The dimensionality of the problem is not the determining factor for failure or poor performance."
+            },
+            {
+                "answer": "When using analytical rather than numerical Jacobians",
+                "correct": false,
+                "feedback": "Incorrect. Analytical Jacobians generally improve performance rather than causing problems."
+            }
+        ]
+    },
+    {
+        "question": "Which function in SciPy is commonly used for solving nonlinear equations?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "scipy.optimize.fsolve",
+                "correct": true,
+                "feedback": "Correct! fsolve is the primary function in SciPy for finding roots of nonlinear systems of equations."
+            },
+            {
+                "answer": "scipy.optimize.minimize",
+                "correct": false,
+                "feedback": "Incorrect. minimize is used for function minimization, not directly for solving nonlinear equations."
+            },
+            {
+                "answer": "scipy.integrate.solve_ivp",
+                "correct": false,
+                "feedback": "Incorrect. solve_ivp is for solving initial value problems in differential equations, not nonlinear algebraic equations."
+            },
+            {
+                "answer": "scipy.linalg.solve",
+                "correct": false,
+                "feedback": "Incorrect. solve is for solving linear systems of equations (Ax = b), not nonlinear systems."
+            }
+        ]
+    },
+    {
+        "question": "How is the numerical Jacobian typically calculated when not explicitly provided?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Using finite differences, approximating each partial derivative",
+                "correct": true,
+                "feedback": "Correct! When not explicitly provided, each element of the Jacobian is approximated using finite differences by perturbing each variable slightly."
+            },
+            {
+                "answer": "Using automatic differentiation",
+                "correct": false,
+                "feedback": "Incorrect. While automatic differentiation is a powerful technique, most standard solvers like fsolve use finite differences for numerical Jacobians."
+            },
+            {
+                "answer": "Using symbolic differentiation",
+                "correct": false,
+                "feedback": "Incorrect. Symbolic differentiation requires explicit mathematical expressions and is not typically used for numerical Jacobian approximation in standard solvers."
+            },
+            {
+                "answer": "Using Monte Carlo sampling",
+                "correct": false,
+                "feedback": "Incorrect. Monte Carlo methods are statistical techniques not typically used for Jacobian approximation."
+            }
+        ]
+    },
+    {
+        "question": "What does 'convergence' typically mean in the context of solving nonlinear equations?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The solution changes very little between iterations and the residual function is close to zero",
+                "correct": true,
+                "feedback": "Correct! Convergence is typically checked by ensuring both small changes in the solution between iterations and small residual values."
+            },
+            {
+                "answer": "The algorithm executes a fixed number of iterations",
+                "correct": false,
+                "feedback": "Incorrect. Running a fixed number of iterations doesn't guarantee convergence; we need to check that the solution stabilizes and the residual approaches zero."
+            },
+            {
+                "answer": "The Jacobian matrix becomes singular",
+                "correct": false,
+                "feedback": "Incorrect. A singular Jacobian is typically a problem that can prevent convergence, not an indication of successful convergence."
+            },
+            {
+                "answer": "The solution reaches its global minimum value",
+                "correct": false,
+                "feedback": "Incorrect. This describes optimization problems, not solving nonlinear equations where we seek roots, not minima."
+            }
+        ]
+    }
+]
