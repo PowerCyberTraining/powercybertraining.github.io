@@ -23,7 +23,9 @@ chapters:
 - file: modules/03/intro.md
   sections:
   - file: modules/03/lp-basics.ipynb
-  - file: modules/03/grid-optimization.ipynb
+  - file: modules/03/grid-optimization-1.ipynb
+  - file: modules/03/grid-optimization-2.ipynb
+  - file: modules/03/grid-optimization-3.ipynb
 - file: modules/04/intro.md
   sections:
   - file: modules/04/linear-equations.ipynb
