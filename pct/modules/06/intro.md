@@ -1,15 +1,24 @@
-# Power System Co-Simulation
+# Power System Dynamic Co-Simulation
 
-## 1. Introduction
-Modern power systems are becoming increasingly complex due to the growing integration of **distributed energy resources (DERs)** such as **solar photovoltaics (PV), battery storage, and demand response programs**. These resources are connected to **distribution networks**, but their operations significantly impact the **transmission system**.  
+## 1. Introduction**
 
-To study these interactions, researchers and engineers use **Transmission-and-Distribution (T&D) co-simulation**—a technique that simulates both transmission and distribution networks **simultaneously**, capturing their real-world interdependencies.  
+The increasing integration of distributed energy resources (DERs)—including solar photovoltaics (PV), battery storage systems, and responsive loads—into distribution networks presents new challenges for maintaining the frequency stability and real-time balance of the entire power grid. Although DERs are typically connected at the distribution level, their aggregated behaviors can significantly influence transmission system dynamics, particularly during disturbances or rapid load/generation variations.
 
-### Why is T&D Co-Simulation Important?
-- **Accurately models DER behavior** and their effect on the grid.
-- **Improves power system stability analysis** by considering both high-voltage transmission and low-voltage distribution networks.
-- **Optimizes grid planning and operations** under real-world conditions.
-- **Evaluates the role of DERs** in providing frequency response services, ensuring a **balanced and reliable** power system.
+To capture these interdependencies, Transmission-and-Distribution (T&D) dynamic co-simulation has emerged as an essential approach. It enables the simultaneous simulation of transmission and distribution networks, allowing researchers and operators to study system-wide impacts of DERs with high accuracy and scalability.
+
+### Why is T&D Dynamic Co-Simulation Important?**
+
+**Accurate DER Frequency Response Modeling:** Captures both primary frequency response (PFR) and secondary frequency response (SFR) from DERs under various grid conditions.
+
+**Integrated Multi-Domain Dynamics:** Simulates the electromechanical dynamics of the transmission system alongside the quasi-static time series (QSTS) behavior of the distribution system, accounting for the local voltage constraints critical to DER operation.
+
+**Scalable for Large Systems:** Modern frameworks (e.g., based on HELICS, ANDES, and OpenDSS) allow the co-simulation of systems with thousands of transmission buses and over a million distribution nodes efficiently.
+
+**Reflects Real-World Operation:** Considers the interaction between centralized and decentralized control layers, enabling studies on how DERs can contribute to grid services such as automatic generation control (AGC).
+
+**Supports Grid Planning and Resilience Studies:** Assesses the impact of high DER penetration on voltage profiles, frequency recovery, and system resilience under contingencies such as generator outages.
+
+This holistic T&D co-simulation approach is essential for the reliable and efficient operation of future power systems dominated by DERs, providing insights that are unattainable through isolated transmission or distribution simulations.
 
 ---
 
@@ -113,4 +122,9 @@ run_cosimulation()
 
 ## Final Thoughts
 T&D **co-simulation is essential for future power system research and operation**. By understanding **transmission and distribution interactions**, we can build a **resilient, efficient, and sustainable** power grid.
+
+## Reference
+[1] W. Wang, X. Fang, H. Cui, F. Li, Y. Liu and T. J. Overbye, "Transmission-and-Distribution Dynamic Co-Simulation Framework for Distributed Energy Resource Frequency Response," in IEEE Transactions on Smart Grid, vol. 13, no. 1, pp. 482-495, Jan. 2022, doi: 10.1109/TSG.2021.3118292. 
+[2] Wang, Wenbo, Xin Fang, et al. "Cyber-Physical Dynamic System (CPDS) Modeling for Frequency Regulation and AGC Services of Distributed Energy Resources." , Aug. 2022. https://doi.org/10.2172/1882191
+[3] Y. Liu et al., "Transmission-Distribution Dynamic Co-simulation of Electric Vehicles Providing Grid Frequency Response," 2022 IEEE Power & Energy Society General Meeting (PESGM), Denver, CO, USA, 2022, pp. 1-5, doi: 10.1109/PESGM48719.2022.9917027.
 
