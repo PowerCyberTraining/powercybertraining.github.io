@@ -16,16 +16,23 @@ chapters:
   - file: modules/01/git.md
 - file: modules/02/intro.md
   sections:
+  - file: modules/02/python-fundamentals.ipynb
+  - file: modules/02/numpy-basics.ipynb
+  - file: modules/02/numpy-advanced.ipynb
+  - file: modules/02/pandas-power-systems.ipynb
+  - file: modules/02/data-visualization.ipynb
+  - file: modules/02/time-series-analysis.ipynb
   - file: modules/02/numpy-pandas-basics.ipynb
   - file: modules/02/time-series-analysis-1.ipynb
   - file: modules/02/time-series-analysis-2.ipynb
   - file: modules/02/solar-power-forecasting.ipynb
-- file: modules/03/intro.md
+- file: modules/03/intro_new.md
   sections:
-  - file: modules/03/lp-basics.ipynb
-  - file: modules/03/grid-optimization-1.ipynb
-  - file: modules/03/grid-optimization-2.ipynb
-  - file: modules/03/grid-optimization-3.ipynb
+  - file: modules/03/optimization-fundamentals.ipynb
+  - file: modules/03/linear-programming-python.ipynb
+  - file: modules/03/electricity-markets-basics.ipynb
+  - file: modules/03/power-system-optimization.ipynb
+  - file: modules/03/advanced-optimization-cases.ipynb
 - file: modules/04/intro.md
   sections:
   - file: modules/04/linear-equations.ipynb
@@ -35,6 +42,11 @@ chapters:
   - file: modules/04/sympy.ipynb
 - file: modules/06/intro.md
   sections:
+  - file: modules/06/setup.md
+  - file: modules/06/helics-fundamentals.ipynb
+  - file: modules/06/lesson3-runnable.ipynb
+  - file: modules/06/lesson4-runnable.ipynb
+  - file: modules/06/lesson5-runnable.ipynb
   - file: modules/06/transmission_federate.ipynb
   - file: modules/06/distribution_federate.ipynb
 - file: about/intro.md
