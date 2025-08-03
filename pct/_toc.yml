@@ -22,10 +22,6 @@ chapters:
   - file: modules/02/pandas-power-systems.ipynb
   - file: modules/02/data-visualization.ipynb
   - file: modules/02/time-series-analysis.ipynb
-  - file: modules/02/numpy-pandas-basics.ipynb
-  - file: modules/02/time-series-analysis-1.ipynb
-  - file: modules/02/time-series-analysis-2.ipynb
-  - file: modules/02/solar-power-forecasting.ipynb
 - file: modules/03/intro_new.md
   sections:
   - file: modules/03/optimization-fundamentals.ipynb
@@ -47,8 +43,6 @@ chapters:
   - file: modules/06/lesson3-runnable.ipynb
   - file: modules/06/lesson4-runnable.ipynb
   - file: modules/06/lesson5-runnable.ipynb
-  - file: modules/06/transmission_federate.ipynb
-  - file: modules/06/distribution_federate.ipynb
 - file: about/intro.md
   sections:
   - file: about/people.md

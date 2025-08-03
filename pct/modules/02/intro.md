@@ -1,116 +1,53 @@
-
 # Data Analytics and Visualization
 
+Welcome to Module 02 of the PowerCyber Training program. This module provides essential data analysis and visualization skills for power systems engineers and researchers. Modern power systems generate vast amounts of data from SCADA systems, smart meters, market operations, and weather stations. The ability to efficiently process, analyze, and visualize this data is crucial for system operations, planning, and research.
 
-## Part 1: NumPy-Pandas-Basics
+## Module Overview
 
+This module bridges the gap between the command-line tools you learned in Module 01 and the advanced numerical methods coming in Module 04. We begin with Python programming fundamentals, ensuring you have a solid foundation before moving to specialized libraries. Each lesson uses power system examples and real-world data to maintain relevance while building technical skills.
 
+The module is structured to progressively build your capabilities. We start with core Python programming concepts, then introduce NumPy for efficient numerical computing, followed by Pandas for data manipulation. With these foundations, we explore data visualization techniques essential for communicating technical results. The module concludes with time series analysis methods widely used in load forecasting and renewable generation prediction.
 
-### Objective
+## Learning Objectives
 
-This section provides a comprehensive introduction to numerical computing and optimization using **NumPy** and **Pandas**. These two foundational tools are essential for data science and engineering, forming the computational backbone for large-scale numerical analysis. The primary goal is to equip learners with the ability to manipulate structured data efficiently and perform high-speed numerical computations using **Python**.
+Upon completing this module, you will be able to:
 
-1. **NumPy**: Introduces array-based computing for efficient numerical operations.
-2. **Pandas**: Focuses on structured data manipulation and analysis.
+- Write Python programs to automate power system calculations and data processing tasks
+- Use NumPy arrays to perform vectorized operations on large-scale power system data
+- Manipulate and analyze power system datasets using Pandas DataFrames
+- Create publication-quality visualizations of power system data and results
+- Apply time series analysis techniques to forecast load and renewable generation
 
+## Prerequisites
 
+This module assumes you have completed Module 01 or have equivalent experience with:
+- Basic command-line operations in Linux/WSL
+- Creating and managing Python environments using conda/mamba
+- Running Jupyter notebooks
+- Basic Git operations for version control
 
-### **1.2 Key Components**
+No prior Python programming experience is assumed. We will build these skills from the ground up using power system contexts.
 
-#### **1. NumPy Fundamentals**
-- **Creating NumPy Arrays**
-- **Array Attributes**
-- **Indexing and Slicing**
-- **Mathematical Operations**
-- **Reshaping and Transposing Arrays**
-- **Statistical Functions**
-- **Stacking and Concatenation**
-  
-#### **2. Pandas for Data Analysis**
-- **Creating Data Structures**
-- **Reading and Writing Data**
-- **Data Inspection and Manipulation**
-- **Data Cleaning**
-- **Modifying Data**
-- **Merging and Joining Data**
-- **Pivot Tables and Crosstabs**
-  
+## Module Structure
 
-## Part 2: Time Series Data Analysis
+The module consists of five comprehensive lessons:
 
-### Objective
+1. **Python Fundamentals for Power Systems**: Core programming concepts including data types, control flow, functions, and error handling
+2. **NumPy for Numerical Computing**: Array operations, linear algebra, and complex numbers for power flow calculations
+3. **Data Analysis with Pandas**: Loading, cleaning, and analyzing real power system datasets
+4. **Data Visualization for Power Systems**: Creating effective plots and visualizations for technical communication
+5. **Time Series Analysis and Forecasting**: Analyzing temporal patterns and building forecasting models
 
-This module aims to provide an in-depth analysis of historical time series data from the power grid system of Great Britain spanning multiple years (2016–2018). The objective is to analyze grid frequency trends, detect anomalies, and understand seasonal variations using Python-based data analytics and visualization tools. By leveraging libraries such as pandas, matplotlib, and seaborn, this module enables users to extract meaningful insights from large datasets.
+Each lesson is designed to take approximately 2 hours to complete and includes extensive hands-on exercises with power system applications.
 
-Source of data:Historic Frequency Data - National Grid ESO, https://www.neso.energy/industry-information/balancing-services/frequency-response-services/historic-frequency-data
+## Approach
 
-### Key Learning Components
-#### Data Acquisition and Loading
+This module emphasizes learning by doing. Every concept is introduced through power system examples, and you will work with real data from system operators and utilities. The exercises are designed to reinforce concepts while building practical skills you can immediately apply to your research or work.
 
-Downloading and managing multiple CSV files corresponding to different years.
-Using pandas to read and consolidate data efficiently.
-Handling large datasets by structuring them into manageable monthly and yearly formats.
-Data Preprocessing
+We focus on open-source tools that are widely used in both academia and industry. The skills you develop here form the foundation for more advanced topics in optimization (Module 03), numerical methods (Module 04), and co-simulation (Module 06).
 
-#### Cleaning and standardizing data for consistency.
-Handling missing values, outliers, and erroneous entries.
-Merging and restructuring datasets to facilitate comprehensive time series analysis.
-Exploratory Time Series Analysis
+## Getting Started
 
-#### Computing key statistical metrics (mean, variance, standard deviation of frequency values).
-Identifying seasonal patterns and long-term trends.
-Comparing frequency deviations across months and years.
-Detecting anomalies or sudden frequency fluctuations using statistical methods.
-Data Visualization and Interpretation
+Ensure your Python environment from Module 01 is activated and has the necessary packages installed. Each lesson will specify any additional requirements. Remember to save your work regularly and commit your progress to Git as you complete exercises.
 
-#### Creating time series plots to visualize frequency trends.
-Comparing historical frequency variations using heatmaps and boxplots.
-Generating moving averages and trend lines to smooth data fluctuations.
-Developing interactive plots for better insights into data patterns.
-
-## Part 3: Overview: Forecasting Solar-Energy Output
-### Objective
-This module focuses on developing and evaluating predictive models for solar energy output using historical time series data. The primary goal is to understand the factors influencing solar power generation and enhance forecasting accuracy. Additionally, the module emphasizes model explainability by analyzing feature importance.
-
-Data Source: Historical solar energy generation data from a specified region in Mississippi, covering years from 2006 onward.
-
-
-### Key Learning Components
-
-#### Data Preparation
-
-Importing, cleaning, and formatting raw solar energy generation data.
-Handling missing timestamps and irregular time intervals.
-Feature engineering: incorporating weather data (temperature, cloud cover, humidity) to improve model accuracy.
-
-#### Time Series Forecasting Models
-
-#### Implementing and comparing multiple forecasting models:
-ARIMA (AutoRegressive Integrated Moving Average) – Suitable for linear time series forecasting.
-Facebook Prophet – Handles seasonality and external factors effectively.
-LightGBM – A gradient-boosting model for high-performance forecasting.
-#### Evaluating model performance using RMSE, MAE, and R² scores.
-
-### Feature Importance Analysis
-
-Identifying key factors influencing solar power output.
-Using SHAP (SHapley Additive exPlanations) values to interpret feature contributions.
-Exploring how cloud cover, temperature, and seasonal changes impact predictions.
-
-### Visualization and Interpretability
-
-Plotting actual vs. predicted solar energy generation.
-Visualizing feature importance using bar charts, heatmaps, and SHAP summary plots.
-Comparing model performance and explaining prediction uncertainties.
-
-## Expected Outcomes
-By the end of this module, participants will be able to:
-
-Conduct effective time series data analysis on large-scale energy datasets.
-Implement data preprocessing and cleaning techniques for real-world energy data.
-Utilize advanced visualization techniques to uncover insights.
-Build and evaluate predictive models for solar energy forecasting.
-Interpret model results and assess feature importance for improved explainability.
-
-
-
+Let's begin with Python fundamentals tailored specifically for power systems applications.
