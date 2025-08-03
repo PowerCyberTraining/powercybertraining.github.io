@@ -19,8 +19,8 @@ chapters:
   - file: modules/02/python-fundamentals.ipynb
   - file: modules/02/numpy-basics.ipynb
   - file: modules/02/numpy-advanced.ipynb
-  - file: modules/02/pandas-power-systems.ipynb
   - file: modules/02/data-visualization.ipynb
+  - file: modules/02/pandas-data-analysis.ipynb
   - file: modules/02/time-series-analysis.ipynb
 - file: modules/03/intro_new.md
   sections:
