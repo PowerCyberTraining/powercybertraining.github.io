@@ -2,15 +2,17 @@
 
 ## 1. Introduction**
 
-The increasing integration of distributed energy resources (DERs)—including solar photovoltaics (PV), battery storage systems, and responsive loads—into distribution networks presents new challenges for maintaining the frequency stability and real-time balance of the entire power grid. Although DERs are typically connected at the distribution level, their aggregated behaviors can significantly influence transmission system dynamics, particularly during disturbances or rapid load/generation variations.
+The increasing integration of distributed energy resources (DERs)—including solar photovoltaics (PV), battery storage systems, and responsive loads—into distribution networks presents new challenges for maintaining the frequency stability and real-time balance of the entire power grid. Although DERs are typically connected at the distribution level and have a small individual capacity, their aggregated behaviors can significantly influence transmission system dynamics, particularly during disturbances or rapid load/generation variations.
 
-To capture these interdependencies, Transmission-and-Distribution (T&D) dynamic co-simulation has emerged as an essential approach. It enables the simultaneous simulation of transmission and distribution networks, allowing researchers and operators to study system-wide impacts of DERs with high accuracy and scalability.
+Power systems operators usually perform transmission and distribution simulations separately. For example, the dynamic simulation is usually conducted for the transmission system since the major dynamic components such as the large scale generators are usually connected to high voltage transmission network. While the distribution simulation usually limited to steady-state power flow simulations to check the distribution voltage profile and protection setting. 
+
+With the increasing penetration of DERs, distribution network can significantly impact the transmission dynamics. To capture these interdependencies between distribution and transmission networks, Transmission-and-Distribution (T&D) dynamic co-simulation has emerged as an essential approach. It enables the simultaneous simulation of transmission and distribution networks, allowing researchers and operators to study system-wide impacts of DERs with high accuracy and scalability.
 
 ### Why is T&D Dynamic Co-Simulation Important?**
 
 **Accurate DER Frequency Response Modeling:** Captures both primary frequency response (PFR) and secondary frequency response (SFR) from DERs under various grid conditions.
 
-**Integrated Multi-Domain Dynamics:** Simulates the electromechanical dynamics of the transmission system alongside the quasi-static time series (QSTS) behavior of the distribution system, accounting for the local voltage constraints critical to DER operation.
+**Integrated Multi-Domain Dynamics:** Simulates the electromechanical dynamics of the transmission system and DERs, alongside the quasi-static time series (QSTS) behavior of the distribution system, accounting for the local voltage constraints critical to DER operation.
 
 **Scalable for Large Systems:** Modern frameworks (e.g., based on HELICS, ANDES, and OpenDSS) allow the co-simulation of systems with thousands of transmission buses and over a million distribution nodes efficiently.
 
@@ -18,7 +20,7 @@ To capture these interdependencies, Transmission-and-Distribution (T&D) dynamic 
 
 **Supports Grid Planning and Resilience Studies:** Assesses the impact of high DER penetration on voltage profiles, frequency recovery, and system resilience under contingencies such as generator outages.
 
-This holistic T&D co-simulation approach is essential for the reliable and efficient operation of future power systems dominated by DERs, providing insights that are unattainable through isolated transmission or distribution simulations.
+This holistic T&D co-simulation approach is essential for the reliable and efficient operation of future power systems penetrated by DERs, providing insights that are unattainable through isolated transmission or distribution simulations.
 
 ---
 
@@ -29,7 +31,7 @@ In this module, we use **HELICS**, an advanced open-source co-simulation platfor
 ### Key Components:
 ```python
 components = {
-    "HELICS": "Acts as the central platform for data exchange and synchronization between transmission and distribution simulators.",
+    "HELICS": "Acts as the central broker for data exchange and synchronization between transmission and distribution simulators.",
     "ANDES": "A transmission system simulator that performs dynamic and steady-state power system analysis, including frequency response modeling.",
     "OpenDSS": "A distribution system simulator used for power flow, time-series analysis, and voltage regulation studies.",
     "Python APIs": "Enable automation, data exchange, and seamless interaction between different simulation tools."

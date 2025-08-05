@@ -6,7 +6,7 @@
   <div style="flex: 1; min-width: 300px; text-align: center;">
     <img src="https://ece.ncsu.edu/wp-content/uploads/2024/06/Hantao-Cui-500x500-1.jpg" alt="Hantao Cui" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
     <h3 style="margin: 0 0 5px 0;">Dr. Hantao Cui</h3>
-    <p style="margin: 0 0 5px 0;">Assistant Professor</p>
+    <p style="margin: 0 0 5px 0;">Associate Professor</p>
     <p style="margin: 0 0 5px 0;">Department of Electrical and Computer Engineering</p>
     <p style="margin: 0 0 5px 0;">North Carolina State University</p>
     <p style="margin: 0;">hcui9@ncsu.edu</p>
