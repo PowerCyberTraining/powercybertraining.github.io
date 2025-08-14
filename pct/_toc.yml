@@ -27,6 +27,7 @@ chapters:
   - file: modules/03/optimization-fundamentals.ipynb
   - file: modules/03/linear-programming-python.ipynb
   - file: modules/03/electricity-markets-basics.ipynb
+  - file: modules/03/ptdf.ipynb
   - file: modules/03/power-system-optimization.ipynb
   - file: modules/03/advanced-optimization-cases.ipynb
 - file: modules/04/intro.md
