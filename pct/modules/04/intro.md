@@ -11,8 +11,6 @@ will introduce computer algebra and code generation based on SymPy to streamline
 modeling and simulation. Techniques to simulate power transmission systems will
 be discussed in the ANDES simulator.
 
-## Motivation
-
 While not everyone aspires to write full-fledged numerical programs, it is
 helpful to understand how basic and advanced numerical methods can be used in
 the Python ecosystem. In addition, the skills to write simple numerical programs

@@ -8,7 +8,7 @@ This module bridges the gap between the command-line tools you learned in Module
 
 The module is structured to progressively build your capabilities. We start with core Python programming concepts, then introduce NumPy for efficient numerical computing, followed by Pandas for data manipulation. With these foundations, we explore data visualization techniques essential for communicating technical results. The module concludes with time series analysis methods widely used in load forecasting and renewable generation prediction.
 
-## Learning Objectives
+### Learning Objectives
 
 Upon completing this module, you will be able to:
 
@@ -18,7 +18,7 @@ Upon completing this module, you will be able to:
 - Create publication-quality visualizations of power system data and results
 - Apply time series analysis techniques to forecast load and renewable generation
 
-## Prerequisites
+### Prerequisites
 
 This module assumes you have completed Module 01 or have equivalent experience with:
 - Basic command-line operations in Linux/WSL
@@ -28,7 +28,7 @@ This module assumes you have completed Module 01 or have equivalent experience w
 
 No prior Python programming experience is assumed. We will build these skills from the ground up using power system contexts.
 
-## Module Structure
+### Module Structure
 
 The module consists of five comprehensive lessons:
 
@@ -40,13 +40,13 @@ The module consists of five comprehensive lessons:
 
 Each lesson is designed to take approximately 2 hours to complete and includes extensive hands-on exercises with power system applications.
 
-## Approach
+### Approach
 
 This module emphasizes learning by doing. Every concept is introduced through power system examples, and you will work with real data from system operators and utilities. The exercises are designed to reinforce concepts while building practical skills you can immediately apply to your research or work.
 
 We focus on open-source tools that are widely used in both academia and industry. The skills you develop here form the foundation for more advanced topics in optimization (Module 03), numerical methods (Module 04), and co-simulation (Module 06).
 
-## Getting Started
+### Getting Started
 
 Ensure your Python environment from Module 01 is activated and has the necessary packages installed. Each lesson will specify any additional requirements. Remember to save your work regularly and commit your progress to Git as you complete exercises.
 
