@@ -24,28 +24,28 @@ chapters:
   - file: modules/02/time-series-analysis.ipynb
 - file: modules/03/intro.md
   sections:
-  - file: modules/03/optimization-fundamentals.ipynb
-  - file: modules/03/linear-programming-python.ipynb
-  - file: modules/03/electricity-markets-basics.ipynb
-  - file: modules/03/ptdf.ipynb
-  - file: modules/03/ed-uc.ipynb
-  - file: modules/03/network-constrained-optimization.ipynb
+  - file: modules/03/linear-equations.ipynb
+  - file: modules/03/nonlinear-equations.ipynb
+  - file: modules/03/ac-power-flow.ipynb
+  - file: modules/03/oop-and-dc-power-flow.ipynb
+  - file: modules/03/sympy.ipynb
 - file: modules/04/intro.md
   sections:
-  - file: modules/04/linear-equations.ipynb
-  - file: modules/04/nonlinear-equations.ipynb
-  - file: modules/04/ac-power-flow.ipynb
-  - file: modules/04/oop-and-dc-power-flow.ipynb
-  - file: modules/04/sympy.ipynb
-- file: modules/06/intro.md
+  - file: modules/04/optimization-fundamentals.ipynb
+  - file: modules/04/linear-programming-python.ipynb
+  - file: modules/04/electricity-markets-basics.ipynb
+  - file: modules/04/ptdf.ipynb
+  - file: modules/04/ed-uc.ipynb
+  - file: modules/04/network-constrained-optimization.ipynb
+- file: modules/05/intro.md
   sections:
-  - file: modules/06/setup.md
-  - file: modules/06/helics-fundamentals.ipynb
-  - file: modules/06/andes-opendss.ipynb
-  - file: modules/06/cosim-fundamentals.ipynb
-  - file: modules/06/transmission_federate.ipynb
-  - file: modules/06/distribution_federate.ipynb
-  - file: modules/06/der-integration-applications.ipynb
+  - file: modules/05/setup.md
+  - file: modules/05/helics-fundamentals.ipynb
+  - file: modules/05/andes-opendss.ipynb
+  - file: modules/05/cosim-fundamentals.ipynb
+  - file: modules/05/transmission_federate.ipynb
+  - file: modules/05/distribution_federate.ipynb
+  - file: modules/05/der-integration-applications.ipynb
 - file: about/intro.md
   sections:
   - file: about/people.md
