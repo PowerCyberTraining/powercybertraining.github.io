@@ -1,6 +1,6 @@
 # Power System Co-simulation
 
-### Overview
+## Module Overview
 
 Modern electric grids no longer operate as isolated transmission backbones delivering power to passive distribution feeders. Distributed energy resources (DER)—solar photovoltaics, battery storage, smart inverters, controllable loads—now interact with high-voltage dynamics in real time. Capturing this multi-scale behaviour requires a modelling strategy that respects the distinct physics, numerical formulations, and temporal resolutions of each subsystem while still representing their mutual influence. Co-simulation provides such a strategy by orchestrating purpose-built simulators through a time-synchronised data-exchange layer. In this module we use the Hierarchical Engine for Large-scale Infrastructure Co-Simulation (HELICS) to couple transmission-level dynamic analysis in ANDES with distribution-level steady-state and quasi-dynamic analysis in OpenDSS.
 
