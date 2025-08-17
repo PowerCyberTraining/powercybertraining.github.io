@@ -41,6 +41,7 @@ chapters:
   sections:
   - file: modules/06/setup.md
   - file: modules/06/helics-fundamentals.ipynb
+  - file: modules/06/andes-opendss.ipynb
   - file: modules/06/cosim-fundamentals.ipynb
   - file: modules/06/transmission_federate.ipynb
   - file: modules/06/distribution_federate.ipynb
