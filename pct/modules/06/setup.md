@@ -476,17 +476,6 @@ Recreate environment from exported configuration:
 mamba env create -f cosim_environment.yml
 ```
 
-## Validation Checklist
-
-Before proceeding to subsequent modules, verify:
-
-- [ ] All verification tests pass without errors
-- [ ] Environment activates correctly (`mamba activate cosim`)
-- [ ] HELICS version 3.6.1 or later installed
-- [ ] ANDES and OpenDSS import successfully
-- [ ] Graphics output functions (verification plot created)
-- [ ] Jupyter Lab launches without errors
-
 ## References and Resources
 
 - HELICS Documentation: https://python.helics.org/
