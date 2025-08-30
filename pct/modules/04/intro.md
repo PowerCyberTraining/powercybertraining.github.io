@@ -15,7 +15,7 @@ By the end you will be able to
 - tackle economic dispatch, unit commitment, and optimal power-flow problems
 - address uncertainty, multiple objectives, and computational scale
 
-## Prerequisites
+### Prerequisites
 
 You should already be comfortable with
 - Python fundamentals (functions, data structures)
@@ -24,6 +24,6 @@ You should already be comfortable with
 
 Completing Module 02 satisfies these requirements.
 
-## How We Will Learn
+### How We Will Learn
 
 Short concept explanations are paired with hands-on notebooks. You will write code, run solvers, and interpret results using open-source tools. Hints and full solutions are available when you need them.
