@@ -163,19 +163,19 @@ where `F(0) = 0` and `F(1) = 1`.
 
 Below is a program that keeps track of a Fibonacci series using memo.
 
-def fibonacci(n, memo={}):
-    if n <= 0:
-        return 0
-    elif n == 1:
-        memo[n] = 1
-    elif n in memo:
-        return memo[n]
-    else:
-        memo[n] = fibonacci(n-1) + fibonacci(n-2)
-        return memo[n]
- 
-# Driver Program
-print(fibonacci(9))
+    def fibonacci(n, memo={}):
+        if n <= 0:
+            return 0
+        elif n == 1:
+            memo[n] = 1
+        elif n in memo:
+            return memo[n]
+        else:
+            memo[n] = fibonacci(n-1) + fibonacci(n-2)
+            return memo[n]
+     
+    # Driver Program
+    print(fibonacci(9))
 
 Copy the code into `fib.py` and save it. Run it, but it will error out:
 
