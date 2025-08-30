@@ -17,28 +17,35 @@
     <h3 style="margin: 0 0 5px 0;">Dr. Xin Fang</h3>
     <p style="margin: 0 0 5px 0;">Assistant Professor</p>
     <p style="margin: 0 0 5px 0;">Department of Electrical and Computer Engineering</p>
-    <p style="margin: 0 0 5px 0;">Mississippi State University</p>
-    <p style="margin: 0;">xfang@ece.msstate.edu</p>
+    <p style="margin: 0 0 5px 0;">University of South Carolina</p>
+    <p style="margin: 0;">fangxin@sc.edu</p>
   </div>
 </div>
 
 ## Contributors
 
-This page recognizes individuals who have contributed to the PowerCyber Training materials.
-
-<!-- You can add contributor information here -->
-<!-- For example:
-- **Contributor Name** - Contribution area - Institution
--->
-
 ## Collaborators
 
-This page highlights organizations and research groups that collaborate with the PowerCyber Training project.
+We sincerely thank the following individuals for their valuable collaboration on
+this project.
+Your insights and contributions are deeply appreciated.
 
-<!-- You can add collaborator information here -->
-<!-- For example:
-- **Organization/Institution Name** - Nature of collaboration - Website/contact
--->
+The names are in alphabetical order:
+
+- Taesik Kim, Associate Professor, University of Missouri
+- Ben Kroposki, Center Director of Power Systems Engineering Center, National
+  Renewable Energy Laboratory
+- Christoph Lackner, Operating Officer and Lead Engineer, Grid Protection
+  Alliance
+- Robin Podmore, President, Incremental Systems Corporation.
+- Luigi Vanfretti, Professor, Rensselaer Polytechnic University
+- Yubo Wang, Research Scientist, Siemens Corporation
+- Baosen Zhang, Associate Professor and Keith & Nancy Rattie Endowed Career
+  Development Professor, University of Washington
+- Song Zhang, Chair, IEEE Working Group on Cloud Computing
+
+We would love to hear from you. If you are interested in contributing a lesson,
+please write to us.
 
 ## User Community
 
