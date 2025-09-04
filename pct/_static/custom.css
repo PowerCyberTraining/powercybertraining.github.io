@@ -1,0 +1,10 @@
+/* Custom CSS for PowerCyber Training Jupyter Book */
+/* Fix for unnecessary sidebar scrollbar */
+
+/* Remove the scrollbar completely if content doesn't overflow */
+.bd-sidebar-primary {
+    /* Use 'visible' to prevent scrollbar when content fits */
+    overflow-y: visible !important;
+    /* Remove the max-height constraint that forces scrollbar */
+    max-height: none !important;
+}

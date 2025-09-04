@@ -43,3 +43,5 @@ html:
   use_repository_button: true
   comments:
     hypothesis: true
+  extra_footer: |
+    <link href="_static/custom.css" rel="stylesheet">
