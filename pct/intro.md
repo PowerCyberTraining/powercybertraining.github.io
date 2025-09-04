@@ -24,3 +24,5 @@ This work is supported by the National Science Foundation (NSF) under [Grant No.
 opinions, findings, and conclusions or recommendations expressed in this
 material are those of the author(s) and do not necessarily reflect the views of
 the National Science Foundation.
+
+We acknowledge the use of generative AI tools, primarily Claude Opus 4.0 and ChatGPT o3, in developing portions of these materials, revising text, and refining code examples. All AI-generated content has been manually reviewed and verified for accuracy. While we strive for complete accuracy, we welcome your feedback and encourage you to reach out if you have any questions or notice areas for improvement.
