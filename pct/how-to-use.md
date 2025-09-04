@@ -60,13 +60,12 @@ The training is organized in a progressive manner, with each module building upo
 
 - **Module 1**: Environment setup and basic tools
 - **Module 2**: Data analysis fundamentals with NumPy, Pandas, and time-series analysis
-- **Module 3**: Solving equations and power flow analysis
+- **Module 3**: Numerical methods for solving equations and power flow analysis
 - **Module 4**: Introduction to linear programming and grid optimization
-- **Module 6**: Advanced topics in transmission and distribution systems
+- **Module 5**: Advanced topics in the co-simulation of transmission and distribution systems
 
 Take your time with each module before moving to the next and ensure you have
 mastered the fundamental concepts before moving on to advanced material.
 
 Remember, the goal is not just to complete the exercises but to develop a deep
-understanding of the concepts and tools that will empower you in your power
-engineering career.
+understanding of the concepts and tools that will be useful in your career in power engineering.
