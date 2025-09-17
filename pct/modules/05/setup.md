@@ -132,7 +132,7 @@ ANDES provides transmission system simulation capabilities. Install via pip:
 pip install andes
 
 # Verify installation
-andes --version
+andes misc --version
 
 # Run self-test to confirm functionality
 andes selftest
