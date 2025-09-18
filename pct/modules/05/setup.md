@@ -64,12 +64,7 @@ sudo apt install -y build-essential
 
 # Install system libraries for graphics and numerical computing
 sudo apt install -y libopenblas-dev liblapack-dev gfortran
-
-# Install X11 libraries for display capabilities in WSL
-sudo apt install -y python3-tk xorg-dev
 ```
-
-These system packages provide the foundation for compiling scientific Python packages and enable graphical output in the WSL environment.
 
 ## Step 3: Create Co-Simulation Environment
 
@@ -153,46 +148,6 @@ python -c "import opendssdirect as dss; print('OpenDSS installation verified')"
 ```
 
 Note that OpenDSSDirect.py includes its own OpenDSS engine, eliminating the need for separate OpenDSS installation.
-
-## Step 8: Display Configuration for WSL
-
-Configure graphics display capabilities for WSL environments.
-
-### For Windows 11 with WSLg
-
-Windows 11 includes WSLg (WSL GUI) support by default. Test the configuration:
-
-```bash
-# Test matplotlib display capability
-python -c "
-import matplotlib.pyplot as plt
-plt.figure()
-plt.plot([1, 2, 3, 4])
-plt.title('Display Test')
-plt.savefig('display_test.png')
-print('Graphics test completed - check for display_test.png')
-"
-```
-
-### For Windows 10 or Display Issues
-
-Configure X11 forwarding if WSLg is unavailable:
-
-```bash
-# Add display configuration to shell profile
-echo 'export DISPLAY=$(grep -oP "(?<=nameserver ).+" /etc/resolv.conf):0.0' >> ~/.bashrc
-source ~/.bashrc
-
-# Test display functionality
-python -c "
-import matplotlib
-matplotlib.use('Agg')  # Use file output backend
-import matplotlib.pyplot as plt
-plt.plot([1, 2, 3])
-plt.savefig('test_plot.png')
-print('Plot saved to test_plot.png')
-"
-```
 
 ## Installation Verification
 
