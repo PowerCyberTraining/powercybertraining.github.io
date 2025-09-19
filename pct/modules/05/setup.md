@@ -141,7 +141,7 @@ Install OpenDSSDirect.py for distribution system simulation:
 
 ```bash
 # Install with full feature set
-pip install opendssdirect.py[all]
+pip install opendssdirect.py
 
 # Verify installation
 python -c "import opendssdirect as dss; print('OpenDSS installation verified')"
@@ -234,7 +234,7 @@ def main():
     else:
         print("⚠ Some components failed verification.")
         print("Review error messages and consult troubleshooting section.")
-        
+
     print("\nVerification plot saved as 'verification_plot.png'")
 
 if __name__ == "__main__":
@@ -312,9 +312,9 @@ mkdir -p ~/.local/share/jupyter/kernels/cosim-helics
 cat > ~/.local/share/jupyter/kernels/cosim-helics/python_wrapper.sh << 'EOF'
 #!/bin/bash
 # Set proper library paths for HELICS
-export LD_LIBRARY_PATH="/home/$USER/mambaforge/envs/cosim/lib:/home/$USER/mambaforge/envs/cosim/lib64:$LD_LIBRARY_PATH"
-export LD_PRELOAD="/home/$USER/mambaforge/envs/cosim/lib/libstdc++.so.6:$LD_PRELOAD"
-exec "/home/$USER/mambaforge/envs/cosim/bin/python" "$@"
+export LD_LIBRARY_PATH="/home/$USER/miniforge3/envs/cosim/lib:/home/$USER/miniforge3/envs/cosim/lib64:$LD_LIBRARY_PATH"
+export LD_PRELOAD="/home/$USER/miniforge3/envs/cosim/lib/libstdc++.so.6:$LD_PRELOAD"
+exec "/home/$USER/miniforge3/envs/cosim/bin/python" "$@"
 EOF
 
 # Make wrapper executable
@@ -350,7 +350,7 @@ cat > ~/start_jupyter_cosim.sh << 'EOF'
 # Start Jupyter Lab with proper environment for HELICS
 
 # Activate conda environment
-source ~/mambaforge/etc/profile.d/conda.sh
+source ~/miniforge3/etc/profile.d/conda.sh
 conda activate cosim
 
 # Set library paths
