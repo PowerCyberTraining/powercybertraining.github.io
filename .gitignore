@@ -5,3 +5,5 @@ pct/_build/*
 .DS_Store
 ~*.xlsx
 .cursor/*
+# MyST build outputs
+_build
