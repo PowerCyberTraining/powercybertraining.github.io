@@ -7,24 +7,17 @@
 :header-rows: 0
 
 * - ```{figure} hantao_cui.jpg
-      :width: 180px
-      :align: center
 
       **Hantao Cui**,
       Associate Professor, North Carolina State University,
       *hcui9@ncsu.edu*
       ```
   - ```{figure} xin_fang.jpg
-      :width: 180px
-      :align: center
 
       **Xin Fang**,
       Assistant Professor, University of South Carolina,
       *fangxin@sc.edu*
       ```
-```
-
-```{clear}
 ```
 
 <!-- ## Contributors -->
