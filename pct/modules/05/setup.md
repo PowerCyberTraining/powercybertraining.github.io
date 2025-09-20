@@ -18,7 +18,7 @@ This installation guide assumes familiarity with the tools and concepts introduc
 ### System Requirements
 
 - WSL Ubuntu 20.04 or newer
-- Python 3.8 or later (recommended: 3.10+)
+- Python 3.9 or later (recommended: 3.9+)
 - Minimum 4GB available disk space
 - Active internet connection for package downloads
 - Existing miniforge installation (covered in Module 01)
@@ -42,37 +42,19 @@ Begin by verifying the WSL Ubuntu installation and miniforge setup:
 # Verify Ubuntu version
 lsb_release -a
 
-# Confirm Python availability
-python3 --version
-
 # Check mamba installation
 mamba --version
 ```
 
-Expected output should show Ubuntu 20.04 or newer and Python 3.8 or later. The mamba command should execute without errors.
+Expected output should show Ubuntu 20.04 or newer. The mamba command should execute without errors.
 
-## Step 2: System Dependencies
-
-Install essential system-level packages required for scientific computing:
-
-```bash
-# Update package repositories
-sudo apt update
-
-# Install development tools and libraries
-sudo apt install -y build-essential
-
-# Install system libraries for graphics and numerical computing
-sudo apt install -y libopenblas-dev liblapack-dev gfortran
-```
-
-## Step 3: Create Co-Simulation Environment
+## Step 2: Create Co-Simulation Environment
 
 Create a dedicated conda environment for co-simulation work:
 
 ```bash
-# Create new environment with Python 3.10
-mamba create -n cosim python=3.10
+# Create new environment with Python 3.9
+mamba create -n cosim python=3.9
 
 # Activate the environment
 mamba activate cosim
@@ -80,37 +62,13 @@ mamba activate cosim
 
 Verify activation by checking that the terminal prompt now displays `(cosim)` at the beginning. This isolated environment will contain all co-simulation dependencies without affecting other projects.
 
-## Step 4: Scientific Computing Stack Installation
-
-Install the C++ runtime to avoid bizzare errors like "undefined symbol":
-
-```bash
-mamba install gcc_linux-64 gxx_linux-64 libstdcxx-ng libgcc-ng -c conda-forge
-```
-
-Install the foundational scientific computing packages using mamba:
-
-```bash
-# Install core scientific packages via conda-forge
-mamba install numpy scipy matplotlib pandas
-
-# Install Jupyter ecosystem for interactive development
-mamba install jupyter jupyterlab
-
-# Install additional analysis and visualization tools
-mamba install networkx plotly seaborn
-
-# Confirm installation
-python -c "import numpy, scipy, matplotlib; print('Scientific stack installed successfully')"
-```
-
-## Step 5: HELICS Installation
+## Step 3: HELICS Installation
 
 HELICS serves as the co-simulation coordination platform. Install using pip as it provides the most recent version:
 
 ```bash
 # Install HELICS with CLI extensions
-python -m pip install 'helics[cli]'
+python -m pip install 'helics[cli]' jupyterlab seaborn
 
 # Verify installation
 python -c "import helics as h; print(f'HELICS version: {h.helicsGetVersion()}')"
@@ -118,7 +76,7 @@ python -c "import helics as h; print(f'HELICS version: {h.helicsGetVersion()}')"
 
 The installation should complete without errors and display the HELICS version (expected: 3.6.1 or later).
 
-## Step 6: ANDES Installation
+## Step 4: ANDES Installation
 
 ANDES provides transmission system simulation capabilities. Install via pip:
 
@@ -135,7 +93,7 @@ andes selftest
 
 The self-test may take several minutes to complete. Minor test failures are acceptable for basic functionality, but core tests should pass.
 
-## Step 7: OpenDSS Installation
+## Step 5: OpenDSS Installation
 
 Install OpenDSSDirect.py for distribution system simulation:
 
@@ -147,7 +105,7 @@ pip install opendssdirect.py
 python -c "import opendssdirect as dss; print('OpenDSS installation verified')"
 ```
 
-Note that OpenDSSDirect.py includes its own OpenDSS engine, eliminating the need for separate OpenDSS installation.
+Note that OpenDSSDirect.py includes its own OpenDSS engine, eliminating the need for a separate OpenDSS installation.
 
 ## Installation Verification
 
@@ -243,6 +201,7 @@ EOF
 
 # Run verification
 python verify_installation.py
+rm verify_installation.py
 ```
 
 ## Troubleshooting
@@ -274,13 +233,6 @@ print('ANDES core functionality confirmed')
 "
 ```
 
-**Issue**: Graphics not displaying in WSL
-**Solution**: Configure matplotlib backend:
-```python
-import matplotlib
-matplotlib.use('Agg')  # Use file output instead of display
-```
-
 **Issue**: Import errors after installation
 **Solution**: Confirm environment activation:
 ```bash
@@ -296,140 +248,9 @@ which python
 OSError: cannot load library '.../libhelics.so': undefined symbol: _ZNSt8ios_base4Init11_S_refcountE
 ```
 
-**Cause**: This error occurs due to C++ ABI incompatibility between the HELICS library (compiled with older GCC) and the conda environment's newer libstdc++. Jupyter's library loading order differs from standalone Python.
+**Cause**: Incompatible C++ runtime library between Python packages compiled in conda-forge and HELICS.
 
-**Solutions**:
-
-#### Solution 1: Custom Jupyter Kernel (Recommended)
-
-Create a custom kernel that preloads the correct libraries:
-
-```bash
-# Create kernel directory
-mkdir -p ~/.local/share/jupyter/kernels/cosim-helics
-
-# Create wrapper script
-cat > ~/.local/share/jupyter/kernels/cosim-helics/python_wrapper.sh << 'EOF'
-#!/bin/bash
-# Set proper library paths for HELICS
-export LD_LIBRARY_PATH="/home/$USER/miniforge3/envs/cosim/lib:/home/$USER/miniforge3/envs/cosim/lib64:$LD_LIBRARY_PATH"
-export LD_PRELOAD="/home/$USER/miniforge3/envs/cosim/lib/libstdc++.so.6:$LD_PRELOAD"
-exec "/home/$USER/miniforge3/envs/cosim/bin/python" "$@"
-EOF
-
-# Make wrapper executable
-chmod +x ~/.local/share/jupyter/kernels/cosim-helics/python_wrapper.sh
-
-# Create kernel.json
-cat > ~/.local/share/jupyter/kernels/cosim-helics/kernel.json << 'EOF'
-{
-  "argv": [
-    "/home/$USER/.local/share/jupyter/kernels/cosim-helics/python_wrapper.sh",
-    "-m", "ipykernel_launcher",
-    "-f", "{connection_file}"
-  ],
-  "display_name": "CoSim (HELICS Fixed)",
-  "language": "python"
-}
-EOF
-
-# Replace $USER with actual username in files
-sed -i "s/\$USER/$USER/g" ~/.local/share/jupyter/kernels/cosim-helics/python_wrapper.sh
-sed -i "s/\$USER/$USER/g" ~/.local/share/jupyter/kernels/cosim-helics/kernel.json
-```
-
-Then restart Jupyter Lab and select "CoSim (HELICS Fixed)" as the kernel.
-
-#### Solution 2: Jupyter Startup Script
-
-Create a startup script that sets the environment before launching Jupyter:
-
-```bash
-cat > ~/start_jupyter_cosim.sh << 'EOF'
-#!/bin/bash
-# Start Jupyter Lab with proper environment for HELICS
-
-# Activate conda environment
-source ~/miniforge3/etc/profile.d/conda.sh
-conda activate cosim
-
-# Set library paths
-export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$CONDA_PREFIX/lib64:$LD_LIBRARY_PATH"
-export LD_PRELOAD="$CONDA_PREFIX/lib/libstdc++.so.6:$LD_PRELOAD"
-
-# Start Jupyter Lab
-jupyter lab "$@"
-EOF
-
-chmod +x ~/start_jupyter_cosim.sh
-```
-
-Use with: `~/start_jupyter_cosim.sh`
-
-#### Solution 3: Environment-Specific Fix
-
-If using the `pct` environment instead of `cosim`, adjust the paths accordingly in the above solutions.
-
-**Verification**: After applying a solution, test HELICS import in a Jupyter notebook:
-```python
-import helics as h
-print(f"HELICS version: {h.helicsGetVersion()}")
-```
-
-## Environment Management
-
-### Daily Activation
-
-Create a convenience script for environment activation:
-
-```bash
-cat > ~/activate_cosim.sh << 'EOF'
-#!/bin/bash
-echo "Activating co-simulation environment..."
-mamba activate cosim
-echo "Environment activated. Current packages:"
-mamba list | grep -E "(helics|andes|opendssdirect)"
-echo
-echo "Ready for co-simulation development."
-EOF
-
-chmod +x ~/activate_cosim.sh
-```
-
-Execute with: `source ~/activate_cosim.sh`
-
-### Package Updates
-
-Maintain current package versions:
-
-```bash
-# Update specific packages
-pip install --upgrade helics andes opendssdirect.py
-
-# Update conda packages
-mamba update --all
-
-# Check for outdated pip packages
-pip list --outdated
-```
-
-### Environment Export and Sharing
-
-Export the environment configuration for reproducibility:
-
-```bash
-# Export complete environment
-mamba env export > cosim_environment.yml
-
-# Export pip-only requirements
-pip freeze > pip_requirements.txt
-```
-
-Recreate environment from exported configuration:
-
-```bash
-mamba env create -f cosim_environment.yml
-```
+Solution: Install all Python packages using `pip`. Do not use `mamba` to install dependencies.
 
 ## References and Resources
 
